@@ -4,7 +4,7 @@ const { icon } = require('../lib/icons');
 const C = require('../lib/content');
 const {
   logoTile, scorePill, pricingTag, visitBtn, toolCard, compareCard, bestCard, postCard,
-  breadcrumbs, breadcrumbLd, scoreBars, scoreRing, newsletter, disclosureNote
+  breadcrumbs, breadcrumbLd, scoreBars, scoreRing, newsletter
 } = require('./components');
 const { page } = require('./layout');
 
@@ -199,7 +199,6 @@ function category(cat) {
 </section>
 <section class="section-tight">
   <div class="container">
-    ${disclosureNote()}
     <div class="tool-grid" data-subgrid>${list.map(toolCard)}</div>
   </div>
 </section>
@@ -250,7 +249,6 @@ function tool(t) {
 
 <div class="container rv-layout">
   <article class="rv-main prose-wrap">
-    ${disclosureNote()}
     <section class="verdict-box" aria-labelledby="verdict">
       <h2 id="verdict">${icon('trophy', '', 20)} Our verdict</h2>
       <p>${t.description}</p>
@@ -392,7 +390,6 @@ function compare(c) {
 </section>
 
 <div class="container narrow">
-  ${disclosureNote()}
   <section class="verdict-box" aria-labelledby="qv">
     <h2 id="qv">${icon('trophy', '', 20)} Quick verdict</h2>
     <p>${c.verdict}</p>
@@ -480,7 +477,6 @@ function best(b) {
 </div></section>
 
 <div class="container narrow">
-  ${disclosureNote()}
   <section class="quicklist" aria-labelledby="ql">
     <h2 id="ql">Our top picks at a glance</h2>
     <ol>${picks.map(({ t, label }, i) => html`<li><span class="rank">${i + 1}</span>${logoTile(t, 'sm')}<a href="#pick-${t.slug}"><b>${t.name}</b></a><span class="ql-label">${label}</span>${scorePill(t.score)}${visitBtn(t, 'btn btn-outline btn-sm hide-sm', 'Visit')}</li>`)}</ol>
@@ -567,7 +563,6 @@ function post(p) {
     </div>
   </aside>
   <article class="prose">
-    ${disclosureNote()}
     ${raw(p.html)}
   </article>
   <aside class="post-tools" aria-label="Tools mentioned">
