@@ -3,7 +3,7 @@ title: 8 No-Code Automations That Save Hours Every Week
 description: Real Zapier and Make workflows for marketing, sales and operations — with the exact triggers and actions to set them up.
 date: 2026-09-30
 category: saas
-author: ToolNexa Editorial
+author: ToolKenzon Editorial
 readTime: 7
 tools: zapier, make, hubspot, notion, mailerlite
 cover: zap

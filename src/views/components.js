@@ -8,7 +8,7 @@ function logoTile(t, size = 'md') {
   return html`<span class="tlogo tlogo-${size}" style="--brand:${t.color};--brand-fg:${t.textColor || '#fff'}" aria-hidden="true">${initials(t.name)}</span>`;
 }
 
-function scorePill(score, label = 'ToolNexa score') {
+function scorePill(score, label = 'ToolKenzon score') {
   return html`<span class="score-pill" title="${label}: ${score.toFixed(1)} out of 10">${icon('star', 'star', 14)}<b>${score.toFixed(1)}</b><span class="sr-only"> out of 10</span></span>`;
 }
 
@@ -102,7 +102,7 @@ function scoreBars(t) {
 
 function scoreRing(score, size = 92) {
   const r = 40; const c = 2 * Math.PI * r; const off = c * (1 - score / 10);
-  return html`<div class="score-ring" style="width:${size}px;height:${size}px" role="img" aria-label="ToolNexa score ${score.toFixed(1)} out of 10">
+  return html`<div class="score-ring" style="width:${size}px;height:${size}px" role="img" aria-label="ToolKenzon score ${score.toFixed(1)} out of 10">
     <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="${r}" class="sr-bg"/><circle cx="50" cy="50" r="${r}" class="sr-fg" stroke-dasharray="${c.toFixed(1)}" stroke-dashoffset="${off.toFixed(1)}"/></svg>
     <span><b>${score.toFixed(1)}</b><small>/10</small></span>
   </div>`;

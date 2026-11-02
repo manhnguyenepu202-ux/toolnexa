@@ -1,4 +1,4 @@
-# Deploying ToolNexa to Hostinger
+# Deploying ToolKenzon to Hostinger
 
 ## Option A — Node.js Web App (recommended, auto-deploy from GitHub)
 
@@ -14,9 +14,9 @@ Requires a Hostinger plan with **Node.js Web Apps** (Business or Cloud hosting).
    - Start command: `npm start`  ·  Entry file: `server.js`
 5. Environment variables (optional):
    - `NODE_ENV=production` (enables page caching)
-   - `SITE_URL=https://toolnexa.com`
+   - `SITE_URL=https://toolkenzon.com`
    - `GA_ID=G-XXXXXXX` (Google Analytics 4)
-6. Click **Deploy**, then connect the domain **toolnexa.com** in the website's dashboard and enable SSL.
+6. Click **Deploy**, then connect the domain **toolkenzon.com** in the website's dashboard and enable SSL.
 
 Every `git push` to the connected branch redeploys automatically.
 
@@ -37,6 +37,6 @@ git push -u origin main
 
 ## After launch
 
-- Submit `https://toolnexa.com/sitemap.xml` in Google Search Console.
+- Submit `https://toolkenzon.com/sitemap.xml` in Google Search Console.
 - Replace official URLs with your affiliate links in `src/data/tools.js` (`affiliateUrl`).
 - Re-check prices monthly and update `PRICING_CHECKED`.

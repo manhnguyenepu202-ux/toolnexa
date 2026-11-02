@@ -1,4 +1,4 @@
-/* ToolNexa client script — progressive enhancement only; every page works without JS. */
+/* ToolKenzon client script — progressive enhancement only; every page works without JS. */
 (function () {
   'use strict';
   var $ = function (s, r) { return (r || document).querySelector(s); };

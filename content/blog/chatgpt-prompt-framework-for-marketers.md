@@ -3,7 +3,7 @@ title: A Simple Prompt Framework for Marketers (With 10 Templates)
 description: Get consistently useful output from ChatGPT, Claude or Gemini with a five-part prompt structure and ready-to-use templates.
 date: 2026-10-07
 category: ai-tools
-author: ToolNexa Editorial
+author: ToolKenzon Editorial
 readTime: 6
 tools: chatgpt, claude, gemini, jasper
 cover: message

@@ -1,7 +1,7 @@
 /*
  * Tool database.
  *
- * - score / scores: ToolNexa editorial scores out of 10 (your own opinion — edit freely).
+ * - score / scores: ToolKenzon editorial scores out of 10 (your own opinion — edit freely).
  * - startingPrice: indicative entry price. Vendors change prices often:
  *   re-check every listing before publishing and update `pricingChecked`.
  * - affiliateUrl: put your affiliate/referral link here. If empty, the official

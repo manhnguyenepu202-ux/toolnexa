@@ -1,5 +1,5 @@
 // Head-to-head comparisons. URL: /compare/<a>-vs-<b>
-// `verdict` is ToolNexa's editorial conclusion. `pickA` / `pickB` say who should choose which.
+// `verdict` is ToolKenzon's editorial conclusion. `pickA` / `pickB` say who should choose which.
 module.exports = [
   {
     a: 'chatgpt', b: 'claude',

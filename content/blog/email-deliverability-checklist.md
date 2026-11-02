@@ -3,7 +3,7 @@ title: The Email Deliverability Checklist for 2026
 description: Authentication, list hygiene and sending habits that keep your emails out of spam — a checklist you can work through in an afternoon.
 date: 2026-10-21
 category: email-marketing
-author: ToolNexa Editorial
+author: ToolKenzon Editorial
 readTime: 7
 tools: brevo, mailerlite, activecampaign
 cover: shield

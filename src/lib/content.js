@@ -39,7 +39,7 @@ const posts = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md')).map((f) =
     description: data.description,
     date: data.date,
     category: data.category,
-    author: data.author || 'ToolNexa Editorial',
+    author: data.author || 'ToolKenzon Editorial',
     readTime: Number(data.readTime) || 5,
     cover: data.cover || 'book',
     tools: (data.tools || '').split(',').map((s) => s.trim()).filter((s) => toolMap[s]),

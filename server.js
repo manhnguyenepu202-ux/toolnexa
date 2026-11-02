@@ -1,5 +1,5 @@
 /*
- * ToolNexa.com — zero-dependency Node.js server (Node 18+).
+ * ToolKenzon.com — zero-dependency Node.js server (Node 18+).
  * Start: npm start   (PORT env var is respected; Hostinger sets it automatically)
  */
 const http = require('http');
@@ -151,7 +151,7 @@ const server = http.createServer(async (req, res) => {
 });
 
 if (require.main === module) {
-  server.listen(PORT, () => console.log(`ToolNexa running on http://localhost:${PORT}`));
+  server.listen(PORT, () => console.log(`ToolKenzon running on http://localhost:${PORT}`));
 }
 
 module.exports = server;

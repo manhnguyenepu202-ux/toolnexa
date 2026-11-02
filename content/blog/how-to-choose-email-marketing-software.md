@@ -3,7 +3,7 @@ title: How to Choose Email Marketing Software in 2026 (Without Overpaying)
 description: A practical framework for picking an email platform — what matters, what doesn't, and how pricing really scales.
 date: 2026-10-28
 category: email-marketing
-author: ToolNexa Editorial
+author: ToolKenzon Editorial
 readTime: 8
 tools: brevo, mailerlite, activecampaign, kit, klaviyo
 cover: mail

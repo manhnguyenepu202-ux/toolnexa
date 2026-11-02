@@ -1,7 +1,7 @@
 {
-  "name": "toolnexa",
+  "name": "toolkenzon",
   "version": "1.0.0",
-  "description": "ToolNexa.com — independent reviews, comparisons and guides for AI tools, SaaS and email marketing software.",
+  "description": "ToolKenzon.com — independent reviews, comparisons and guides for AI tools, SaaS and email marketing software.",
   "main": "server.js",
   "private": true,
   "scripts": {

@@ -1,4 +1,4 @@
-# ToolNexa.com
+# ToolKenzon.com
 
 Review, comparison & buying-guide website for **AI tools, SaaS and email marketing software** — built with plain **Node.js** (no npm dependencies, Node 18+).
 

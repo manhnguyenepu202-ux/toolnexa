@@ -225,7 +225,7 @@ function tool(t) {
     [`Is ${t.name} free?`, t.freePlan ? `Yes. ${t.name} has a free plan, and paid plans start from ${t.startingPrice}.` : `${t.name} does not have a permanent free plan${t.pricingModel === 'Free Trial' ? ', but it offers a free trial' : ''}. Paid plans start from ${t.startingPrice}.`],
     [`Who is ${t.name} best for?`, t.bestFor],
     [`What are the best ${t.name} alternatives?`, `The closest alternatives are ${alts.map((a) => a.name).join(', ')}. See the comparison section on this page for details.`],
-    [`How does ToolNexa score ${t.name}?`, `${t.name} scores ${t.score.toFixed(1)}/10 overall in our editorial review, based on ease of use (${t.scores.ease}), features (${t.scores.features}), value for money (${t.scores.value}) and support (${t.scores.support}).`]
+    [`How does ToolKenzon score ${t.name}?`, `${t.name} scores ${t.score.toFixed(1)}/10 overall in our editorial review, based on ease of use (${t.scores.ease}), features (${t.scores.features}), value for money (${t.scores.value}) and support (${t.scores.support}).`]
   ];
   const body = html`
 <section class="page-hero review-hero">
@@ -241,7 +241,7 @@ function tool(t) {
       </div>
       <div class="rv-score">
         ${scoreRing(t.score)}
-        <span class="small muted">ToolNexa score</span>
+        <span class="small muted">ToolKenzon score</span>
       </div>
     </div>
   </div>
@@ -405,7 +405,7 @@ function compare(c) {
       <table class="cmp-table">
         <thead><tr><th scope="col"><span class="sr-only">Criteria</span></th><th scope="col">${A.name}</th><th scope="col">${B.name}</th></tr></thead>
         <tbody>
-          ${row('ToolNexa score', `${A.score.toFixed(1)}/10`, `${B.score.toFixed(1)}/10`, overall)}
+          ${row('ToolKenzon score', `${A.score.toFixed(1)}/10`, `${B.score.toFixed(1)}/10`, overall)}
           ${row('Ease of use', A.scores.ease.toFixed(1), B.scores.ease.toFixed(1), winner(A.scores.ease, B.scores.ease))}
           ${row('Features', A.scores.features.toFixed(1), B.scores.features.toFixed(1), winner(A.scores.features, B.scores.features))}
           ${row('Value for money', A.scores.value.toFixed(1), B.scores.value.toFixed(1), winner(A.scores.value, B.scores.value))}
@@ -592,12 +592,12 @@ function simple({ path, title, description, h1, lead, content }) {
 }
 
 const about = () => simple({
-  path: '/about', title: 'About ToolNexa & Our Review Methodology', h1: 'About ToolNexa',
+  path: '/about', title: 'About ToolKenzon & Our Review Methodology', h1: 'About ToolKenzon',
   description: 'Who we are, how we test software and how we keep our reviews independent.',
   lead: 'We help marketers, founders and teams choose software with confidence.',
   content: `
 <h2 id="mission">Our mission</h2>
-<p>Software buying is noisy. Vendor pages promise everything, and many "review" sites rank whoever pays the most. ToolNexa exists to give you clear, honest guidance so you can pick the right AI, SaaS or email marketing tool quickly.</p>
+<p>Software buying is noisy. Vendor pages promise everything, and many "review" sites rank whoever pays the most. ToolKenzon exists to give you clear, honest guidance so you can pick the right AI, SaaS or email marketing tool quickly.</p>
 <h2 id="method">How we review</h2>
 <ol>
 <li><strong>Hands-on testing.</strong> We create accounts, set up real workflows and use each tool the way a customer would.</li>
@@ -606,16 +606,16 @@ const about = () => simple({
 <li><strong>Regular updates.</strong> Tools change fast, so we revisit listings and re-score when meaningful changes happen.</li>
 </ol>
 <h2 id="independence">Editorial independence</h2>
-<p>Some links on ToolNexa are affiliate links. That never affects scores or rankings: tools without affiliate programs are reviewed and ranked on exactly the same criteria. See our <a href="/affiliate-disclosure">affiliate disclosure</a>.</p>
+<p>Some links on ToolKenzon are affiliate links. That never affects scores or rankings: tools without affiliate programs are reviewed and ranked on exactly the same criteria. See our <a href="/affiliate-disclosure">affiliate disclosure</a>.</p>
 <h2 id="contact">Get in touch</h2>
 <p>Spotted an outdated price or a tool we should review? <a href="/contact">Contact us</a> — we read every message.</p>`
 });
 
 const disclosure = () => simple({
   path: '/affiliate-disclosure', title: 'Affiliate Disclosure', h1: 'Affiliate Disclosure',
-  description: 'How ToolNexa makes money and how we keep our reviews independent.',
+  description: 'How ToolKenzon makes money and how we keep our reviews independent.',
   content: `
-<p>ToolNexa is reader-supported. When you click some links on our site and make a purchase, we may earn an affiliate commission. This comes at <strong>no extra cost to you</strong>.</p>
+<p>ToolKenzon is reader-supported. When you click some links on our site and make a purchase, we may earn an affiliate commission. This comes at <strong>no extra cost to you</strong>.</p>
 <h2 id="how">How it works</h2>
 <p>Outbound "Visit" buttons may contain tracking links provided by software vendors or affiliate networks. These links are marked with <code>rel="sponsored"</code>.</p>
 <h2 id="independence">Our promise</h2>
@@ -629,10 +629,10 @@ const disclosure = () => simple({
 
 const privacy = () => simple({
   path: '/privacy', title: 'Privacy Policy', h1: 'Privacy Policy',
-  description: 'How ToolNexa collects and uses information.',
+  description: 'How ToolKenzon collects and uses information.',
   content: `
 <p><em>Last updated: ${formatDate(new Date().toISOString().slice(0, 10))}</em></p>
-<p>This policy explains what information ToolNexa.com ("we") collects and how we use it. <strong>Please review this template with a qualified advisor before publishing.</strong></p>
+<p>This policy explains what information ToolKenzon.com ("we") collects and how we use it. <strong>Please review this template with a qualified advisor before publishing.</strong></p>
 <h2 id="collect">Information we collect</h2>
 <ul>
 <li><strong>Newsletter and contact forms:</strong> the email address and message you submit.</li>
@@ -647,15 +647,15 @@ const privacy = () => simple({
 
 const terms = () => simple({
   path: '/terms', title: 'Terms of Use', h1: 'Terms of Use',
-  description: 'Terms for using ToolNexa.com.',
+  description: 'Terms for using ToolKenzon.com.',
   content: `
-<p>By using ToolNexa.com you agree to these terms. <strong>Please review this template with a qualified advisor before publishing.</strong></p>
+<p>By using ToolKenzon.com you agree to these terms. <strong>Please review this template with a qualified advisor before publishing.</strong></p>
 <h2 id="info">Information only</h2>
 <p>Our reviews and comparisons reflect our editorial opinion at the time of writing. Features and prices change; always confirm details on the vendor's website before buying.</p>
 <h2 id="trademarks">Trademarks</h2>
 <p>Product names and trademarks belong to their respective owners. Their use here is for identification only and does not imply endorsement.</p>
 <h2 id="liability">Liability</h2>
-<p>ToolNexa is provided "as is" without warranties. We are not liable for decisions made based on our content.</p>`
+<p>ToolKenzon is provided "as is" without warranties. We are not liable for decisions made based on our content.</p>`
 });
 
 function contact() {
@@ -676,7 +676,7 @@ function contact() {
   </form>
   <p class="muted small">Prefer email? Write to <a href="mailto:${site.email}">${site.email}</a>.</p>
 </div>`;
-  return page({ title: 'Contact', description: 'Contact the ToolNexa team.', path: '/contact', body });
+  return page({ title: 'Contact', description: 'Contact the ToolKenzon team.', path: '/contact', body });
 }
 
 function notFound() {

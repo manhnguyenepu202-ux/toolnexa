@@ -3,7 +3,7 @@ title: 9 AI Tools That Actually Save Small Businesses Time
 description: Skip the hype. These are the AI tools that pay for themselves in hours saved each week — with realistic use cases.
 date: 2026-10-14
 category: ai-tools
-author: ToolNexa Editorial
+author: ToolKenzon Editorial
 readTime: 9
 tools: chatgpt, claude, perplexity, canva, grammarly, zapier, elevenlabs, notion, hubspot
 cover: sparkles

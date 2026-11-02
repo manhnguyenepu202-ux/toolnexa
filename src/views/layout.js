@@ -13,11 +13,11 @@ const NAV = [
 ];
 
 function logo() {
-  return html`<a href="/" class="logo" aria-label="ToolNexa home">
+  return html`<a href="/" class="logo" aria-label="ToolKenzon home">
     <span class="logo-mark" aria-hidden="true">
       <svg viewBox="0 0 32 32" width="32" height="32"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs><rect width="32" height="32" rx="9" fill="url(#lg)"/><path d="M9 10h14M16 10v13" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="23" cy="22" r="3" fill="#FDBA74"/></svg>
     </span>
-    <span class="logo-text">Tool<span>Nexa</span></span>
+    <span class="logo-text">Tool<span>Kenzon</span></span>
   </a>`;
 }
 
@@ -57,7 +57,7 @@ function footer() {
       <div class="footer-brand">
         ${logo()}
         <p>${site.description}</p>
-        <p class="small muted">ToolNexa is reader-supported. We may earn a commission when you buy through links on our site, at no extra cost to you. <a href="/affiliate-disclosure">Learn more</a>.</p>
+        <p class="small muted">ToolKenzon is reader-supported. We may earn a commission when you buy through links on our site, at no extra cost to you. <a href="/affiliate-disclosure">Learn more</a>.</p>
       </div>
       ${categories.map((c) => html`<div>
         <h3 class="footer-h">${c.name}</h3>
@@ -73,7 +73,7 @@ function footer() {
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© ${site.year} ToolNexa.com. All rights reserved.</p>
+      <p>© ${site.year} ToolKenzon.com. All rights reserved.</p>
       <ul class="footer-legal">
         <li><a href="/about">About & Methodology</a></li>
         <li><a href="/affiliate-disclosure">Affiliate Disclosure</a></li>
