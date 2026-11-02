@@ -1,0 +1,88 @@
+// Head-to-head comparisons. URL: /compare/<a>-vs-<b>
+// `verdict` is ToolNexa's editorial conclusion. `pickA` / `pickB` say who should choose which.
+module.exports = [
+  {
+    a: 'chatgpt', b: 'claude',
+    summary: 'The two most capable AI assistants, with different strengths.',
+    verdict: 'ChatGPT is the better all-rounder thanks to image generation, voice and a bigger ecosystem. Claude is the stronger pick for long documents, natural-sounding writing and coding. Many professionals keep both.',
+    pickA: 'You want one assistant for everything — images, voice, browsing and custom GPTs.',
+    pickB: 'You work with long reports, contracts or code and care about writing quality.'
+  },
+  {
+    a: 'chatgpt', b: 'gemini',
+    summary: 'OpenAI\'s flagship vs Google\'s ecosystem-native assistant.',
+    verdict: 'ChatGPT wins on versatility and customization. Gemini wins if your work lives in Gmail, Docs and Drive, and its plan bundles extra storage.',
+    pickA: 'You want the broadest feature set and custom GPTs.',
+    pickB: 'You live in Google Workspace and want AI inside your existing apps.'
+  },
+  {
+    a: 'claude', b: 'perplexity',
+    summary: 'Deep-thinking assistant vs cited answer engine.',
+    verdict: 'Use Perplexity to find and verify information quickly; use Claude to analyse, write and build with that information.',
+    pickA: 'You need analysis, writing or coding help on complex material.',
+    pickB: 'You mainly need fast, sourced answers from the web.'
+  },
+  {
+    a: 'jasper', b: 'copy-ai',
+    summary: 'Two AI writing platforms aimed at business teams.',
+    verdict: 'Jasper is better for brand-consistent marketing content at scale. Copy.ai is better for automating sales and GTM workflows, and has a free plan to start.',
+    pickA: 'Your marketing team needs strict brand voice across lots of content.',
+    pickB: 'You want to automate prospecting and repetitive GTM writing.'
+  },
+  {
+    a: 'mailchimp', b: 'brevo',
+    summary: 'The best-known email tool vs the value-priced all-in-one.',
+    verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',
+    pickA: 'You want the most familiar, polished editor and integrations.',
+    pickB: 'You have a large list and want email + SMS at a lower cost.'
+  },
+  {
+    a: 'kit', b: 'mailerlite',
+    summary: 'Creator-focused email vs budget-friendly all-rounder.',
+    verdict: 'Kit is purpose-built for creators selling digital products and growing through recommendations. MailerLite offers more design flexibility and lower prices for small businesses.',
+    pickA: 'You are a creator monetizing an audience with products or paid newsletters.',
+    pickB: 'You want great-looking emails and landing pages on a tight budget.'
+  },
+  {
+    a: 'activecampaign', b: 'getresponse',
+    summary: 'Automation powerhouse vs funnel-and-webinar all-rounder.',
+    verdict: 'ActiveCampaign has the deeper automation and CRM. GetResponse wins if you want webinars and conversion funnels in the same subscription.',
+    pickA: 'Email automation and lead scoring drive your sales.',
+    pickB: 'You run webinars and want funnels without extra tools.'
+  },
+  {
+    a: 'klaviyo', b: 'mailchimp',
+    summary: 'E-commerce specialist vs generalist email marketing.',
+    verdict: 'For Shopify and D2C stores, Klaviyo\'s data-driven flows usually generate more revenue. For service businesses and simple newsletters, Mailchimp is easier and cheaper.',
+    pickA: 'You run an online store and want revenue-focused flows.',
+    pickB: 'You need straightforward newsletters for a non-store business.'
+  },
+  {
+    a: 'kit', b: 'beehiiv',
+    summary: 'Two leading platforms for creator newsletters.',
+    verdict: 'beehiiv is the better choice for growth and ad monetization of a newsletter. Kit is better when email automations and selling products matter most.',
+    pickA: 'You sell courses or digital products and need automations.',
+    pickB: 'Your newsletter is the product and you want growth and ad revenue.'
+  },
+  {
+    a: 'notion', b: 'clickup',
+    summary: 'Flexible workspace vs feature-packed work management.',
+    verdict: 'Notion is the better knowledge base and flexible workspace. ClickUp is the better dedicated project manager with more built-in PM features per dollar.',
+    pickA: 'Docs, wikis and flexible databases are your priority.',
+    pickB: 'You need full task management, time tracking and goals.'
+  },
+  {
+    a: 'monday', b: 'asana',
+    summary: 'Two polished, popular project management platforms.',
+    verdict: 'monday.com is more visual and customizable for operations workflows. Asana is cleaner for structured cross-team project and portfolio management.',
+    pickA: 'You want visual boards and dashboards for many workflow types.',
+    pickB: 'You run many structured projects and need portfolios and goals.'
+  },
+  {
+    a: 'zapier', b: 'make',
+    summary: 'The easiest automation tool vs the most flexible.',
+    verdict: 'Zapier is easier and connects to more apps. Make is cheaper and handles complex, branching scenarios better.',
+    pickA: 'You want quick automations with zero learning curve.',
+    pickB: 'You build complex workflows and care about cost per operation.'
+  }
+];

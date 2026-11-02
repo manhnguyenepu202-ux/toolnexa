@@ -1,0 +1,416 @@
+/*
+ * Tool database.
+ *
+ * - score / scores: ToolNexa editorial scores out of 10 (your own opinion — edit freely).
+ * - startingPrice: indicative entry price. Vendors change prices often:
+ *   re-check every listing before publishing and update `pricingChecked`.
+ * - affiliateUrl: put your affiliate/referral link here. If empty, the official
+ *   website is used. All outbound "Visit" buttons go through /go/<slug>.
+ */
+const PRICING_CHECKED = '2026-11';
+
+const t = (o) => ({
+  pricingChecked: PRICING_CHECKED,
+  affiliateUrl: '',
+  editorsPick: false,
+  trending: false,
+  ...o
+});
+
+module.exports = [
+  // ───────────────────────── AI TOOLS ─────────────────────────
+  t({
+    slug: 'chatgpt', name: 'ChatGPT', vendor: 'OpenAI', category: 'ai-tools', sub: 'ai-chatbots',
+    color: '#10A37F', website: 'https://chatgpt.com',
+    tagline: 'The all-round AI assistant for writing, research, coding and images.',
+    description: 'ChatGPT is OpenAI\'s general-purpose assistant. It combines chat, web search, file analysis, image generation, voice mode and custom GPTs in one app, which makes it the default starting point for most people trying AI at work.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$20/mo', priceValue: 20,
+    score: 9.3, scores: { ease: 9.6, features: 9.5, value: 9.0, support: 8.2 },
+    bestFor: 'Individuals and teams who want one assistant that does a bit of everything.',
+    pros: ['Huge feature set in one app (search, files, images, voice)', 'Custom GPTs and projects for repeatable workflows', 'Very large ecosystem of tutorials and integrations'],
+    cons: ['Best models and higher limits sit behind paid tiers', 'Output can be generic without careful prompting', 'Team data controls require Business/Enterprise plans'],
+    features: ['Chat & reasoning models', 'Web search with sources', 'File & data analysis', 'Image generation', 'Voice mode', 'Custom GPTs', 'Projects & memory'],
+    alternatives: ['claude', 'gemini', 'perplexity'], trending: true, editorsPick: true
+  }),
+  t({
+    slug: 'claude', name: 'Claude', vendor: 'Anthropic', category: 'ai-tools', sub: 'ai-chatbots',
+    color: '#D97757', website: 'https://claude.ai',
+    tagline: 'Thoughtful AI assistant known for long documents, writing quality and coding.',
+    description: 'Claude by Anthropic is an AI assistant that stands out for natural writing, careful reasoning over long documents and strong coding ability. Projects, artifacts and connectors to apps like Google Drive make it a capable work companion.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$20/mo', priceValue: 20,
+    score: 9.2, scores: { ease: 9.3, features: 9.0, value: 9.0, support: 8.3 },
+    bestFor: 'Writers, analysts and developers working with long or complex material.',
+    pros: ['Natural, less robotic writing style', 'Handles very long documents well', 'Excellent at coding and structured analysis'],
+    cons: ['Usage limits can be reached on heavy days', 'Fewer consumer extras than ChatGPT', 'Some advanced features are plan-dependent'],
+    features: ['Long-context chat', 'Projects with shared knowledge', 'Artifacts (docs, apps, visuals)', 'Web search', 'App connectors', 'Coding tools'],
+    alternatives: ['chatgpt', 'gemini', 'perplexity'], trending: true, editorsPick: true
+  }),
+  t({
+    slug: 'gemini', name: 'Google Gemini', vendor: 'Google', category: 'ai-tools', sub: 'ai-chatbots',
+    color: '#4285F4', website: 'https://gemini.google.com',
+    tagline: 'Google\'s AI assistant, deeply wired into Gmail, Docs and Search.',
+    description: 'Gemini is Google\'s assistant and model family. Its biggest advantage is integration: it can work across Gmail, Docs, Drive and other Google apps, and paid plans bundle extra Google storage.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$19.99/mo', priceValue: 19.99,
+    score: 8.8, scores: { ease: 9.0, features: 8.9, value: 9.0, support: 8.0 },
+    bestFor: 'People and teams already living in Google Workspace.',
+    pros: ['Tight integration with Google apps', 'Paid plan includes extra cloud storage', 'Strong multimodal input (images, video, files)'],
+    cons: ['Workspace features vary by plan and region', 'Less flexible customization than rivals', 'Privacy settings take some digging'],
+    features: ['Chat & reasoning', 'Gmail/Docs/Drive integration', 'Deep Research', 'Image & video understanding', 'Gems (custom assistants)'],
+    alternatives: ['chatgpt', 'claude', 'perplexity'], trending: true
+  }),
+  t({
+    slug: 'perplexity', name: 'Perplexity', vendor: 'Perplexity AI', category: 'ai-tools', sub: 'ai-chatbots',
+    color: '#20808D', website: 'https://www.perplexity.ai',
+    tagline: 'AI answer engine that searches the web and cites its sources.',
+    description: 'Perplexity combines a search engine with a language model: you ask a question, it searches, reads and answers with clickable citations. It is one of the fastest ways to research a topic you can verify.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$20/mo', priceValue: 20,
+    score: 8.7, scores: { ease: 9.4, features: 8.4, value: 8.6, support: 7.8 },
+    bestFor: 'Research, fact-finding and quick answers you can check.',
+    pros: ['Citations on every answer', 'Fast, clean interface', 'Choice of underlying models on Pro'],
+    cons: ['Less suited to long-form writing', 'Source quality varies by topic', 'Advanced features need Pro'],
+    features: ['Cited web answers', 'Pro Search / research mode', 'File upload', 'Spaces for collections', 'Model picker'],
+    alternatives: ['chatgpt', 'claude', 'gemini']
+  }),
+  t({
+    slug: 'jasper', name: 'Jasper', vendor: 'Jasper AI', category: 'ai-tools', sub: 'ai-writing',
+    color: '#8B5CF6', website: 'https://www.jasper.ai',
+    tagline: 'AI content platform for marketing teams with brand voice controls.',
+    description: 'Jasper is built for marketing teams rather than individuals. Brand voice, style guides, campaign workflows and team collaboration help keep AI-generated content on-brand across many writers.',
+    pricingModel: 'Free Trial', freePlan: false, startingPrice: '$39/mo', priceValue: 39,
+    score: 8.2, scores: { ease: 8.6, features: 8.5, value: 7.4, support: 8.4 },
+    bestFor: 'Marketing teams producing high volumes of on-brand content.',
+    pros: ['Brand voice and style guide controls', 'Marketing-specific templates and workflows', 'Good collaboration features'],
+    cons: ['Pricier than general chatbots', 'Overkill for solo writers', 'Quality still depends on editing'],
+    features: ['Brand Voice', 'Campaign workflows', 'Templates', 'Browser extension', 'Team workspaces', 'SEO mode'],
+    alternatives: ['copy-ai', 'chatgpt', 'grammarly']
+  }),
+  t({
+    slug: 'copy-ai', name: 'Copy.ai', vendor: 'Copy.ai', category: 'ai-tools', sub: 'ai-writing',
+    color: '#6366F1', website: 'https://www.copy.ai',
+    tagline: 'AI workflows for go-to-market teams: sales, marketing and content.',
+    description: 'Copy.ai has evolved from a copywriting tool into a GTM workflow platform. You can chain AI steps into workflows for prospecting, content repurposing and sales emails.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$29/mo', priceValue: 29,
+    score: 7.9, scores: { ease: 8.4, features: 8.0, value: 7.8, support: 7.5 },
+    bestFor: 'Sales and marketing teams automating repetitive writing.',
+    pros: ['Workflow builder for repeatable tasks', 'Free plan to test', 'Good for short-form sales copy'],
+    cons: ['Workflows have a learning curve', 'Long-form quality trails top chatbots', 'Pricing jumps for workflow credits'],
+    features: ['Chat', 'Workflows', 'Brand voice', 'Infobase', 'Prospecting templates'],
+    alternatives: ['jasper', 'chatgpt', 'claude']
+  }),
+  t({
+    slug: 'grammarly', name: 'Grammarly', vendor: 'Grammarly', category: 'ai-tools', sub: 'ai-writing',
+    color: '#15C39A', website: 'https://www.grammarly.com',
+    tagline: 'AI writing assistant that checks and improves text everywhere you type.',
+    description: 'Grammarly works across browsers, desktop apps and documents to fix grammar, tone and clarity. Generative AI features help draft and rewrite, but its core strength is polishing what you write.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$12/mo (annual)', priceValue: 12,
+    score: 8.6, scores: { ease: 9.6, features: 8.3, value: 8.2, support: 8.0 },
+    bestFor: 'Anyone who writes emails, docs or posts daily and wants cleaner text.',
+    pros: ['Works almost everywhere', 'Excellent grammar and clarity suggestions', 'Generous free tier'],
+    cons: ['Monthly billing is expensive', 'Generative features less powerful than chatbots', 'Can over-correct personal style'],
+    features: ['Grammar & spelling', 'Tone detection', 'Rewrite & generate', 'Plagiarism check (paid)', 'Style guides (teams)'],
+    alternatives: ['jasper', 'chatgpt', 'claude']
+  }),
+  t({
+    slug: 'midjourney', name: 'Midjourney', vendor: 'Midjourney', category: 'ai-tools', sub: 'ai-image',
+    color: '#111827', website: 'https://www.midjourney.com',
+    tagline: 'Best-in-class AI image generator for artistic, polished visuals.',
+    description: 'Midjourney produces some of the most aesthetically striking AI images available. A web app now complements the original Discord workflow, with editing, upscaling and style references.',
+    pricingModel: 'Paid', freePlan: false, startingPrice: '$10/mo', priceValue: 10,
+    score: 8.9, scores: { ease: 8.0, features: 9.0, value: 8.8, support: 7.5 },
+    bestFor: 'Designers, marketers and creators who need high-quality visuals.',
+    pros: ['Outstanding image quality and style', 'Style and character references', 'Active community for inspiration'],
+    cons: ['No free plan', 'Images are public on lower tiers', 'Precise text in images can be hit-or-miss'],
+    features: ['Text-to-image', 'Web editor', 'Upscale & vary', 'Style references', 'Video generation'],
+    alternatives: ['canva', 'chatgpt', 'runway'], trending: true
+  }),
+  t({
+    slug: 'elevenlabs', name: 'ElevenLabs', vendor: 'ElevenLabs', category: 'ai-tools', sub: 'ai-voice',
+    color: '#000000', website: 'https://elevenlabs.io',
+    tagline: 'Realistic AI voices, voice cloning and dubbing in many languages.',
+    description: 'ElevenLabs is the leading AI voice platform. Text-to-speech, voice cloning, dubbing and conversational voice agents are used by creators, publishers and developers.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$5/mo', priceValue: 5,
+    score: 9.0, scores: { ease: 9.0, features: 9.2, value: 8.8, support: 8.0 },
+    bestFor: 'Creators and businesses producing voiceovers, audiobooks or dubbing.',
+    pros: ['Very natural-sounding voices', 'Multilingual voice cloning', 'Strong API for developers'],
+    cons: ['Character credits run out quickly', 'Commercial use requires paid plan', 'Cloning needs responsible-use checks'],
+    features: ['Text to speech', 'Voice cloning', 'Dubbing', 'Sound effects', 'Voice agents', 'API'],
+    alternatives: ['synthesia', 'runway'], trending: true
+  }),
+  t({
+    slug: 'synthesia', name: 'Synthesia', vendor: 'Synthesia', category: 'ai-tools', sub: 'ai-video',
+    color: '#4F46E5', website: 'https://www.synthesia.io',
+    tagline: 'Create training and marketing videos with AI avatars — no camera needed.',
+    description: 'Synthesia turns scripts into presenter-style videos with AI avatars and voices in many languages. It is popular for training, onboarding and explainer content.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$29/mo', priceValue: 29,
+    score: 8.4, scores: { ease: 9.0, features: 8.5, value: 7.8, support: 8.2 },
+    bestFor: 'L&D, HR and marketing teams producing explainer videos at scale.',
+    pros: ['Fast script-to-video workflow', 'Large avatar and language library', 'Templates for training content'],
+    cons: ['Avatars can still feel stiff', 'Video minutes are limited per plan', 'Custom avatars cost extra'],
+    features: ['AI avatars', 'Multilingual voices', 'Templates', 'Screen recording', 'Translation'],
+    alternatives: ['runway', 'elevenlabs']
+  }),
+  t({
+    slug: 'runway', name: 'Runway', vendor: 'Runway', category: 'ai-tools', sub: 'ai-video',
+    color: '#0F172A', website: 'https://runwayml.com',
+    tagline: 'Generative video studio for creators and filmmakers.',
+    description: 'Runway offers text- and image-to-video generation plus AI editing tools. It is aimed at creative professionals who want cinematic AI footage and fast post-production.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$15/mo', priceValue: 15,
+    score: 8.3, scores: { ease: 8.0, features: 8.8, value: 7.6, support: 7.8 },
+    bestFor: 'Video creators experimenting with generative footage.',
+    pros: ['High-quality generative video', 'Many AI editing tools in one place', 'Frequent model upgrades'],
+    cons: ['Credits disappear fast on video', 'Results need several attempts', 'Steeper learning curve'],
+    features: ['Text/image to video', 'Video editing tools', 'Motion controls', 'Upscaling', 'Team workspaces'],
+    alternatives: ['synthesia', 'midjourney']
+  }),
+  t({
+    slug: 'surfer-seo', name: 'Surfer', vendor: 'Surfer', category: 'ai-tools', sub: 'ai-seo',
+    color: '#FF5C35', website: 'https://surferseo.com',
+    tagline: 'Content optimization and AI writing for ranking on Google.',
+    description: 'Surfer analyses top-ranking pages and guides you on terms, structure and length so your content competes in search. Its AI writer drafts optimized articles you can then edit.',
+    pricingModel: 'Paid', freePlan: false, startingPrice: '$79/mo (annual)', priceValue: 79,
+    score: 8.3, scores: { ease: 8.7, features: 8.6, value: 7.5, support: 8.2 },
+    bestFor: 'Content marketers and affiliate publishers focused on SEO.',
+    pros: ['Clear, actionable content score', 'Integrates with Google Docs and WordPress', 'Speeds up content briefs'],
+    cons: ['No free plan', 'Can encourage keyword-stuffing if followed blindly', 'AI article credits cost extra'],
+    features: ['Content Editor', 'AI article writer', 'Content audit', 'Topical maps', 'Chrome extension'],
+    alternatives: ['semrush', 'jasper']
+  }),
+
+  // ───────────────────────── SAAS ─────────────────────────
+  t({
+    slug: 'notion', name: 'Notion', vendor: 'Notion Labs', category: 'saas', sub: 'project-management',
+    color: '#191919', website: 'https://www.notion.so',
+    tagline: 'All-in-one workspace for docs, wikis, projects and AI.',
+    description: 'Notion combines documents, databases and wikis in flexible pages. Teams use it as a knowledge base, project tracker and lightweight CRM, with Notion AI built into higher plans.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$10/seat/mo (annual)', priceValue: 10,
+    score: 9.0, scores: { ease: 8.4, features: 9.3, value: 9.0, support: 8.0 },
+    bestFor: 'Teams that want docs and projects in one flexible place.',
+    pros: ['Extremely flexible building blocks', 'Great for wikis and documentation', 'Huge template gallery'],
+    cons: ['Flexibility means setup time', 'Can get slow in very large workspaces', 'Advanced PM features are limited'],
+    features: ['Docs & wikis', 'Databases', 'Project views', 'Notion AI', 'Templates', 'Integrations'],
+    alternatives: ['clickup', 'asana', 'monday'], editorsPick: true, trending: true
+  }),
+  t({
+    slug: 'clickup', name: 'ClickUp', vendor: 'ClickUp', category: 'saas', sub: 'project-management',
+    color: '#7B68EE', website: 'https://clickup.com',
+    tagline: 'One app to replace them all: tasks, docs, goals, chat and AI.',
+    description: 'ClickUp is a feature-packed work management platform covering tasks, docs, whiteboards, goals and chat. It is highly customizable and very affordable per seat.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$7/seat/mo (annual)', priceValue: 7,
+    score: 8.6, scores: { ease: 7.6, features: 9.5, value: 9.2, support: 8.0 },
+    bestFor: 'Teams that want maximum features for minimum price.',
+    pros: ['Enormous feature set', 'Very competitive pricing', 'Many views (list, board, Gantt, etc.)'],
+    cons: ['Busy interface, steeper learning curve', 'Occasional performance hiccups', 'AI is an add-on cost'],
+    features: ['Tasks & subtasks', 'Docs', 'Whiteboards', 'Goals', 'Time tracking', 'Automations', 'ClickUp AI'],
+    alternatives: ['notion', 'asana', 'monday']
+  }),
+  t({
+    slug: 'monday', name: 'monday.com', vendor: 'monday.com', category: 'saas', sub: 'project-management',
+    color: '#FF3D57', website: 'https://monday.com',
+    tagline: 'Visual work OS for projects, workflows and team operations.',
+    description: 'monday.com is a colorful, visual platform for managing projects and workflows. Boards, automations and dashboards make it easy for non-technical teams to adopt.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$9/seat/mo (annual, 3 seats min)', priceValue: 9,
+    score: 8.7, scores: { ease: 9.2, features: 8.8, value: 7.9, support: 8.7 },
+    bestFor: 'Non-technical teams who want an intuitive visual tool.',
+    pros: ['Very intuitive and visual', 'Strong automations and dashboards', 'Good customer support'],
+    cons: ['Seat minimums raise the price', 'Key features locked to higher tiers', 'Free plan is limited'],
+    features: ['Boards & views', 'Automations', 'Dashboards', 'Integrations', 'Forms', 'monday AI'],
+    alternatives: ['asana', 'clickup', 'notion']
+  }),
+  t({
+    slug: 'asana', name: 'Asana', vendor: 'Asana', category: 'saas', sub: 'project-management',
+    color: '#F06A6A', website: 'https://asana.com',
+    tagline: 'Work management for teams that need clarity on who does what by when.',
+    description: 'Asana focuses on structured project and portfolio management with timelines, goals and workload views. It is a reliable choice for cross-functional teams.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$10.99/seat/mo (annual)', priceValue: 10.99,
+    score: 8.6, scores: { ease: 8.9, features: 8.7, value: 8.0, support: 8.2 },
+    bestFor: 'Cross-functional teams running many projects at once.',
+    pros: ['Clean, focused interface', 'Excellent timeline and portfolio views', 'Mature integrations'],
+    cons: ['Pricier than ClickUp', 'Docs/wiki features are basic', 'One assignee per task'],
+    features: ['Lists, boards, timelines', 'Portfolios', 'Goals', 'Workload', 'Rules automation', 'Asana AI'],
+    alternatives: ['monday', 'clickup', 'notion']
+  }),
+  t({
+    slug: 'hubspot', name: 'HubSpot CRM', vendor: 'HubSpot', category: 'saas', sub: 'crm',
+    color: '#FF7A59', website: 'https://www.hubspot.com',
+    tagline: 'Free CRM that grows into a full marketing, sales and service suite.',
+    description: 'HubSpot offers a genuinely useful free CRM plus paid hubs for marketing, sales, service and content. It is a favorite among small and mid-sized businesses for its ease of use.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$15/seat/mo (annual)', priceValue: 15,
+    score: 8.9, scores: { ease: 9.1, features: 9.2, value: 8.0, support: 8.8 },
+    bestFor: 'SMBs that want CRM and marketing tools in one ecosystem.',
+    pros: ['Powerful free CRM', 'All-in-one marketing/sales platform', 'Excellent learning resources'],
+    cons: ['Costs climb steeply at Professional tier', 'Contact-based pricing for marketing', 'Some lock-in to the ecosystem'],
+    features: ['Contact & deal management', 'Email tracking', 'Marketing automation', 'Landing pages', 'Reporting', 'Breeze AI'],
+    alternatives: ['activecampaign', 'brevo'], editorsPick: true
+  }),
+  t({
+    slug: 'zapier', name: 'Zapier', vendor: 'Zapier', category: 'saas', sub: 'automation',
+    color: '#FF4F00', website: 'https://zapier.com',
+    tagline: 'Connect thousands of apps and automate work without code.',
+    description: 'Zapier is the best-known no-code automation tool, connecting thousands of apps with triggers and actions. AI steps, tables and interfaces extend it into a lightweight app builder.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$19.99/mo (annual)', priceValue: 19.99,
+    score: 8.8, scores: { ease: 9.4, features: 9.0, value: 7.6, support: 8.4 },
+    bestFor: 'Non-technical users automating workflows across many apps.',
+    pros: ['Largest app integration library', 'Very easy to start', 'AI and multi-step Zaps'],
+    cons: ['Gets expensive at high task volumes', 'Complex logic is harder than in Make', 'Free plan is limited'],
+    features: ['Zaps (automations)', 'Multi-step workflows', 'AI actions', 'Tables', 'Interfaces', 'Webhooks'],
+    alternatives: ['make'], trending: true
+  }),
+  t({
+    slug: 'make', name: 'Make', vendor: 'Make (Celonis)', category: 'saas', sub: 'automation',
+    color: '#6D00CC', website: 'https://www.make.com',
+    tagline: 'Visual automation builder for complex, multi-branch workflows.',
+    description: 'Make (formerly Integromat) lets you build automations visually on a canvas, with routers, iterators and error handling. It is more powerful and cheaper than Zapier for complex scenarios.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$9/mo (annual)', priceValue: 9,
+    score: 8.7, scores: { ease: 7.9, features: 9.2, value: 9.3, support: 7.9 },
+    bestFor: 'Power users who need complex logic at a lower price.',
+    pros: ['Visual scenario builder', 'Excellent value per operation', 'Advanced data handling'],
+    cons: ['Steeper learning curve', 'Fewer integrations than Zapier', 'Debugging can take time'],
+    features: ['Visual scenarios', 'Routers & filters', 'Iterators/aggregators', 'AI modules', 'Webhooks', 'Scheduling'],
+    alternatives: ['zapier']
+  }),
+  t({
+    slug: 'canva', name: 'Canva', vendor: 'Canva', category: 'saas', sub: 'design',
+    color: '#00C4CC', website: 'https://www.canva.com',
+    tagline: 'Easy design for social posts, presentations and brand assets — with AI.',
+    description: 'Canva makes design accessible with thousands of templates, a drag-and-drop editor and Magic Studio AI features. It covers social media, presentations, video, print and more.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$15/mo', priceValue: 15,
+    score: 9.1, scores: { ease: 9.7, features: 9.0, value: 9.0, support: 8.0 },
+    bestFor: 'Marketers, creators and small businesses without a designer.',
+    pros: ['Extremely easy to use', 'Massive template library', 'Strong AI tools in Magic Studio'],
+    cons: ['Designs can look template-y', 'Pro features needed for brand kits', 'Limited for advanced design work'],
+    features: ['Templates', 'Magic Studio AI', 'Brand Kit', 'Video editor', 'Presentations', 'Print'],
+    alternatives: ['midjourney'], editorsPick: true
+  }),
+  t({
+    slug: 'semrush', name: 'Semrush', vendor: 'Semrush', category: 'saas', sub: 'seo-marketing',
+    color: '#FF642D', website: 'https://www.semrush.com',
+    tagline: 'All-in-one SEO, content and competitive research platform.',
+    description: 'Semrush covers keyword research, site audits, rank tracking, backlinks, competitor analysis and content marketing. It is a staple for SEO professionals and agencies.',
+    pricingModel: 'Free Trial', freePlan: false, startingPrice: '$139.95/mo', priceValue: 139.95,
+    score: 8.8, scores: { ease: 8.0, features: 9.6, value: 7.8, support: 8.4 },
+    bestFor: 'SEO specialists, agencies and serious content publishers.',
+    pros: ['Huge keyword and backlink databases', 'Covers SEO, PPC and content', 'Competitor research is excellent'],
+    cons: ['Expensive for beginners', 'Interface can overwhelm', 'Extra users cost more'],
+    features: ['Keyword research', 'Site audit', 'Position tracking', 'Backlink analytics', 'PPC research', 'Content toolkit'],
+    alternatives: ['surfer-seo']
+  }),
+  t({
+    slug: 'webflow', name: 'Webflow', vendor: 'Webflow', category: 'saas', sub: 'website-builder',
+    color: '#146EF5', website: 'https://webflow.com',
+    tagline: 'Visual website builder with designer-level control and a built-in CMS.',
+    description: 'Webflow lets designers build production websites visually, with clean code, animations and a powerful CMS. It suits marketing sites and content-heavy brands.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$14/mo (annual)', priceValue: 14,
+    score: 8.5, scores: { ease: 7.4, features: 9.2, value: 8.0, support: 8.0 },
+    bestFor: 'Designers and marketing teams building custom websites.',
+    pros: ['Pixel-perfect design control', 'Powerful CMS', 'Fast, reliable hosting'],
+    cons: ['Steeper learning curve', 'Pricing structure is complex', 'E-commerce plans are pricey'],
+    features: ['Visual designer', 'CMS', 'Interactions & animations', 'Hosting', 'SEO controls', 'Localization'],
+    alternatives: ['canva']
+  }),
+
+  // ───────────────────────── EMAIL MARKETING ─────────────────────────
+  t({
+    slug: 'mailchimp', name: 'Mailchimp', vendor: 'Intuit', category: 'email-marketing', sub: 'email-platforms',
+    color: '#FFE01B', textColor: '#111827', website: 'https://mailchimp.com',
+    tagline: 'The most recognised email marketing platform for small businesses.',
+    description: 'Mailchimp offers email campaigns, automations, landing pages and audience management with an approachable editor. It is easy to start but becomes costly as your list grows.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$13/mo', priceValue: 13,
+    score: 8.2, scores: { ease: 9.0, features: 8.5, value: 7.0, support: 7.8 },
+    bestFor: 'Small businesses that want a familiar, easy email tool.',
+    pros: ['Polished, beginner-friendly editor', 'Huge integration library', 'Good reporting'],
+    cons: ['Price rises fast with list size', 'Free plan is very limited', 'Automations locked to higher tiers'],
+    features: ['Email campaigns', 'Customer journeys', 'Landing pages', 'Segmentation', 'A/B testing', 'AI content tools'],
+    alternatives: ['brevo', 'mailerlite', 'klaviyo']
+  }),
+  t({
+    slug: 'brevo', name: 'Brevo', vendor: 'Brevo (ex-Sendinblue)', category: 'email-marketing', sub: 'email-platforms',
+    color: '#0B996E', website: 'https://www.brevo.com',
+    tagline: 'Email, SMS and WhatsApp marketing priced by emails sent, not contacts.',
+    description: 'Brevo (formerly Sendinblue) is an all-in-one marketing platform with email, SMS, WhatsApp, a CRM and transactional email. Pricing is based on sending volume, so large lists stay affordable.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$9/mo', priceValue: 9,
+    score: 8.7, scores: { ease: 8.6, features: 8.9, value: 9.3, support: 8.0 },
+    bestFor: 'Businesses with big lists who email less frequently.',
+    pros: ['Unlimited contacts on all plans', 'Email + SMS + WhatsApp in one place', 'Transactional email included'],
+    cons: ['Daily sending cap on free plan', 'Brevo logo on lower tiers', 'Templates less polished than Mailchimp'],
+    features: ['Email campaigns', 'Automation', 'SMS & WhatsApp', 'CRM', 'Transactional email', 'Landing pages'],
+    alternatives: ['mailchimp', 'mailerlite', 'getresponse'], editorsPick: true
+  }),
+  t({
+    slug: 'kit', name: 'Kit (ConvertKit)', vendor: 'Kit', category: 'email-marketing', sub: 'newsletters',
+    color: '#FB6970', website: 'https://kit.com',
+    tagline: 'Email marketing for creators — newsletters, automations and digital sales.',
+    description: 'Kit, formerly ConvertKit, is built for creators: bloggers, YouTubers, coaches and course sellers. Tag-based subscribers, visual automations and a creator network help grow and monetize an audience.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$29/mo', priceValue: 29,
+    score: 8.6, scores: { ease: 8.8, features: 8.5, value: 8.2, support: 8.6 },
+    bestFor: 'Creators selling digital products or paid newsletters.',
+    pros: ['Generous free plan for new creators', 'Simple, clean visual automations', 'Built-in commerce and recommendations'],
+    cons: ['Fewer design options for emails', 'Limited for e-commerce stores', 'Advanced reporting on higher plans'],
+    features: ['Visual automations', 'Tags & segments', 'Landing pages & forms', 'Digital products', 'Creator Network', 'Paid newsletters'],
+    alternatives: ['beehiiv', 'mailerlite', 'mailchimp'], trending: true
+  }),
+  t({
+    slug: 'activecampaign', name: 'ActiveCampaign', vendor: 'ActiveCampaign', category: 'email-marketing', sub: 'email-platforms',
+    color: '#356AE6', website: 'https://www.activecampaign.com',
+    tagline: 'Advanced marketing automation with CRM for growing businesses.',
+    description: 'ActiveCampaign is known for the depth of its automation builder: conditional logic, lead scoring, site tracking and a sales CRM. It is ideal when email is the engine of your sales funnel.',
+    pricingModel: 'Free Trial', freePlan: false, startingPrice: '$15/mo (annual)', priceValue: 15,
+    score: 8.8, scores: { ease: 7.9, features: 9.6, value: 8.3, support: 8.6 },
+    bestFor: 'B2B and online businesses running sophisticated funnels.',
+    pros: ['Best-in-class automation builder', 'Built-in CRM and lead scoring', 'Strong deliverability'],
+    cons: ['Learning curve for beginners', 'Prices rise with contacts', 'No free plan'],
+    features: ['Automation builder', 'CRM & deals', 'Lead scoring', 'Site & event tracking', 'Predictive sending', 'AI assistant'],
+    alternatives: ['getresponse', 'hubspot', 'brevo'], editorsPick: true
+  }),
+  t({
+    slug: 'getresponse', name: 'GetResponse', vendor: 'GetResponse', category: 'email-marketing', sub: 'email-platforms',
+    color: '#00BAFF', website: 'https://www.getresponse.com',
+    tagline: 'Email marketing with webinars, funnels and landing pages built in.',
+    description: 'GetResponse bundles email marketing with automation, landing pages, conversion funnels and even webinars. It is a strong all-rounder for online businesses and course creators.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$19/mo', priceValue: 19,
+    score: 8.4, scores: { ease: 8.4, features: 8.9, value: 8.2, support: 8.0 },
+    bestFor: 'Marketers who want email, funnels and webinars in one tool.',
+    pros: ['Webinars and funnels included', 'Good automation templates', 'AI email and campaign generator'],
+    cons: ['Interface feels dated in places', 'Webinars only on higher plans', 'Deliverability reports vary'],
+    features: ['Email & newsletters', 'Marketing automation', 'Landing pages', 'Conversion funnels', 'Webinars', 'AI generator'],
+    alternatives: ['activecampaign', 'brevo', 'mailchimp']
+  }),
+  t({
+    slug: 'mailerlite', name: 'MailerLite', vendor: 'MailerLite', category: 'email-marketing', sub: 'email-platforms',
+    color: '#09C269', website: 'https://www.mailerlite.com',
+    tagline: 'Simple, affordable email marketing with a beautiful editor.',
+    description: 'MailerLite offers a clean drag-and-drop editor, automations, landing pages and websites at a low price. It is one of the best-value email tools for small businesses and bloggers.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$10/mo', priceValue: 10,
+    score: 8.8, scores: { ease: 9.4, features: 8.4, value: 9.4, support: 8.4 },
+    bestFor: 'Small businesses and bloggers on a budget.',
+    pros: ['Very affordable', 'Clean, intuitive editor', 'Websites and landing pages included'],
+    cons: ['Strict account approval process', 'Fewer advanced automation features', 'Limited integrations vs. leaders'],
+    features: ['Drag-and-drop editor', 'Automations', 'Landing pages', 'Websites', 'Forms & pop-ups', 'Digital products'],
+    alternatives: ['brevo', 'kit', 'mailchimp'], trending: true
+  }),
+  t({
+    slug: 'klaviyo', name: 'Klaviyo', vendor: 'Klaviyo', category: 'email-marketing', sub: 'ecommerce-email',
+    color: '#232426', website: 'https://www.klaviyo.com',
+    tagline: 'Email and SMS marketing built for e-commerce revenue.',
+    description: 'Klaviyo deeply integrates with Shopify and other stores to use purchase and browsing data for segmentation, flows and predictive analytics. It is the go-to choice for D2C brands.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$20/mo', priceValue: 20,
+    score: 8.9, scores: { ease: 8.3, features: 9.5, value: 7.9, support: 8.3 },
+    bestFor: 'Shopify and D2C e-commerce brands.',
+    pros: ['Deep e-commerce data integration', 'Powerful pre-built revenue flows', 'Predictive analytics'],
+    cons: ['Expensive as profiles grow', 'Overkill for non-e-commerce', 'SMS billed separately'],
+    features: ['E-commerce flows', 'Email & SMS', 'Predictive analytics', 'Segmentation', 'Reviews', 'AI tools'],
+    alternatives: ['mailchimp', 'brevo', 'activecampaign']
+  }),
+  t({
+    slug: 'beehiiv', name: 'beehiiv', vendor: 'beehiiv', category: 'email-marketing', sub: 'newsletters',
+    color: '#FFD000', textColor: '#111827', website: 'https://www.beehiiv.com',
+    tagline: 'Newsletter platform built for growth and monetization.',
+    description: 'beehiiv is a newsletter platform from early Morning Brew team members. Referral programs, an ad network, paid subscriptions and a website builder help newsletters grow and earn.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$43/mo', priceValue: 43,
+    score: 8.5, scores: { ease: 9.0, features: 8.6, value: 8.0, support: 8.2 },
+    bestFor: 'Newsletter-first creators and media brands.',
+    pros: ['Growth tools like referral programs', 'Built-in ad network and paid subs', 'Generous free plan'],
+    cons: ['Limited automation vs. full ESPs', 'Not built for e-commerce', 'Key growth tools on paid plans'],
+    features: ['Newsletter editor', 'Referral program', 'Ad network', 'Paid subscriptions', 'Website builder', 'Analytics'],
+    alternatives: ['kit', 'mailerlite']
+  })
+];
