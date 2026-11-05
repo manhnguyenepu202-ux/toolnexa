@@ -118,7 +118,7 @@ ${noindex ? raw('<meta name="robots" content="noindex">') : ''}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/css/style.css?v=2">
+<link rel="stylesheet" href="/css/style.css?v=3">
 <script>try{var t=localStorage.getItem('tn-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 ${raw(ld.map((o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`).join('\n'))}
 ${site.gaId ? raw(`<script async src="https://www.googletagmanager.com/gtag/js?id=${esc(site.gaId)}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${esc(site.gaId)}');</script>`) : ''}

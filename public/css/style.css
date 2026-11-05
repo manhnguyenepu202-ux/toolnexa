@@ -441,7 +441,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--p
 .vs-side p { margin: 0; }
 .vs-mid { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--violet)); color: #fff; font-weight: 800; box-shadow: 0 0 0 6px var(--bg); }
 .narrow section { margin: 40px 0; }
-.table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card); }
+.table-wrap { position: relative; overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); background: var(--card); }
 .cmp-table { width: 100%; border-collapse: collapse; min-width: 560px; font-size: .94rem; }
 .cmp-table th, .cmp-table td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
 .cmp-table thead th { background: var(--bg-alt); font-size: 1rem; position: sticky; top: 0; }
