@@ -125,7 +125,8 @@ const server = http.createServer(async (req, res) => {
     if (pathname.startsWith('/api/')) return handleApi(req, res, pathname);
 
     if (pathname.startsWith('/go/')) {
-      const t = C.toolMap[pathname.slice(4)];
+      const slug = pathname.slice(4);
+      const t = C.toolMap[slug] || C.firstLookMap[slug];
       if (t) {
         res.writeHead(302, { Location: t.affiliateUrl || t.website, 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex, nofollow' });
         return res.end();

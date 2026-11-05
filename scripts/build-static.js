@@ -23,7 +23,7 @@ for (const [route, fn] of Object.entries(ROUTES)) {
   write(route === '/' ? 'index.html' : path.join(route, 'index.html'), fn());
   n++;
 }
-C.tools.forEach((t) => write(path.join('go', t.slug, 'index.html'), P.goPage(t)));
+[...C.tools, ...C.firstLooks].forEach((t) => write(path.join('go', t.slug, 'index.html'), P.goPage(t)));
 write('404.html', P.notFound());
 write('sitemap.xml', sitemap());
 write('robots.txt', robots());

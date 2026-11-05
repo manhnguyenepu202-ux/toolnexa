@@ -8,6 +8,7 @@ function inline(s) {
   out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   out = out.replace(/(^|[\s(])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>');
   out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (m, text, href) => {
+    if (href.startsWith('/go/')) return `<a href="${href}" target="_blank" rel="sponsored nofollow noopener">${text}</a>`;
     const external = /^https?:\/\//.test(href);
     return `<a href="${href}"${external ? ' target="_blank" rel="noopener"' : ''}>${text}</a>`;
   });

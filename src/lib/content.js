@@ -7,8 +7,10 @@ const categories = require('../data/categories');
 const tools = require('../data/tools');
 const comparisons = require('../data/comparisons');
 const bestof = require('../data/bestof');
+const firstLooks = require('../data/firstlooks');
 
 const toolMap = Object.fromEntries(tools.map((t) => [t.slug, t]));
+const firstLookMap = Object.fromEntries(firstLooks.map((t) => [t.slug, t]));
 const catMap = Object.fromEntries(categories.map((c) => [c.slug, c]));
 const subMap = {};
 categories.forEach((c) => c.subcategories.forEach((s) => { subMap[s.slug] = { ...s, parent: c.slug }; }));
@@ -92,7 +94,7 @@ const toolsIn = (catSlug) => tools.filter((t) => t.category === catSlug).sort((a
 const comparisonsFor = (slug) => comparisons.filter((c) => c.a === slug || c.b === slug);
 
 module.exports = {
-  categories, tools, comparisons, bestof, posts,
-  toolMap, catMap, subMap, compareMap, bestMap, postMap,
+  categories, tools, comparisons, bestof, posts, firstLooks,
+  toolMap, firstLookMap, catMap, subMap, compareMap, bestMap, postMap,
   toolsIn, comparisonsFor
 };
