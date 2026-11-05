@@ -5,11 +5,11 @@ updated: 2026-11-05
 evidence: research
 ---
 
-*Affiliate note: ToolKenzon may earn a commission through the Submagic link on this page. OpusClip is not an affiliate partner here, and we still think it's the better buy for many readers.*
+*Affiliate note: ToolKenzon may earn a commission through the Visit buttons for both tools on this page. It costs you nothing extra and it doesn't change our verdict.*
 
 ## How we evaluated this
 
-This is a research-based comparison, without first-hand test footage of our own. We read both pricing pages, Submagic's help centre and terms, and the Trustpilot profiles and lowest-rated reviews for each tool. Checked November 5, 2026.
+This is a research-based comparison, without first-hand test footage of our own. We read both pricing pages, both help centres, both sets of terms, and the Trustpilot profiles and lowest-rated reviews for each tool. Checked November 5, 2026.
 
 ## The one question that decides it
 
@@ -19,25 +19,27 @@ What are you starting with? If it's a finished short clip that needs to look goo
 
 **What they're built around.** Submagic starts from a clip you've already chosen and makes it look edited. OpusClip starts from a long video and picks the moments for you, with a virality score to rank them. Both now reach into each other's territory, but their pricing still shows where each one lives.
 
-**How they meter you.** Submagic charges per video: 3 credits to upload, 1 to 3 per AI feature. OpusClip is reported to charge by the minute of source video, at one credit per minute. A two-minute clip with lots of AI extras is cheap on OpusClip and costly on Submagic. A one-hour episode is the reverse, if Magic Clips can take it.
+**How they meter you.** Submagic charges per video: 3 credits to upload, 1 to 3 per AI feature. OpusClip charges by the minute of source video, at one credit per minute. A two-minute clip with lots of AI extras is cheap on OpusClip and costly on Submagic. A one-hour episode is the reverse, if Magic Clips can take it.
 
-**Length limits.** Submagic caps each video at 2, 5 or 30 minutes by plan. OpusClip's pricing page lists file-size limits of 10GB on Free and 30GB on Pro rather than short duration caps. For podcasters, this alone can settle it.
+**Length limits.** Submagic caps each video at 2, 5 or 30 minutes by plan. OpusClip's help centre says it supports videos up to 10 hours. For podcasters, this alone can settle it.
 
-**Free access.** OpusClip has a free plan with about 60 credits a month, a watermark, and exports that expire after three days. Submagic offers a trial of three short videos.
+**Free access.** OpusClip has a free plan with 60 credits a month, a watermark, and exports that expire after three days. Submagic offers a trial of three short videos.
 
 **Pro editors.** OpusClip Pro exports to Premiere Pro and DaVinci Resolve, which suits people who finish work elsewhere. We didn't find that on Submagic's plans.
 
 ## Pricing head-to-head
 
-Both vendors change prices often, and OpusClip's page doesn't define a credit, so its allowances below come from third-party pricing guides.
+Both vendors change prices often. OpusClip's allowances below come from its help centre. Its yearly dollar price comes from third-party pricing guides, and it matches the 50% yearly discount the help centre describes.
 
 | | Submagic | OpusClip |
 |---|---|---|
 | Entry paid plan | $19/mo, or $12/mo billed yearly | $15/mo |
-| Mid plan | $39/mo, or $23/mo billed yearly | $29/mo, reported $14.50/mo billed yearly |
-| Allowance | 45 and 120 credits | Reported 150 and 300 credits |
+| Mid plan | $39/mo, or $23/mo billed yearly | $29/mo, or about $14.50/mo billed yearly |
+| Allowance | 45 and 120 credits | 150 and 300 credits |
+| Unused credits | Not confirmed | Expire after 60 days on monthly, 12 months on yearly |
+| Failed jobs | Not confirmed | Credits return automatically |
 | Free plan | Trial only | Yes, with watermark |
-| Refunds | Non-refundable, per terms | Not confirmed |
+| Refunds | Non-refundable, per terms | Non-refundable, per terms |
 
 Here's how that plays out in practice:
 
@@ -62,13 +64,13 @@ The complaints look oddly similar, though:
 - **Submagic:** in 29 low-star reviews, bugs and export problems (8), billing and renewals (7) and refusals of refunds (7) led.
 - **OpusClip:** in the first 20 one-star reviews, billing (7), bugs (5) and support (5) led, including charges after cancelling.
 
-So neither tool gets a pass on billing. Cancel early with either one, and keep the confirmation. OpusClip does reply to every negative review on Trustpilot, often within days, against 66% for Submagic, although many replies are a template.
+So neither tool gets a pass on billing, and neither refunds fees under its terms. Cancel early with either one, and keep the confirmation. OpusClip does reply to every negative review on Trustpilot, often within days, against 66% for Submagic, although many replies are a template.
 
-Neither set of reviews we read leaned on caption errors, which suggests that captions are mostly a solved problem in this category.
+Neither set of reviews we read leaned on caption errors, which suggests that captions are mostly good enough in this category. Clip selection is OpusClip's real variable: in [ScaleReach's 30-day test](https://www.scalereach.ai/blog/opus-clip-review), 47 of 76 clips were ready to publish as they came. ScaleReach sells a competing tool, so read that with care.
 
 ## Switching
 
-There's little to migrate. Both tools work on individual videos, so moving mainly means rebuilding your caption templates and brand settings. Save your finished videos first: Submagic's terms say data is destroyed 60 days after your plan ends. Check your renewal date before you switch, because any unused time on a Submagic plan won't come back.
+There's little to migrate. Both tools work on individual videos, so moving mainly means rebuilding your caption templates and brand settings. Save your finished videos first: Submagic's terms say data is destroyed 60 days after your plan ends, and OpusClip's help centre warns that projects go out of reach three days after you cancel. Check your renewal date before you switch, because any unused time on a Submagic plan won't come back.
 
 ## Verdict
 
@@ -104,7 +106,11 @@ Pricing checked November 2026.
 - [Submagic terms of use](https://www.submagic.co/terms-of-use)
 - [OpusClip pricing](https://www.opus.pro/pricing)
 - [OpusClip homepage](https://www.opus.pro/)
-- [Creatify guide to OpusClip pricing (a competitor)](https://creatify.ai/blog/opusclip-pricing-plans-and-what-you-ll-actually-pay-in-2026)
+- [OpusClip: how credits are consumed](https://help.opus.pro/docs/article/how-are-credits-consumed)
+- [OpusClip: why projects fail](https://help.opus.pro/docs/article/why-did-my-project-fail)
+- [OpusClip: video length](https://help.opus.pro/docs/article/video-length)
+- [OpusClip terms of service](https://www.opus.pro/terms-of-service)
+- [ScaleReach 30-day test (a competitor)](https://www.scalereach.ai/blog/opus-clip-review)
 - [Quso guide to OpusClip pricing (a competitor)](https://quso.ai/blog/opus-clip-pricing)
 - [Trustpilot: Submagic](https://www.trustpilot.com/review/submagic.co)
 - [Trustpilot: OpusClip](https://www.trustpilot.com/review/opus.pro)

@@ -186,7 +186,7 @@ module.exports = [
     pros: ['Built for long source videos', 'Free plan to try it on real content', 'Pro exports to Premiere Pro and DaVinci Resolve'],
     cons: ['Free plan adds a watermark and exports expire quickly', 'Reviews include charges after cancelling', 'Bugs and uploads failing are recurring complaints'],
     features: ['AI clipping', 'Virality score', 'Animated captions', 'Social scheduling', 'AI B-roll', 'Premiere and DaVinci export'],
-    alternatives: ['submagic']
+    alternatives: ['submagic'], affiliateUrl: 'https://www.opus.pro/?via=harryi7'
   }),
   t({
     slug: 'surfer-seo', name: 'Surfer', vendor: 'Surfer', category: 'ai-tools', sub: 'ai-seo',
