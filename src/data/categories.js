@@ -14,6 +14,7 @@ module.exports = [
       { slug: 'ai-video', name: 'AI Video' },
       { slug: 'ai-voice', name: 'AI Voice & Audio' },
       { slug: 'ai-3d', name: 'AI 3D' },
+      { slug: 'ai-app-builders', name: 'AI App Builders' },
       { slug: 'ai-seo', name: 'AI SEO' }
     ]
   },
@@ -30,6 +31,7 @@ module.exports = [
       { slug: 'automation', name: 'Automation' },
       { slug: 'design', name: 'Design' },
       { slug: 'seo-marketing', name: 'SEO & Marketing' },
+      { slug: 'social-media', name: 'Social Media' },
       { slug: 'website-builder', name: 'Website Builders' }
     ]
   },
@@ -45,6 +47,28 @@ module.exports = [
       { slug: 'newsletters', name: 'Newsletter Platforms' },
       { slug: 'ecommerce-email', name: 'E-commerce Email' },
       { slug: 'email-verification', name: 'Email Verification' }
+    ]
+  },
+  {
+    slug: 'online-learning',
+    name: 'Online Learning',
+    short: 'Learning',
+    icon: 'book',
+    color: '#0D9488',
+    description: 'Online course platforms compared on quality, real cost and what happens after you pay.',
+    subcategories: [
+      { slug: 'creative-courses', name: 'Creative Courses' }
+    ]
+  },
+  {
+    slug: 'utilities',
+    name: 'PC Utilities',
+    short: 'Utilities',
+    icon: 'shield',
+    color: '#2563EB',
+    description: 'Desktop utilities compared on what they really rescue, what they cost and how refunds work.',
+    subcategories: [
+      { slug: 'data-recovery', name: 'Data Recovery' }
     ]
   }
 ];

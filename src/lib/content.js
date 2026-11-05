@@ -9,6 +9,10 @@ const comparisons = require('../data/comparisons');
 const bestof = require('../data/bestof');
 const firstLooks = require('../data/firstlooks');
 
+// Tools with a file in public/img/logos show it; the rest fall back to initials.
+const logoDir = path.join(__dirname, '..', '..', 'public', 'img', 'logos');
+tools.forEach((t) => { t.logo = fs.existsSync(path.join(logoDir, `${t.slug}.png`)); });
+
 const toolMap = Object.fromEntries(tools.map((t) => [t.slug, t]));
 const firstLookMap = Object.fromEntries(firstLooks.map((t) => [t.slug, t]));
 const catMap = Object.fromEntries(categories.map((c) => [c.slug, c]));

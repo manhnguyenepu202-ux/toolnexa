@@ -58,6 +58,27 @@ module.exports = [
     pickB: 'You mainly 3D print, or you value a longer review history.'
   },
   {
+    a: 'vista-social', b: 'buffer',
+    summary: 'Flat plans for agencies vs simple per-channel scheduling.',
+    verdict: 'Buffer is the better buy for solo operators and small teams under about 10 channels. Vista Social offers more for agencies with 15 or more profiles, though buyers should note the Trustpilot warning on its profile.',
+    pickA: 'You manage many client profiles and need an inbox, reviews and reports.',
+    pickB: 'You run a few channels and mainly need simple scheduling.'
+  },
+  {
+    a: 'base44', b: 'lovable',
+    summary: 'All-in-one simplicity vs better reviews and a clearer exit.',
+    verdict: 'Lovable is the safer pick for most real projects, with stronger reviews and Git sync on every plan. Base44 suits non-coders who want everything bundled for a quick test.',
+    pickA: 'You want the least setup and only need a simple app.',
+    pickB: 'You may hand the project to developers, or care about a clear exit.'
+  },
+  {
+    a: 'easeus-data-recovery', b: 'disk-drill',
+    summary: 'A bigger free allowance vs a possibly cheaper tool to keep.',
+    verdict: 'EaseUS is the better first move for a one-off rescue, with more free recovery and clearer plans. Disk Drill suits people who want to keep a tool, once its licence term is confirmed.',
+    pickA: 'You need one rescue and want to see the most before paying.',
+    pickB: 'You want a tool to keep, and checkout confirms a good lifetime price.'
+  },
+  {
     a: 'mailchimp', b: 'brevo',
     summary: 'The best-known email tool vs the value-priced all-in-one.',
     verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',

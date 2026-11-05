@@ -5,6 +5,7 @@ const { catMap, subMap, toolMap } = require('../lib/content');
 const initials = (name) => name.replace(/\(.*\)/, '').replace(/\.com$/, '').split(/[\s.]+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase();
 
 function logoTile(t, size = 'md') {
+  if (t.logo) return html`<span class="tlogo tlogo-${size} tlogo-img" aria-hidden="true"><img src="/img/logos/${t.slug}.png" alt="" width="88" height="88" loading="lazy" decoding="async"></span>`;
   return html`<span class="tlogo tlogo-${size}" style="--brand:${t.color};--brand-fg:${t.textColor || '#fff'}" aria-hidden="true">${initials(t.name)}</span>`;
 }
 
