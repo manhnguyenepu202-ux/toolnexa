@@ -213,7 +213,7 @@ module.exports = [
     pros: ['Agent edits and generates from instructions', 'Timeline edits and exports use no credits', 'Seven-day refund window on unused plans'],
     cons: ['Many reviews report credits gone without a usable video', 'Agent generates without asking by default', 'Plan and extra credits both expire', 'Starter has few credits and no Seedance 2.5'],
     features: ['AI editing agent', 'Multitrack timeline', 'Multi-model generation', 'Live collaboration', 'Bring your own agents', 'Stock media'],
-    alternatives: ['videogen', 'synthesia', 'runway'], affiliateUrl: 'https://invideo.sjv.io/LKA2dY'
+    alternatives: ['fliki', 'videogen', 'synthesia', 'runway'], affiliateUrl: 'https://invideo.sjv.io/LKA2dY'
   }),
   t({
     slug: 'tripo', name: 'Tripo', vendor: 'Holymolly Ltd', category: 'ai-tools', sub: 'ai-3d',
@@ -292,6 +292,19 @@ module.exports = [
     cons: ['Credits burn quickly on larger builds', 'Fees are non-refundable', 'Bugs can cost credits to fix'],
     features: ['Prompt to app', 'Git sync', 'Code download', 'Custom domains', 'Team workspaces'],
     alternatives: ['base44']
+  }),
+  t({
+    slug: 'fliki', name: 'Fliki', vendor: 'Nine Thirty Five LLC', category: 'ai-tools', sub: 'ai-video',
+    color: '#6D28D9', website: 'https://fliki.ai',
+    tagline: 'Turns scripts and blogs into narrated videos in 80+ languages.',
+    description: 'Fliki builds narrated videos from text, with a large AI voice library and stock media that costs no credits. It suits faceless content, but avatars and AI clips use credits quickly, credits do not roll over, and refunds are unlikely.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$21/mo (annual)', priceValue: 21,
+    score: 7.8, scores: { ease: 8.6, features: 8.2, value: 7.6, support: 6.2 },
+    bestFor: 'Creators making faceless, narrated stock videos, often in several languages.',
+    pros: ['Large voice library across 80+ languages', 'Stock media uses no credits', 'Published credit rates', 'Voice cloning on Standard'],
+    cons: ['Credits do not roll over', 'Avatars and AI clips burn credits fast', 'Support is the top recent complaint', 'Refunds are unlikely'],
+    features: ['Script to video', 'Blog and PPT to video', 'AI voices', 'Voice cloning', 'AI avatars', 'Translation', 'YouTube publishing'],
+    alternatives: ['invideo', 'videogen', 'synthesia'], affiliateUrl: 'https://fliki.ai/?via=harry-johnson'
   }),
   t({
     slug: 'surfer-seo', name: 'Surfer', vendor: 'Surfer', category: 'ai-tools', sub: 'ai-seo',

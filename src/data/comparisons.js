@@ -86,6 +86,13 @@ module.exports = [
     pickB: 'You want to sample many topics for one yearly price.'
   },
   {
+    a: 'fliki', b: 'invideo',
+    summary: 'Predictable narrated video vs agent-driven generated footage.',
+    verdict: 'Fliki is the better tool for narrated stock videos, and easier to budget. InVideo does more with generated footage and timeline editing, if you keep a close eye on credits.',
+    pickA: 'You publish narrated videos and need many voices or languages.',
+    pickB: 'You want generated footage and an AI agent that edits for you.'
+  },
+  {
     a: 'mailchimp', b: 'brevo',
     summary: 'The best-known email tool vs the value-priced all-in-one.',
     verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',
