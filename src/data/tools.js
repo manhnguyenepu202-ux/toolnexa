@@ -163,6 +163,32 @@ module.exports = [
     alternatives: ['synthesia', 'midjourney']
   }),
   t({
+    slug: 'submagic', name: 'Submagic', vendor: 'Submagic (Turbo Studio)', category: 'ai-tools', sub: 'ai-video',
+    color: '#6D28D9', website: 'https://www.submagic.co',
+    tagline: 'AI captions and quick edits that make short talking-head videos look professionally cut.',
+    description: 'Submagic is an AI editor for short videos. It adds animated captions, removes silences and lets you cut by editing the transcript. It is excellent for short clips, but credits, per-video length caps and non-refundable plans need a close look before you buy.',
+    pricingModel: 'Free Trial', freePlan: false, startingPrice: '$19/mo', priceValue: 19,
+    score: 8.1, scores: { ease: 9.1, features: 8.4, value: 7.4, support: 7.3 },
+    bestFor: 'Creators and small teams polishing short videos filmed to camera.',
+    pros: ['Very fast from upload to finished captioned clip', 'No watermark on any paid plan', 'Edit video by editing the transcript'],
+    cons: ['Length caps of 2, 5 or 30 minutes per video by plan', 'Extra AI features eat credits quickly', 'Fees are non-refundable, and billing complaints recur', 'Magic Clips pricing is unclear across official pages'],
+    features: ['AI captions', 'Transcript editing', 'Silence removal', 'AI B-roll', 'Magic Clips', 'Caption translation', 'Social publishing', 'API'],
+    alternatives: ['opusclip'], affiliateUrl: 'https://submagic.co/?via=harry-e44919'
+  }),
+  t({
+    slug: 'opusclip', name: 'OpusClip', vendor: 'OpusClip', category: 'ai-tools', sub: 'ai-video',
+    color: '#111827', website: 'https://www.opus.pro',
+    tagline: 'Turns long videos into short clips and ranks them with a virality score.',
+    description: 'OpusClip takes long recordings such as podcasts and webinars, picks the moments worth sharing and turns them into short clips with captions. It has a free plan and low entry prices, though billing and bug complaints show up in its reviews.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$15/mo', priceValue: 15,
+    score: 8.2, scores: { ease: 8.6, features: 8.7, value: 8.4, support: 7.2 },
+    bestFor: 'Podcasters and video teams repurposing long recordings into many clips.',
+    pros: ['Built for long source videos', 'Free plan to try it on real content', 'Pro exports to Premiere Pro and DaVinci Resolve'],
+    cons: ['Free plan adds a watermark and exports expire quickly', 'Reviews include charges after cancelling', 'Bugs and uploads failing are recurring complaints'],
+    features: ['AI clipping', 'Virality score', 'Animated captions', 'Social scheduling', 'AI B-roll', 'Premiere and DaVinci export'],
+    alternatives: ['submagic']
+  }),
+  t({
     slug: 'surfer-seo', name: 'Surfer', vendor: 'Surfer', category: 'ai-tools', sub: 'ai-seo',
     color: '#FF5C35', website: 'https://surferseo.com',
     tagline: 'Content optimization and AI writing for ranking on Google.',

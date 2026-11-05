@@ -30,6 +30,13 @@ module.exports = [
     pickB: 'You want to automate prospecting and repetitive GTM writing.'
   },
   {
+    a: 'submagic', b: 'opusclip',
+    summary: 'A finisher for short clips vs a clipper for long recordings.',
+    verdict: 'OpusClip is the better fit if you start from long recordings, and it costs less on monthly billing. Submagic is the sharper finisher for short clips filmed to camera, with a stronger reputation among users.',
+    pickA: 'You film short videos to camera and want fast, polished captions.',
+    pickB: 'You start from podcasts, webinars or other long recordings.'
+  },
+  {
     a: 'mailchimp', b: 'brevo',
     summary: 'The best-known email tool vs the value-priced all-in-one.',
     verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',
