@@ -515,7 +515,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--p
 .prose code { padding: 2px 6px; border-radius: 6px; background: var(--bg-alt); border: 1px solid var(--border); font-size: .88em; }
 .prose blockquote { margin: 1.5em 0; padding: 4px 20px; border-left: 4px solid var(--primary); background: var(--primary-50); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
 .prose a { font-weight: 600; }
-.rv-main, .article-block, .article-block .prose { min-width: 0; }
+.rv-main, .article-block, .article-block .prose, .post-layout .prose { min-width: 0; }
 .prose .table-wrap { margin: 1.5em 0; }
 .article-toc { margin: 16px 0 24px; padding: 16px 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); }
 .article-toc ol { margin: 8px 0 0; padding-left: 1.3em; columns: 2; column-gap: 32px; font-size: .92rem; }

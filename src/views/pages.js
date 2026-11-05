@@ -531,7 +531,7 @@ function best(b) {
 </div>
 ${newsletter('best')}`;
   return page({
-    title: `${b.title} (${site.year}) — Tested & Ranked`,
+    title: b.seoTitle || `${b.title} (${site.year}) — Tested & Ranked`,
     description: `${b.intro.split('. ')[0]}. Top picks: ${picks.slice(0, 3).map((p) => p.t.name).join(', ')}.`,
     path: `/best/${b.slug}`, body, ogType: 'article',
     jsonLd: [breadcrumbLd(site, crumbs), { '@context': 'https://schema.org', '@type': 'ItemList', name: b.title, itemListElement: picks.map(({ t }, i) => ({ '@type': 'ListItem', position: i + 1, url: `${site.url}/tools/${t.slug}`, name: t.name })) }]

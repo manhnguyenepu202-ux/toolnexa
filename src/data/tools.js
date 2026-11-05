@@ -450,7 +450,7 @@ module.exports = [
     pros: ['Gives a verdict on almost every catch-all address', 'Low cost per check, with credits that do not expire', 'Free single checks for testing'],
     cons: ['Weaker on consumer domains like Yahoo in a rival benchmark', 'Verification only, no warm-up or monitoring', 'Terms and privacy notice date from 2022', 'Purchases are non-refundable, and the guarantee is narrow'],
     features: ['Catch-all verification', 'Bulk verification', 'Free single checks', 'API', 'Deliverability score', 'CRM Sync', 'Clay and n8n integrations'],
-    alternatives: ['zerobounce'], affiliateUrl: 'https://bounceban.com/?via=harry'
+    alternatives: ['zerobounce', 'allegrow', 'millionverifier'], affiliateUrl: 'https://bounceban.com/?via=harry'
   }),
   t({
     slug: 'zerobounce', name: 'ZeroBounce', vendor: 'ZeroBounce', category: 'email-marketing', sub: 'email-verification',
@@ -463,6 +463,32 @@ module.exports = [
     pros: ['Broad deliverability toolkit in one account', 'Unknown results are free', 'Long public track record of user reviews'],
     cons: ['Costs far more per check than specialist verifiers', 'Pay-as-you-go pricing is hard to compare', 'Billing and credit surprises lead its one-star reviews'],
     features: ['Email validation', 'Catch-all resolution', 'Activity data', 'Email finder', 'Warm-up', 'Inbox placement tests', 'Blacklist and DMARC monitoring'],
-    alternatives: ['bounceban']
+    alternatives: ['bounceban', 'allegrow', 'millionverifier']
+  }),
+  t({
+    slug: 'allegrow', name: 'Allegrow', vendor: 'Allegrow (Direct Software Limited)', category: 'email-marketing', sub: 'email-verification',
+    color: '#0F766E', website: 'https://www.allegrow.co',
+    tagline: 'B2B email verification with primary email detection and domain health tracking.',
+    description: 'Allegrow verifies B2B email lists, including catch-all addresses, and adds primary email detection and domain health tracking. It suits larger outbound teams, but the jump from Starter to its unlimited plan is steep.',
+    pricingModel: 'Free Trial', freePlan: false, startingPrice: '$99/mo', priceValue: 99,
+    score: 8.1, scores: { ease: 8.2, features: 8.9, value: 7.1, support: 8.4 },
+    bestFor: 'Larger B2B sales teams that need integrations and security reports.',
+    pros: ['Strong on catch-all addresses', 'Primary email detection', 'SOC 2 reports on higher plans'],
+    cons: ['Big price gap between Starter and Scale Plus', 'No native integrations on Starter', 'Top benchmark result is from its own test'],
+    features: ['Catch-all verification', 'Primary email detection', 'Domain health tracking', 'HubSpot, Outreach and Salesloft integrations', 'SPF, DKIM and DMARC monitoring', 'API'],
+    alternatives: ['bounceban', 'zerobounce']
+  }),
+  t({
+    slug: 'millionverifier', name: 'MillionVerifier', vendor: 'MillionVerifier', category: 'email-marketing', sub: 'email-verification',
+    color: '#16A34A', website: 'https://www.millionverifier.com',
+    tagline: 'Very low-cost bulk email verification with credits that never expire.',
+    description: 'MillionVerifier is a budget bulk verifier for cleaning large lists. The price is hard to beat, but user complaints centre on accuracy, and it performed poorly on catch-all domains in a rival benchmark.',
+    pricingModel: 'Paid', freePlan: false, startingPrice: '$89 per 50k credits', priceValue: 89,
+    score: 8.0, scores: { ease: 8.6, features: 7.2, value: 9.2, support: 7.2 },
+    bestFor: 'Cleaning large, simple lists on a tight budget.',
+    pros: ['Lowest price per million of the tools we compared', 'Credits never expire', 'Promises refunds on risky results'],
+    cons: ['Accuracy is the top complaint in one-star reviews', 'Passed many fake catch-all addresses in a rival test', 'Support complaints recur'],
+    features: ['Bulk verification', 'Single email checker', 'API', 'Risky result refunds'],
+    alternatives: ['bounceban', 'zerobounce']
   })
 ];

@@ -117,9 +117,9 @@ Overall: 8.3/10.
 
 **ZeroBounce** is the established all-rounder, with far more deliverability tools. Pick ZeroBounce if your list mixes consumer and business addresses, or you want everything in one place. See our [BounceBan vs ZeroBounce comparison](/compare/bounceban-vs-zerobounce).
 
-**Allegrow** topped its own test and pitches itself at larger B2B teams, including primary email detection and warm-up. Pick Allegrow if you're scaling outbound and need SOC 2. Check that claim directly.
+**Allegrow** topped its own test and pitches itself at larger B2B teams, with primary email detection, domain health tracking and SOC 2 reports on its top plan. Pick Allegrow if you're scaling outbound and need that paperwork.
 
-**NeverBounce and MillionVerifier** suit plain list cleaning when catch-alls don't matter much. Pick one of these if you only want basic hygiene at a low price. Neither performed well on catch-alls in Allegrow's test.
+**MillionVerifier** suits plain list cleaning when catch-alls don't matter much. Pick it if you only want basic hygiene at a low price, but it did poorly on catch-alls in Allegrow's test. See our [best email verification tools guide](/blog/best-email-verification-tools) for the wider field.
 
 ## Your first hour
 

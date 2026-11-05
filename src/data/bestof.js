@@ -48,5 +48,14 @@ module.exports = [
     intro: 'Automate repetitive work between your apps without writing code. These are the platforms we trust.',
     picks: [['zapier', 'Easiest and most integrations'], ['make', 'Best for complex workflows & value']],
     howWeChose: ['Number and quality of integrations', 'Logic: branching, loops, error handling', 'AI capabilities', 'Cost per task/operation']
+  },
+  {
+    slug: 'email-verification-tools',
+    title: 'Best Email Verification Tools',
+    seoTitle: 'Best Email Verification Tools (2026): Compared & Ranked',
+    category: 'email-marketing',
+    intro: 'We compared the leading email verifiers on catch-all handling, real cost, user complaints and paperwork. Every benchmark we found was run by a vendor, so test on your own list before you commit.',
+    picks: [['zerobounce', 'Best overall'], ['bounceban', 'Best for catch-all lists on a budget'], ['allegrow', 'Best for scaled B2B outbound'], ['millionverifier', 'Cheapest bulk cleaning']],
+    howWeChose: ['Handling of catch-all and gateway-protected addresses', 'Real cost at realistic volumes, including credit expiry', 'Recurring user complaints and how recent they are', 'Terms, privacy notices and security reports']
   }
 ];
