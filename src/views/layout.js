@@ -102,6 +102,7 @@ function page({ title, description, path = '/', body, jsonLd = [], ogType = 'web
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="impact-site-verification" value="9166c2b2-73fd-4324-939d-df23baf80a1e">
 <title>${fullTitle}</title>
 <meta name="description" content="${desc}">
 <link rel="canonical" href="${canonical}">
