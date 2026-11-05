@@ -96,7 +96,7 @@ Overall: 7.5/10.
 
 ## Domestika vs rivals
 
-**Skillshare** is a flat subscription with a large library, reported at about $168 a year. Its Trustpilot score is 4.0, with 30% one-star. Pick Skillshare if you want to sample lots of classes rather than own a few.
+**Skillshare** is a flat subscription with a large library, reported at about $168 a year. Its Trustpilot score is 4.0, with 30% one-star. Pick Skillshare if you want to sample lots of classes rather than own a few. See our [Domestika vs Skillshare comparison](/compare/domestika-vs-skillshare).
 
 **Udemy** sells single courses across a much broader range, especially technical skills. Pick Udemy if you're learning code or business skills.
 

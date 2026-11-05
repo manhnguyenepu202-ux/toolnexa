@@ -79,6 +79,13 @@ module.exports = [
     pickB: 'You want a tool to keep, and checkout confirms a good lifetime price.'
   },
   {
+    a: 'domestika', b: 'skillshare',
+    summary: 'Courses you buy and keep vs a big library you rent.',
+    verdict: 'Domestika single courses suit focused learners, with low sale prices and no ongoing cost. Skillshare is the better subscription for variety, and it is cheaper than Domestika Plus after year one.',
+    pickA: 'You want one specific skill and a course you keep.',
+    pickB: 'You want to sample many topics for one yearly price.'
+  },
+  {
     a: 'mailchimp', b: 'brevo',
     summary: 'The best-known email tool vs the value-priced all-in-one.',
     verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',
