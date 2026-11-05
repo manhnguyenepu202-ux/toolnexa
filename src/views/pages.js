@@ -654,27 +654,45 @@ const privacy = () => simple({
   path: '/privacy', title: 'Privacy Policy', h1: 'Privacy Policy',
   description: 'How ToolKenzon collects and uses information.',
   content: `
-<p><em>Last updated: ${formatDate(new Date().toISOString().slice(0, 10))}</em></p>
-<p>This policy explains what information ToolKenzon.com ("we") collects and how we use it. <strong>Please review this template with a qualified advisor before publishing.</strong></p>
+<p><em>Last updated: November 5, 2026</em></p>
+<p>This policy explains what information ToolKenzon.com ("we") collects, why we collect it and the choices you have. Questions go to <a href="mailto:${site.email}">${site.email}</a>.</p>
 <h2 id="collect">Information we collect</h2>
 <ul>
-<li><strong>Newsletter and contact forms:</strong> the email address and message you submit.</li>
-<li><strong>Analytics:</strong> if enabled, anonymised usage data such as pages visited, collected via cookies.</li>
-<li><strong>Affiliate links:</strong> partners may set cookies to attribute purchases made after clicking our links.</li>
+<li><strong>Newsletter form:</strong> your email address.</li>
+<li><strong>Contact form:</strong> your name, email address, the topic you choose and your message.</li>
+<li><strong>Technical logs:</strong> our hosting provider may record standard server data such as IP address, browser type and pages requested, to run and secure the site.</li>
+<li><strong>Your device:</strong> we save your light or dark theme choice in your browser's local storage. It stays on your device.</li>
 </ul>
+<h2 id="cookies">Cookies and analytics</h2>
+<p>ToolKenzon does not set its own advertising cookies, and we do not currently run analytics. If we add analytics such as Google Analytics, we will update this page first.</p>
+<h2 id="affiliate">Affiliate links</h2>
+<p>Some links go through <code>/go/</code> pages and on to a vendor or affiliate network. After you click, those companies may set cookies or use similar technology to attribute a purchase to us. Their own privacy policies apply. We do not receive your payment details.</p>
 <h2 id="use">How we use it</h2>
-<p>To send the newsletter you requested, reply to your messages and improve our content. We do not sell your personal information.</p>
-<h2 id="rights">Your choices</h2>
-<p>You can unsubscribe from emails at any time and request deletion of your data by contacting <a href="mailto:${site.email}">${site.email}</a>.</p>`
+<p>We use your information to send the newsletter you asked for, reply to your messages, keep the site running and improve our content. Where privacy law requires a legal basis, we rely on your consent for the newsletter and on our legitimate interests for replying to messages and securing the site.</p>
+<h2 id="share">Who we share it with</h2>
+<p>We do not sell your personal information. We share it only with service providers that help us run the site, such as our hosting provider and any email service we use, and when the law requires it. These providers may process data outside your country.</p>
+<h2 id="keep">How long we keep it</h2>
+<p>We keep newsletter details until you unsubscribe, and messages for as long as we need them to deal with your request. You can ask us to delete your data sooner.</p>
+<h2 id="rights">Your choices and rights</h2>
+<p>You can unsubscribe from emails at any time. Depending on where you live, you may also have the right to access, correct, delete or restrict the use of your data, to object to its use, and to complain to your local data protection authority. To make a request, email <a href="mailto:${site.email}">${site.email}</a>.</p>
+<h2 id="children">Children</h2>
+<p>ToolKenzon is written for business users and is not directed at children under 16. We do not knowingly collect their data.</p>
+<h2 id="changes">Changes</h2>
+<p>We will update this page when our practices change, and revise the date at the top.</p>`
 });
 
 const terms = () => simple({
   path: '/terms', title: 'Terms of Use', h1: 'Terms of Use',
   description: 'Terms for using ToolKenzon.com.',
   content: `
-<p>By using ToolKenzon.com you agree to these terms. <strong>Please review this template with a qualified advisor before publishing.</strong></p>
+<p><em>Last updated: November 5, 2026</em></p>
+<p>By using ToolKenzon.com you agree to these terms.</p>
 <h2 id="info">Information only</h2>
 <p>Our reviews and comparisons reflect our editorial opinion at the time of writing. Features and prices change; always confirm details on the vendor's website before buying.</p>
+<h2 id="affiliate">Affiliate links</h2>
+<p>Some links are affiliate links, and we may earn a commission if you buy through them. See our <a href="/affiliate-disclosure">affiliate disclosure</a>.</p>
+<h2 id="third-party">Other websites</h2>
+<p>We link to websites we do not control. Purchases you make there are between you and that vendor, under its own terms.</p>
 <h2 id="trademarks">Trademarks</h2>
 <p>Product names and trademarks belong to their respective owners. Their use here is for identification only and does not imply endorsement.</p>
 <h2 id="liability">Liability</h2>
