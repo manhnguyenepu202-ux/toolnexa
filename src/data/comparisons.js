@@ -44,6 +44,13 @@ module.exports = [
     pickB: 'Your list includes many consumer addresses, or you want everything in one account.'
   },
   {
+    a: 'videogen', b: 'invideo',
+    summary: 'Two credit-based AI video tools with very different complaints.',
+    verdict: 'VideoGen looks like the better deal at entry level, especially for slide and script-based explainers. InVideo offers a seven-day refund window if credits are unused. Start monthly with either.',
+    pickA: 'You want more footage per dollar and start from scripts or slides.',
+    pickB: 'You value a short refund window or want an agent to build the video.'
+  },
+  {
     a: 'mailchimp', b: 'brevo',
     summary: 'The best-known email tool vs the value-priced all-in-one.',
     verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',

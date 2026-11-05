@@ -148,7 +148,7 @@ module.exports = [
     pros: ['Fast script-to-video workflow', 'Large avatar and language library', 'Templates for training content'],
     cons: ['Avatars can still feel stiff', 'Video minutes are limited per plan', 'Custom avatars cost extra'],
     features: ['AI avatars', 'Multilingual voices', 'Templates', 'Screen recording', 'Translation'],
-    alternatives: ['runway', 'elevenlabs']
+    alternatives: ['runway', 'elevenlabs', 'videogen']
   }),
   t({
     slug: 'runway', name: 'Runway', vendor: 'Runway', category: 'ai-tools', sub: 'ai-video',
@@ -188,6 +188,32 @@ module.exports = [
     cons: ['Free plan adds a watermark and exports expire quickly', 'Reviews include charges after cancelling', 'Bugs and uploads failing are recurring complaints'],
     features: ['AI clipping', 'Virality score', 'Animated captions', 'Social scheduling', 'AI B-roll', 'Premiere and DaVinci export'],
     alternatives: ['submagic'], affiliateUrl: 'https://www.opus.pro/?via=harryi7'
+  }),
+  t({
+    slug: 'videogen', name: 'VideoGen', vendor: 'VideoGen, Inc', category: 'ai-tools', sub: 'ai-video',
+    color: '#2563EB', website: 'https://videogen.io',
+    tagline: 'Turns scripts, slides and voiceovers into AI videos using one credit balance.',
+    description: 'VideoGen turns scripts, voiceovers and slides into finished videos, with avatars, an editor and access to many AI models. It is capable and fair for still-image explainers, but credits burn fast at high quality, and recent reviews raise serious billing and support concerns.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$19/user/mo (annual)', priceValue: 19,
+    score: 7.5, scores: { ease: 8.4, features: 8.6, value: 7.2, support: 5.8 },
+    bestFor: 'Marketers and creators making narrated explainers, on monthly billing.',
+    pros: ['Starts from scripts, slides, voiceovers or storyboards', 'Published per-second credit rate card', 'Commercial use on all plans'],
+    cons: ['Billing and cancellation complaints in recent reviews', 'Credits burn fast at High and Max quality', 'Purchases are non-refundable', 'Video export requires a paid plan'],
+    features: ['Script to video', 'Slides to video', 'AI avatars', 'Voiceovers', 'Video editor', 'Multi-model access', 'API and MCP'],
+    alternatives: ['invideo', 'synthesia', 'runway'], affiliateUrl: 'https://videogen.io/ai-video-generator?fp_ref=harry-40e5ba'
+  }),
+  t({
+    slug: 'invideo', name: 'InVideo', vendor: 'Invideo', category: 'ai-tools', sub: 'ai-video',
+    color: '#111827', website: 'https://invideo.io',
+    tagline: 'Prompt-driven AI video creation with an agent that builds the edit.',
+    description: 'InVideo creates videos from prompts through an AI agent, with access to generative models. It offers a short refund window, but many recent reviews say credits ran out before they got a usable video.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$10/seat/mo (annual)', priceValue: 10,
+    score: 7.2, scores: { ease: 7.6, features: 8.4, value: 6.6, support: 5.6 },
+    bestFor: 'Creators who want an agent to draft videos and will monitor credit use.',
+    pros: ['Agent workflow from a prompt', 'Seven-day refund if credits are unused', 'Guest seats on team plans'],
+    cons: ['Many reviews report credits gone without a usable video', 'Unused plan credits do not roll over', 'Starter has few credits and no Seedance 2.5', 'Replies to few negative reviews'],
+    features: ['Prompt to video', 'AI agent', 'Generative models', 'Team seats', 'Stock media'],
+    alternatives: ['videogen', 'synthesia', 'runway']
   }),
   t({
     slug: 'surfer-seo', name: 'Surfer', vendor: 'Surfer', category: 'ai-tools', sub: 'ai-seo',
