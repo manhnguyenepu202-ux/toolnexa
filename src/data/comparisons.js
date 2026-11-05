@@ -37,6 +37,13 @@ module.exports = [
     pickB: 'You start from podcasts, webinars or other long recordings.'
   },
   {
+    a: 'bounceban', b: 'zerobounce',
+    summary: 'A low-cost catch-all specialist vs a broader deliverability suite.',
+    verdict: 'BounceBan is the better buy for outbound teams with catch-all-heavy B2B lists. ZeroBounce is the safer pick for mixed marketing lists and teams that want fuller tooling.',
+    pickA: 'You run B2B outbound and want catch-all verdicts at a low price.',
+    pickB: 'Your list includes many consumer addresses, or you want everything in one account.'
+  },
+  {
     a: 'mailchimp', b: 'brevo',
     summary: 'The best-known email tool vs the value-priced all-in-one.',
     verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',

@@ -438,5 +438,31 @@ module.exports = [
     cons: ['Limited automation vs. full ESPs', 'Not built for e-commerce', 'Key growth tools on paid plans'],
     features: ['Newsletter editor', 'Referral program', 'Ad network', 'Paid subscriptions', 'Website builder', 'Analytics'],
     alternatives: ['kit', 'mailerlite']
+  }),
+  t({
+    slug: 'bounceban', name: 'BounceBan', vendor: 'BounceBan', category: 'email-marketing', sub: 'email-verification',
+    color: '#1E6FF1', website: 'https://bounceban.com',
+    tagline: 'Email verifier built to judge catch-all addresses that other tools mark as risky.',
+    description: 'BounceBan verifies emails, with a focus on catch-all and gateway-protected addresses, without sending any mail. It is cheap and strong for B2B outbound, but its accuracy claims lack a neutral test, consumer addresses look weaker, and its legal pages are dated.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$34 per 10k credits', priceValue: 34,
+    score: 8.3, scores: { ease: 8.6, features: 8.2, value: 8.9, support: 7.7 },
+    bestFor: 'Cold outbound teams and agencies with catch-all-heavy B2B lists.',
+    pros: ['Gives a verdict on almost every catch-all address', 'Low cost per check, with credits that do not expire', 'Free single checks for testing'],
+    cons: ['Weaker on consumer domains like Yahoo in a rival benchmark', 'Verification only, no warm-up or monitoring', 'Terms and privacy notice date from 2022', 'Purchases are non-refundable, and the guarantee is narrow'],
+    features: ['Catch-all verification', 'Bulk verification', 'Free single checks', 'API', 'Deliverability score', 'CRM Sync', 'Clay and n8n integrations'],
+    alternatives: ['zerobounce'], affiliateUrl: 'https://bounceban.com/?via=harry'
+  }),
+  t({
+    slug: 'zerobounce', name: 'ZeroBounce', vendor: 'ZeroBounce', category: 'email-marketing', sub: 'email-verification',
+    color: '#2F3A4C', website: 'https://www.zerobounce.net',
+    tagline: 'Email validation plus a wider set of deliverability tools.',
+    description: 'ZeroBounce validates email lists and adds email finding, activity data, warm-up, inbox placement testing and monitoring. It costs more per check than specialists, but it is the steadier all-round choice for mixed lists.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$99/mo', priceValue: 99,
+    score: 8.5, scores: { ease: 8.9, features: 9.0, value: 7.6, support: 8.2 },
+    bestFor: 'Marketing teams with mixed consumer and business lists.',
+    pros: ['Broad deliverability toolkit in one account', 'Unknown results are free', 'Long public track record of user reviews'],
+    cons: ['Costs far more per check than specialist verifiers', 'Pay-as-you-go pricing is hard to compare', 'Billing and credit surprises lead its one-star reviews'],
+    features: ['Email validation', 'Catch-all resolution', 'Activity data', 'Email finder', 'Warm-up', 'Inbox placement tests', 'Blacklist and DMARC monitoring'],
+    alternatives: ['bounceban']
   })
 ];

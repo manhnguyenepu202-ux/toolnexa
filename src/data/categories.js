@@ -42,7 +42,8 @@ module.exports = [
     subcategories: [
       { slug: 'email-platforms', name: 'Email Platforms' },
       { slug: 'newsletters', name: 'Newsletter Platforms' },
-      { slug: 'ecommerce-email', name: 'E-commerce Email' }
+      { slug: 'ecommerce-email', name: 'E-commerce Email' },
+      { slug: 'email-verification', name: 'Email Verification' }
     ]
   }
 ];
