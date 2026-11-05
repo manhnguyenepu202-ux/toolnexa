@@ -205,15 +205,41 @@ module.exports = [
   t({
     slug: 'invideo', name: 'InVideo', vendor: 'Invideo', category: 'ai-tools', sub: 'ai-video',
     color: '#111827', website: 'https://invideo.io',
-    tagline: 'Prompt-driven AI video creation with an agent that builds the edit.',
-    description: 'InVideo creates videos from prompts through an AI agent, with access to generative models. It offers a short refund window, but many recent reviews say credits ran out before they got a usable video.',
+    tagline: 'Agentic AI video editor that generates and cuts video from your instructions.',
+    description: 'InVideo is an agentic video editor that generates, cuts and revises video from your instructions, with access to many AI models. It is clever and quick for short videos, but many recent reviews say credits ran out before they got a usable result.',
     pricingModel: 'Freemium', freePlan: true, startingPrice: '$10/seat/mo (annual)', priceValue: 10,
-    score: 7.2, scores: { ease: 7.6, features: 8.4, value: 6.6, support: 5.6 },
+    score: 7.3, scores: { ease: 8.0, features: 8.4, value: 6.6, support: 6.2 },
     bestFor: 'Creators who want an agent to draft videos and will monitor credit use.',
-    pros: ['Agent workflow from a prompt', 'Seven-day refund if credits are unused', 'Guest seats on team plans'],
-    cons: ['Many reviews report credits gone without a usable video', 'Unused plan credits do not roll over', 'Starter has few credits and no Seedance 2.5', 'Replies to few negative reviews'],
-    features: ['Prompt to video', 'AI agent', 'Generative models', 'Team seats', 'Stock media'],
-    alternatives: ['videogen', 'synthesia', 'runway']
+    pros: ['Agent edits and generates from instructions', 'Timeline edits and exports use no credits', 'Seven-day refund window on unused plans'],
+    cons: ['Many reviews report credits gone without a usable video', 'Agent generates without asking by default', 'Plan and extra credits both expire', 'Starter has few credits and no Seedance 2.5'],
+    features: ['AI editing agent', 'Multitrack timeline', 'Multi-model generation', 'Live collaboration', 'Bring your own agents', 'Stock media'],
+    alternatives: ['videogen', 'synthesia', 'runway'], affiliateUrl: 'https://invideo.sjv.io/LKA2dY'
+  }),
+  t({
+    slug: 'tripo', name: 'Tripo', vendor: 'Holymolly Ltd', category: 'ai-tools', sub: 'ai-3d',
+    color: '#1D4ED8', website: 'https://www.tripo3d.ai',
+    tagline: 'Generates textured, riggable 3D models from images or text in seconds.',
+    description: 'Tripo turns images and text into 3D models, with texturing, retopology, segmentation and auto-rigging. It is fast and good value for props and prototypes, but characters need cleanup, and recent reviews raise billing concerns.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$20/mo', priceValue: 20,
+    score: 8.3, scores: { ease: 8.6, features: 8.8, value: 8.7, support: 6.6 },
+    bestFor: 'Indie developers and 3D artists who need many models quickly.',
+    pros: ['Fast generation', 'More credits per dollar than Meshy', 'Credits returned on failed jobs'],
+    cons: ['Meshes need cleanup for animation', 'Cancellation and charge complaints in recent reviews', 'Headline model counts ignore texture and rig costs', 'Free plan is public and non-commercial'],
+    features: ['Image to 3D', 'Text to 3D', 'AI texturing', 'Auto rigging', 'Retopology', 'Smart segmentation', 'Blender, Unity and Unreal bridges'],
+    alternatives: ['meshy'], affiliateUrl: 'https://tripo.pxf.io/R0rW3v'
+  }),
+  t({
+    slug: 'meshy', name: 'Meshy', vendor: 'Meshy LLC', category: 'ai-tools', sub: 'ai-3d',
+    color: '#7C3AED', website: 'https://www.meshy.ai',
+    tagline: 'AI 3D generator with print tools and a strong user reputation.',
+    description: 'Meshy generates and textures 3D models from text or images, with print repair tools and slicer integrations. It has a strong Trustpilot record, though it offers fewer credits per dollar than Tripo and downloads on the free plan are very limited.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$20/mo', priceValue: 20,
+    score: 8.4, scores: { ease: 8.9, features: 8.9, value: 7.9, support: 6.8 },
+    bestFor: '3D printing hobbyists and creators who value a proven track record.',
+    pros: ['Strong Trustpilot record', 'Print tools and slicer integrations', 'Credits refunded on failed tasks'],
+    cons: ['Fewer credits per dollar than Tripo', 'Free plan downloads are very limited', 'Billing and cancellation complaints recur'],
+    features: ['Text to 3D', 'Image to 3D', 'AI texturing', 'Print repair', 'Animation library', 'API', 'Slicer and DCC plugins'],
+    alternatives: ['tripo']
   }),
   t({
     slug: 'surfer-seo', name: 'Surfer', vendor: 'Surfer', category: 'ai-tools', sub: 'ai-seo',

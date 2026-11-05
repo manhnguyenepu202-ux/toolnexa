@@ -104,7 +104,7 @@ Overall: 7.5/10. That's among the lowest on ToolKenzon, and it's driven by billi
 
 ## VideoGen vs rivals
 
-**InVideo** is the closest match. It costs more per seat and its Trustpilot record is worse, though its terms allow a refund within seven days if no credits were used. Pick InVideo if that refund window matters to you. See our [VideoGen vs InVideo comparison](/compare/videogen-vs-invideo).
+**InVideo** is the closest match. It costs more for comparable output and its Trustpilot record is similar, though its terms allow a refund within seven days on unused plans. Pick InVideo if you want agent-led editing or that refund window. See our [VideoGen vs InVideo comparison](/compare/videogen-vs-invideo).
 
 **Synthesia** is the safer choice for presenter-style training video. Pick Synthesia if avatars are the point and you want an established business tool.
 

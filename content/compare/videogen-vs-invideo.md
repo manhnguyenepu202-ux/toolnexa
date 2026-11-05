@@ -5,11 +5,11 @@ updated: 2026-11-05
 evidence: research
 ---
 
-*Affiliate note: ToolKenzon may earn a commission through the VideoGen link on this page. InVideo is not an affiliate partner here.*
+*Affiliate note: ToolKenzon may earn a commission through the Visit buttons for both tools on this page. It costs you nothing extra and it doesn't change our verdict.*
 
 ## How we evaluated this
 
-This is a research-based comparison, without first-hand test footage of our own. We read both pricing pages and terms, VideoGen's rate card and help centre, and both Trustpilot profiles, including the 20 latest one-star reviews for each. Checked November 5, 2026.
+This is a research-based comparison, without first-hand test footage of our own. We read both pricing pages and terms, VideoGen's rate card and help centre, InVideo's documentation, and Trustpilot profiles for both, including the 20 latest one-star reviews for each. Checked November 5, 2026.
 
 ## The short answer
 
@@ -33,9 +33,9 @@ VideoGen looks like the better deal for most people, because its entry plans giv
 
 **Refunds.** VideoGen's terms say all purchases are non-refundable. InVideo's terms allow a refund within seven days of purchase or renewal, provided you haven't used credits or premium features. That condition limits it, since you can't test much without spending credits.
 
-**Rollover.** Both reset plan credits monthly. VideoGen sells extra credits that never expire. One InVideo reviewer reported bought credits expiring, which we couldn't confirm.
+**Rollover.** Both reset plan credits monthly. VideoGen's extra credits never expire. InVideo's docs say its extra credits expire after a set period or when your plan ends.
 
-**Starting points.** VideoGen lists more ways to start, from storyboards to slides. Some InVideo complaints involve an agent spending credits while it works, so review what it plans before you approve it.
+**Starting points.** VideoGen lists more ways to start, from storyboards to slides. Many InVideo complaints involve credits disappearing, and its docs say the agent's default setting generates without asking, so turn on approvals first.
 
 ## Pricing head-to-head
 
@@ -45,7 +45,7 @@ VideoGen looks like the better deal for most people, because its entry plans giv
 | Mid plan | Advanced, $59, $39 | Plus, $60, $30 |
 | Top self-serve plan | Ultra, $149, $99 | Max, $250 |
 | Plan credits | 6,000, 18,000, 60,000 | 400, 2,000, 8,000 |
-| Rollover | No, but bought credits never expire | No |
+| Rollover | No, but bought credits never expire | No, and bought credits expire too |
 | Refunds | Non-refundable | 7 days, if unused |
 | Commercial use | All plans | Licence in terms; stock has its own licence |
 
@@ -66,18 +66,18 @@ Both profiles have many five-star reviews and a large one-star group, and both h
 
 | | VideoGen | InVideo |
 |---|---|---|
-| Trustpilot score | 2.7 | 1.8 |
-| Reviews | 108 | 1,028 |
-| One-star share | 35% | 32% |
-| Reviews in last 12 months | 12 | 115 |
-| Replies to negative reviews | None shown as a pattern | 15% |
+| Trustpilot score | 2.7 | 2.9 (AI product) |
+| Reviews | 108 | 910 |
+| One-star share | 35% | 30% |
+| Reviews in last 12 months | 12 | 344 |
+| Replies to negative reviews | None shown as a pattern | 19% |
 
-InVideo's percentages look better than its 1.8 score suggests, since Trustpilot weighs recent reviews and other factors. A separate profile for its AI product shows 2.9 from 910 reviews, which we didn't read.
+InVideo has a second, older Invideo Studio profile at 1.8 from 1,028 reviews. We use the AI product's profile here because it matches what you'd buy today.
 
 The complaints differ, and that's useful:
 
 - **VideoGen:** billing dominates. About 12 of 20 mention charges after cancelling, trouble cancelling or refused refunds.
-- **InVideo:** wasted credits dominate. 11 of 20 say credits ran out without a usable video, and some describe a month's credits vanishing on one short project.
+- **InVideo:** wasted credits dominate. About 15 of the latest 20 say credits ran out too fast or before a usable video, and some describe a month's credits vanishing on one short project.
 
 Put simply, VideoGen's reviewers worry about getting out, and InVideo's worry about getting anything out.
 
@@ -93,7 +93,7 @@ If you already film yourself and only need captions and tighter edits, you don't
 
 Pick VideoGen for narrated explainers and slide-based videos, on Pro with monthly billing. It offers more usable video at entry level, and its credit rules are published clearly.
 
-Pick InVideo only if you value its refund window or want its agent workflow. Make sure you test it on a short project before spending a month's credits.
+Pick InVideo if you want its agent workflow or value its refund window. Turn on approvals and test it on a short project before spending a month's credits. See our [full InVideo review](/tools/invideo).
 
 If avatars are your main need, skip both and look at [Synthesia](/tools/synthesia).
 
@@ -105,7 +105,7 @@ At entry level on monthly billing, for comparable output, yes. InVideo's $10 yea
 
 ### Which has better reviews?
 
-VideoGen scores higher on Trustpilot, at 2.7 against 1.8, but it has far fewer recent reviews. Neither is good.
+They're close on Trustpilot: 2.7 for VideoGen and 2.9 for InVideo's AI product, which has far more recent reviews. Neither is good.
 
 ### Can I get a refund from either?
 

@@ -46,9 +46,16 @@ module.exports = [
   {
     a: 'videogen', b: 'invideo',
     summary: 'Two credit-based AI video tools with very different complaints.',
-    verdict: 'VideoGen looks like the better deal at entry level, especially for slide and script-based explainers. InVideo offers a seven-day refund window if credits are unused. Start monthly with either.',
+    verdict: 'VideoGen looks like the better deal at entry level, especially for slide and script-based explainers. InVideo is the more ambitious agent-led editor, with a seven-day refund window on unused plans. Start monthly with either.',
     pickA: 'You want more footage per dollar and start from scripts or slides.',
-    pickB: 'You value a short refund window or want an agent to build the video.'
+    pickB: 'You want an agent to edit and generate, or you value a short refund window.'
+  },
+  {
+    a: 'tripo', b: 'meshy',
+    summary: 'More models per dollar vs a stronger reputation and print tools.',
+    verdict: 'Tripo is better value for game assets, props and prototypes. Meshy is worth the extra cost for 3D printing or if you want the stronger track record.',
+    pickA: 'You need lots of assets on a budget and want fast generation.',
+    pickB: 'You mainly 3D print, or you value a longer review history.'
   },
   {
     a: 'mailchimp', b: 'brevo',

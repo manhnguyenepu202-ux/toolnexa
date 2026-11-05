@@ -13,6 +13,7 @@ module.exports = [
       { slug: 'ai-image', name: 'AI Image' },
       { slug: 'ai-video', name: 'AI Video' },
       { slug: 'ai-voice', name: 'AI Voice & Audio' },
+      { slug: 'ai-3d', name: 'AI 3D' },
       { slug: 'ai-seo', name: 'AI SEO' }
     ]
   },
