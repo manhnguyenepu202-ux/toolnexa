@@ -13,6 +13,21 @@ const sectionHead = (eyebrow, title, link, linkLabel) => html`<div class="sectio
   ${link ? html`<a class="link-arrow" href="${link}">${linkLabel} ${icon('arrowRight', '', 16)}</a>` : ''}
 </div>`;
 
+const evidenceNotes = {
+  research: 'Based on vendor pricing pages, documentation and public user reviews.',
+  'hands-on': 'Includes our own hands-on notes alongside vendor documentation and public user reviews.'
+};
+
+function articleBlock(a, heading) {
+  if (!a) return '';
+  return html`<section class="article-block" aria-labelledby="full-article">
+    <h2 id="full-article">${heading}</h2>
+    <p class="small muted">Updated <time datetime="${a.updated}">${formatDate(a.updated)}</time> · ${a.readTime} min read · ${evidenceNotes[a.evidence]}</p>
+    ${a.toc.length > 2 ? html`<nav class="article-toc" aria-label="In this article"><p class="f-label">In this article</p><ol>${a.toc.map((h) => html`<li><a href="#${h.id}">${h.text.replace(/\*\*/g, '')}</a></li>`)}</ol></nav>` : ''}
+    <div class="prose">${raw(a.html)}</div>
+  </section>`;
+}
+
 // ───────────────────────────── HOME ─────────────────────────────
 function home() {
   const trending = C.tools.filter((t) => t.trending || t.editorsPick).sort((a, b) => b.score - a.score).slice(0, 9);
@@ -221,7 +236,8 @@ function tool(t) {
   const alts = t.alternatives.map((s) => C.toolMap[s]);
   const comps = C.comparisonsFor(t.slug);
   const crumbs = [{ label: cat.name, href: `/category/${cat.slug}` }, { label: `${t.name} Review`, href: `/tools/${t.slug}` }];
-  const faqs = [
+  const a = t.article;
+  const faqs = a && a.faqs.length ? a.faqs : [
     [`Is ${t.name} free?`, t.freePlan ? `Yes. ${t.name} has a free plan, and paid plans start from ${t.startingPrice}.` : `${t.name} does not have a permanent free plan${t.pricingModel === 'Free Trial' ? ', but it offers a free trial' : ''}. Paid plans start from ${t.startingPrice}.`],
     [`Who is ${t.name} best for?`, t.bestFor],
     [`What are the best ${t.name} alternatives?`, `The closest alternatives are ${alts.map((a) => a.name).join(', ')}. See the comparison section on this page for details.`],
@@ -264,6 +280,8 @@ function tool(t) {
       <div class="pc pros"><h2>${icon('check', '', 20)} Pros</h2><ul>${t.pros.map((p) => html`<li>${icon('check', 'ic-pro', 16)}<span>${p}</span></li>`)}</ul></div>
       <div class="pc cons"><h2>${icon('x', '', 20)} Cons</h2><ul>${t.cons.map((p) => html`<li>${icon('x', 'ic-con', 16)}<span>${p}</span></li>`)}</ul></div>
     </section>
+
+    ${articleBlock(a, `Our full ${t.name} review`)}
 
     <section aria-labelledby="features">
       <h2 id="features">Key features</h2>
@@ -316,8 +334,8 @@ function tool(t) {
 ${newsletter('tool')}`;
 
   return page({
-    title: `${t.name} Review (${site.year}): Pricing, Pros & Cons`,
-    description: `${t.name} review: ${t.tagline} Score ${t.score.toFixed(1)}/10. Pricing from ${t.startingPrice}, pros, cons and the best alternatives.`,
+    title: (a && a.title) || `${t.name} Review (${site.year}): Pricing, Pros & Cons`,
+    description: (a && a.description) || `${t.name} review: ${t.tagline} Score ${t.score.toFixed(1)}/10. Pricing from ${t.startingPrice}, pros, cons and the best alternatives.`,
     path: `/tools/${t.slug}`, body, ogType: 'article',
     jsonLd: [
       breadcrumbLd(site, crumbs),
@@ -326,7 +344,8 @@ ${newsletter('tool')}`;
         itemReviewed: { '@type': 'SoftwareApplication', name: t.name, applicationCategory: 'BusinessApplication', operatingSystem: 'Web', url: t.website },
         reviewRating: { '@type': 'Rating', ratingValue: t.score, bestRating: 10, worstRating: 0 },
         author: { '@type': 'Organization', name: site.name },
-        publisher: { '@type': 'Organization', name: site.name }
+        publisher: { '@type': 'Organization', name: site.name },
+        ...(a ? { dateModified: a.updated } : {})
       },
       { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }
     ]
@@ -424,6 +443,8 @@ function compare(c) {
     <p class="small muted">Feature list reflects headline features named by each vendor; "—" means not listed as a headline feature, not necessarily missing.</p>
   </section>
 
+  ${articleBlock(c.article, `${A.name} vs ${B.name}: the full comparison`)}
+
   ${[A, B].map((t) => html`<section aria-labelledby="pc-${t.slug}">
     <h2 id="pc-${t.slug}">${t.name}: pros & cons</h2>
     <div class="pc-grid">
@@ -444,8 +465,8 @@ function compare(c) {
 </div>
 ${newsletter('cmp')}`;
   return page({
-    title: `${A.name} vs ${B.name} (${site.year}): Which Is Better?`,
-    description: `${A.name} vs ${B.name}: features, pricing, pros and cons compared side by side. ${c.verdict.split('. ')[0]}.`,
+    title: (c.article && c.article.title) || `${A.name} vs ${B.name} (${site.year}): Which Is Better?`,
+    description: (c.article && c.article.description) || `${A.name} vs ${B.name}: features, pricing, pros and cons compared side by side. ${c.verdict.split('. ')[0]}.`,
     path: `/compare/${c.slug}`, body, ogType: 'article',
     jsonLd: [breadcrumbLd(site, crumbs)]
   });

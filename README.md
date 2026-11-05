@@ -36,7 +36,11 @@ SEO: canonical URLs, Open Graph, JSON-LD (Organization, WebSite search, Review, 
 | Best-of lists | `src/data/bestof.js` |
 | Categories | `src/data/categories.js` |
 | Blog posts | `content/blog/*.md` (one Markdown file per post) |
+| Long review on a tool page | `content/reviews/<tool-slug>.md` |
+| Long comparison on a compare page | `content/compare/<a>-vs-<b>.md` |
 | Site name, URL, email, Google Analytics | `src/config.js` |
+
+**Long articles:** both folders use Markdown with frontmatter: `updated: YYYY-MM-DD` and `evidence: research` or `hands-on` are required, `title` and `description` are optional SEO overrides. A `## FAQ` section with `### question` headings replaces the page's default FAQ and its structured data.
 
 **Affiliate links:** set `affiliateUrl: 'https://…'` on a tool. All "Visit" buttons go through `/go/<slug>`, so you only change the link in one place.
 

@@ -1,5 +1,5 @@
 // Tiny, dependency-free Markdown → HTML converter covering what the blog uses:
-// headings, paragraphs, ordered/unordered lists, blockquotes, code, bold, italic, links.
+// headings, paragraphs, ordered/unordered lists, tables, blockquotes, code, bold, italic, links.
 const { esc } = require('./util');
 
 function inline(s) {
@@ -18,7 +18,8 @@ function slugify(s) {
   return s.toLowerCase().replace(/<[^>]+>/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
-function parseFrontmatter(src) {
+function parseFrontmatter(input) {
+  const src = input.replace(/\r\n/g, '\n');
   const m = src.match(/^---\n([\s\S]*?)\n---\n?/);
   if (!m) return { data: {}, body: src };
   const data = {};
@@ -29,12 +30,13 @@ function parseFrontmatter(src) {
   return { data, body: src.slice(m[0].length) };
 }
 
-function render(md) {
+function render(md, { idPrefix = '' } = {}) {
   const lines = md.replace(/\r/g, '').split('\n');
   const html = [];
   const toc = [];
   let para = [];
   let list = null; // { type, items }
+  let table = [];
 
   const flushPara = () => {
     if (para.length) html.push(`<p>${inline(para.join(' '))}</p>`);
@@ -44,15 +46,30 @@ function render(md) {
     if (list) html.push(`<${list.type}>${list.items.map((i) => `<li>${inline(i)}</li>`).join('')}</${list.type}>`);
     list = null;
   };
+  const flushTable = () => {
+    if (!table.length) return;
+    if (table.length > 1 && /^\|[\s:|-]+\|$/.test(table[1])) {
+      const cells = (row) => row.slice(1, -1).split('|').map((c) => c.trim());
+      const head = cells(table[0]).map((c) => `<th scope="col">${inline(c)}</th>`).join('');
+      const rows = table.slice(2).map((r) => `<tr>${cells(r).map((c) => `<td>${inline(c)}</td>`).join('')}</tr>`).join('');
+      html.push(`<div class="table-wrap" tabindex="0" role="region" aria-label="Table"><table class="cmp-table"><thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table></div>`);
+    } else {
+      para.push(...table);
+      flushPara();
+    }
+    table = [];
+  };
 
   for (const raw of lines) {
     const line = raw.trimEnd();
     let m;
+    if (/^\|.*\|$/.test(line.trim())) { flushPara(); flushList(); table.push(line.trim()); continue; }
+    flushTable();
     if (!line.trim()) { flushPara(); flushList(); continue; }
     if ((m = line.match(/^(#{2,4})\s+(.*)$/))) {
       flushPara(); flushList();
       const level = m[1].length;
-      const id = slugify(m[2]);
+      const id = idPrefix + slugify(m[2]);
       if (level === 2) toc.push({ id, text: m[2] });
       html.push(`<h${level} id="${id}">${inline(m[2])}</h${level}>`);
       continue;
@@ -71,7 +88,7 @@ function render(md) {
     flushList();
     para.push(line.trim());
   }
-  flushPara(); flushList();
+  flushTable(); flushPara(); flushList();
   return { html: html.join('\n'), toc };
 }
 
