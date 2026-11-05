@@ -13,6 +13,8 @@ const sectionHead = (eyebrow, title, link, linkLabel) => html`<div class="sectio
   ${link ? html`<a class="link-arrow" href="${link}">${linkLabel} ${icon('arrowRight', '', 16)}</a>` : ''}
 </div>`;
 
+const latestPricingCheck = C.tools.map((t) => t.pricingChecked).filter(Boolean).sort().pop();
+
 const evidenceNotes = {
   research: 'Based on vendor pricing pages, documentation and public user reviews.',
   'hands-on': 'Includes our own hands-on notes alongside vendor documentation and public user reviews.'
@@ -35,7 +37,7 @@ function home() {
 <section class="hero">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="container hero-inner">
-    <span class="hero-badge">${icon('shield', '', 16)} Independent reviews · Updated ${formatDate(C.tools[0].pricingChecked + '-01').replace(/\s\d+,/, '')}</span>
+    <span class="hero-badge">${icon('shield', '', 16)} Independent reviews · Updated ${formatDate(latestPricingCheck + '-01').replace(/\s\d+,/, '')}</span>
     <h1>Find the right <span class="grad">AI, SaaS & email</span> tools — without the guesswork.</h1>
     <p class="lead">Research-based reviews, honest scores and side-by-side comparisons of ${C.tools.length}+ tools, so you can pick the right one in minutes, not weeks.</p>
     <form class="hero-search" action="/tools" method="get" role="search">
@@ -296,7 +298,7 @@ function tool(t) {
         <div><span class="muted small">Model</span><b>${t.pricingModel}</b></div>
         ${visitBtn(t, 'btn btn-accent', 'See current pricing')}
       </div>
-      <p class="small muted">Pricing last checked ${formatDate(t.pricingChecked + '-01').replace(/\s\d+,/, '')}. Vendors change prices often — always confirm on the official site.</p>
+      <p class="small muted">${t.pricingChecked ? `Pricing last checked ${formatDate(t.pricingChecked + '-01').replace(/\s\d+,/, '')}.` : 'We could not confirm this price on the vendor\'s page at our last check.'} Vendors change prices often — always confirm on the official site.</p>
     </section>
 
     ${comps.length ? html`<section aria-labelledby="vs"><h2 id="vs">${t.name} comparisons</h2><div class="compare-grid compact">${comps.map(compareCard)}</div></section>` : ''}
@@ -492,7 +494,7 @@ function best(b) {
   const body = html`
 <section class="page-hero" style="--cat:${cat.color}"><div class="container">
   ${breadcrumbs(crumbs)}
-  <span class="eyebrow">${cat.name} · Updated ${formatDate(picks[0].t.pricingChecked + '-01').replace(/\s\d+,/, '')}</span>
+  <span class="eyebrow">${cat.name} · Updated ${formatDate(latestPricingCheck + '-01').replace(/\s\d+,/, '')}</span>
   <h1>${b.title} in ${site.year}</h1>
   <p class="lead">${b.intro}</p>
 </div></section>

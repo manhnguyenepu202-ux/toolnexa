@@ -44,7 +44,7 @@ SEO: canonical URLs, Open Graph, JSON-LD (Organization, WebSite search, Review, 
 
 **Affiliate links:** set `affiliateUrl: 'https://…'` on a tool. All "Visit" buttons go through `/go/<slug>`, so you only change the link in one place.
 
-**Before launch:** re-check every `startingPrice` against the vendor's pricing page and update `PRICING_CHECKED` at the top of `tools.js`. Scores are editorial — adjust them to your own testing.
+**Before launch:** re-check every `startingPrice` against the vendor's pricing page and update `PRICING_CHECKED` at the top of `tools.js`. Set `pricingChecked: null` on any tool whose price you could not confirm. Scores are editorial — adjust them to your own testing.
 
 The server validates content on startup: a typo in a slug stops it with a clear error.
 

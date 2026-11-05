@@ -25,7 +25,7 @@ module.exports = [
   {
     a: 'jasper', b: 'copy-ai',
     summary: 'Two AI writing platforms aimed at business teams.',
-    verdict: 'Jasper is better for brand-consistent marketing content at scale. Copy.ai is better for automating sales and GTM workflows, and has a free plan to start.',
+    verdict: 'Jasper is better for brand-consistent marketing content at scale. Copy.ai is better for automating sales and GTM workflows.',
     pickA: 'Your marketing team needs strict brand voice across lots of content.',
     pickB: 'You want to automate prospecting and repetitive GTM writing.'
   },
