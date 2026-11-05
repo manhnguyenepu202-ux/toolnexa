@@ -126,7 +126,7 @@ function newsletter(variant = '') {
 }
 
 function disclosureNote() {
-  return html`<p class="disclosure">${icon('info', '', 16)} <span>We test tools independently. Some links are affiliate links — if you buy, we may earn a commission at no extra cost to you. <a href="/affiliate-disclosure">How we make money</a>.</span></p>`;
+  return html`<p class="disclosure">${icon('info', '', 16)} <span>We review tools independently. Some links are affiliate links — if you buy, we may earn a commission at no extra cost to you. <a href="/affiliate-disclosure">How we make money</a>.</span></p>`;
 }
 
 module.exports = { logoTile, scorePill, pricingTag, visitBtn, toolCard, compareCard, bestCard, postCard, breadcrumbs, breadcrumbLd, scoreBars, scoreRing, newsletter, disclosureNote, initials, raw };

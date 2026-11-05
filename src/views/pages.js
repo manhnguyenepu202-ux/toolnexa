@@ -37,7 +37,7 @@ function home() {
   <div class="container hero-inner">
     <span class="hero-badge">${icon('shield', '', 16)} Independent reviews · Updated ${formatDate(C.tools[0].pricingChecked + '-01').replace(/\s\d+,/, '')}</span>
     <h1>Find the right <span class="grad">AI, SaaS & email</span> tools — without the guesswork.</h1>
-    <p class="lead">Hands-on reviews, honest scores and side-by-side comparisons of ${C.tools.length}+ tools, so you can pick the right one in minutes, not weeks.</p>
+    <p class="lead">Research-based reviews, honest scores and side-by-side comparisons of ${C.tools.length}+ tools, so you can pick the right one in minutes, not weeks.</p>
     <form class="hero-search" action="/tools" method="get" role="search">
       <label for="hero-q" class="sr-only">Search tools</label>
       ${icon('search', 'hs-icon', 22)}
@@ -112,10 +112,10 @@ function home() {
       <a class="btn btn-ghost" href="/about">Read our methodology</a>
     </div>
     <ol class="how-steps">
-      <li><span>${icon('users', '', 22)}</span><div><h3>Hands-on testing</h3><p>We sign up, set up real workflows and use the tool like a customer would.</p></div></li>
+      <li><span>${icon('users', '', 22)}</span><div><h3>Research first</h3><p>We read pricing pages, documentation and public user reviews before we score a tool.</p></div></li>
       <li><span>${icon('scale', '', 22)}</span><div><h3>Same criteria for all</h3><p>Ease of use, features, value for money and support — weighted the same across a category.</p></div></li>
       <li><span>${icon('tag', '', 22)}</span><div><h3>Real pricing</h3><p>We show the price you'll actually pay and flag where costs climb as you grow.</p></div></li>
-      <li><span>${icon('clock', '', 22)}</span><div><h3>Kept up to date</h3><p>Listings are re-checked regularly and every page shows when pricing was last verified.</p></div></li>
+      <li><span>${icon('clock', '', 22)}</span><div><h3>Dated pricing</h3><p>Pages show when pricing was last checked. Vendors change prices often, so confirm before you buy.</p></div></li>
     </ol>
   </div>
 </section>
@@ -531,7 +531,7 @@ function best(b) {
 </div>
 ${newsletter('best')}`;
   return page({
-    title: b.seoTitle || `${b.title} (${site.year}) — Tested & Ranked`,
+    title: `${b.title} (${site.year}) — Compared & Ranked`,
     description: `${b.intro.split('. ')[0]}. Top picks: ${picks.slice(0, 3).map((p) => p.t.name).join(', ')}.`,
     path: `/best/${b.slug}`, body, ogType: 'article',
     jsonLd: [breadcrumbLd(site, crumbs), { '@context': 'https://schema.org', '@type': 'ItemList', name: b.title, itemListElement: picks.map(({ t }, i) => ({ '@type': 'ListItem', position: i + 1, url: `${site.url}/tools/${t.slug}`, name: t.name })) }]
@@ -614,17 +614,17 @@ function simple({ path, title, description, h1, lead, content }) {
 
 const about = () => simple({
   path: '/about', title: 'About ToolKenzon & Our Review Methodology', h1: 'About ToolKenzon',
-  description: 'Who we are, how we test software and how we keep our reviews independent.',
+  description: 'Who we are, how we review software and how we keep our reviews independent.',
   lead: 'We help marketers, founders and teams choose software with confidence.',
   content: `
 <h2 id="mission">Our mission</h2>
 <p>Software buying is noisy. Vendor pages promise everything, and many "review" sites rank whoever pays the most. ToolKenzon exists to give you clear, honest guidance so you can pick the right AI, SaaS or email marketing tool quickly.</p>
 <h2 id="method">How we review</h2>
 <ol>
-<li><strong>Hands-on testing.</strong> We create accounts, set up real workflows and use each tool the way a customer would.</li>
+<li><strong>Research-based reviews.</strong> We read pricing pages, documentation and public user reviews. We say so on the page when a review draws on our own use of a tool, and we don't claim testing we haven't done.</li>
 <li><strong>Consistent scoring.</strong> Every tool gets an editorial score out of 10 based on four criteria: <em>ease of use</em>, <em>features</em>, <em>value for money</em> and <em>support</em>.</li>
 <li><strong>Real pricing.</strong> We report the entry price and flag where costs rise as you grow. Each page shows when pricing was last checked.</li>
-<li><strong>Regular updates.</strong> Tools change fast, so we revisit listings and re-score when meaningful changes happen.</li>
+<li><strong>Updates.</strong> Tools change fast, so we update listings and scores when we learn of meaningful changes.</li>
 </ol>
 <h2 id="independence">Editorial independence</h2>
 <p>Some links on ToolKenzon are affiliate links. That never affects scores or rankings: tools without affiliate programs are reviewed and ranked on exactly the same criteria. See our <a href="/affiliate-disclosure">affiliate disclosure</a>.</p>

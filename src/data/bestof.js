@@ -7,7 +7,7 @@ module.exports = [
     category: 'ai-tools',
     intro: 'We compared the leading AI assistants on reasoning, writing quality, research ability, integrations and value. Here is how they rank for everyday professional work.',
     picks: [['chatgpt', 'Best overall'], ['claude', 'Best for writing & long documents'], ['gemini', 'Best for Google Workspace users'], ['perplexity', 'Best for research with sources']],
-    howWeChose: ['Quality of answers on real work tasks (emails, analysis, summaries, code)', 'Accuracy and willingness to say when unsure', 'Features: files, search, voice, integrations', 'Price and generosity of free plan']
+    howWeChose: ['Reported quality of answers on everyday work (emails, analysis, summaries, code)', 'Accuracy and willingness to say when unsure', 'Features: files, search, voice, integrations', 'Price and generosity of free plan']
   },
   {
     slug: 'ai-writing-tools',
@@ -52,7 +52,6 @@ module.exports = [
   {
     slug: 'email-verification-tools',
     title: 'Best Email Verification Tools',
-    seoTitle: 'Best Email Verification Tools (2026): Compared & Ranked',
     category: 'email-marketing',
     intro: 'We compared the leading email verifiers on catch-all handling, real cost, user complaints and paperwork. Every benchmark we found was run by a vendor, so test on your own list before you commit.',
     picks: [['zerobounce', 'Best overall'], ['bounceban', 'Best for catch-all lists on a budget'], ['allegrow', 'Best for scaled B2B outbound'], ['millionverifier', 'Cheapest bulk cleaning']],

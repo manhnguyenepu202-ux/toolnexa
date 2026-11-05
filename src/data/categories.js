@@ -6,7 +6,7 @@ module.exports = [
     short: 'AI',
     icon: 'sparkles',
     color: '#7C3AED',
-    description: 'Chatbots, AI writers, image, video and voice generators — tested on real work, not demos.',
+    description: 'Chatbots, AI writers, image, video and voice generators — compared on real pricing and user feedback.',
     subcategories: [
       { slug: 'ai-chatbots', name: 'AI Chatbots & Assistants' },
       { slug: 'ai-writing', name: 'AI Writing' },
