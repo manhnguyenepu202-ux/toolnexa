@@ -333,6 +333,46 @@ module.exports = [
     alternatives: ['joggai', 'synthesia', 'invideo']
   }),
   t({
+    slug: 'crayo', name: 'Crayo', vendor: 'Crayo, Inc.', category: 'ai-tools', sub: 'ai-video',
+    color: '#F97316', website: 'https://crayo.ai',
+    tagline: 'Makes Reddit-story, fake-text and clipped short videos.',
+    description: 'Crayo builds short-form videos such as Reddit stories, fake-text chats and clips, with AI voiceovers. It is quick for those formats, but all sales are final, voiceover minutes cap real output, and its terms conflict on commercial use.',
+    pricingModel: 'Paid', freePlan: false, startingPrice: '$16.58/mo (annual)', priceValue: 16.58,
+    score: 7.0, scores: { ease: 8.4, features: 7.8, value: 6.9, support: 5.2 },
+    bestFor: 'Creators making simple faceless shorts by hand.',
+    pros: ['Very quick for short formats', 'One credit equals one video', 'Self-service cancelling'],
+    cons: ['All sales are final', 'Voiceover minutes cap output', '43% one-star on Trustpilot', 'Terms and FAQ conflict on commercial use'],
+    features: ['Reddit story videos', 'Fake text videos', 'AutoClip', 'AI voiceovers', 'AI images', 'iOS app'],
+    alternatives: ['opusclip', 'submagic', 'fliki'], affiliateUrl: 'http://crayo.ai/?ref=manhrz'
+  }),
+  t({
+    slug: 'jenni', name: 'Jenni AI', vendor: 'Jenni AI, Inc.', category: 'ai-tools', sub: 'ai-writing',
+    color: '#0EA5E9', website: 'https://jenni.ai',
+    tagline: 'AI writing assistant for academics, with autocomplete and citations.',
+    description: 'Jenni AI helps students and researchers draft from their own PDFs, with autocomplete, chat and unlimited citations. It works well for people who have done the reading, but billing complaints are common, and default analytics can capture draft text.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$12/mo (annual)', priceValue: 12,
+    score: 7.6, scores: { ease: 8.7, features: 8.2, value: 7.5, support: 6.0 },
+    bestFor: 'Students and researchers drafting long papers from their sources.',
+    pros: ['Unlimited citations even on Free', 'Chat with your PDFs', 'Inline autocomplete', 'Says it does not train on your data'],
+    cons: ['Billing and cancelling complaints', 'Monthly billing is expensive', 'Session replay can capture drafts by default', 'No built-in AI detector'],
+    features: ['AI autocomplete', 'PDF chat', 'Citations', 'AI edits', 'Reviews', 'Team plans'],
+    alternatives: ['paperpal', 'grammarly'], affiliateUrl: 'https://jenni.ai/?via=harry-johnson'
+  }),
+  t({
+    slug: 'paperpal', name: 'Paperpal', vendor: 'Paperpal', category: 'ai-tools', sub: 'ai-writing',
+    color: '#4338CA', website: 'https://paperpal.com',
+    tagline: 'Academic language editing and journal-readiness checks.',
+    description: 'Paperpal helps researchers polish existing text and prepare it for submission, with AI disclosure templates and a strong review record. It suits editing better than first drafts.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: 'About $12/mo (annual)', priceValue: 12,
+    pricingChecked: null,
+    score: 8.1, scores: { ease: 8.6, features: 8.2, value: 8.0, support: 7.9 },
+    bestFor: 'Researchers polishing drafts for journal submission.',
+    pros: ['Strong Trustpilot record', 'AI disclosure templates', 'Replies to all negative reviews'],
+    cons: ['Dollar prices vary by source', 'Less useful for first drafts', 'Company invites reviews, which can lift scores'],
+    features: ['Language editing', 'Journal checks', 'AI disclosure templates', 'Institution plans'],
+    alternatives: ['jenni', 'grammarly']
+  }),
+  t({
     slug: 'surfer-seo', name: 'Surfer', vendor: 'Surfer', category: 'ai-tools', sub: 'ai-seo',
     color: '#FF5C35', website: 'https://surfer.ai',
     tagline: 'Content optimization and AI writing for ranking on Google.',

@@ -100,6 +100,20 @@ module.exports = [
     pickB: 'You run paid ads and would use competitor research.'
   },
   {
+    a: 'crayo', b: 'opusclip',
+    summary: 'Story-format shorts vs finding clips in long videos.',
+    verdict: 'OpusClip is the better and cheaper choice for clipping long videos. Crayo only makes sense for Reddit-story and fake-text formats, on a monthly plan.',
+    pickA: 'You want Reddit-story or fake-text shorts with no long video.',
+    pickB: 'You have long videos and want the best moments found for you.'
+  },
+  {
+    a: 'jenni', b: 'paperpal',
+    summary: 'Help drafting from sources vs polishing for journals.',
+    verdict: 'Paperpal is the safer pick for most academics, with a far stronger review record. Jenni is better if drafting is your real obstacle and your institution allows it.',
+    pickA: 'You need help turning your reading into a first draft.',
+    pickB: 'You have a draft and need it polished for submission.'
+  },
+  {
     a: 'mailchimp', b: 'brevo',
     summary: 'The best-known email tool vs the value-priced all-in-one.',
     verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',
