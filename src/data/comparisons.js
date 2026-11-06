@@ -121,6 +121,13 @@ module.exports = [
     pickB: 'You need offline or private dictation, or prefer to pay once.'
   },
   {
+    a: 'ahaslides', b: 'mentimeter',
+    summary: 'Cheaper under 100 people vs cheaper for big crowds.',
+    verdict: 'AhaSlides is the better buy for classrooms and groups under 100. Above that, Mentimeter Basic costs less and has no participant cap.',
+    pickA: 'You run sessions under 100 people, teach, or want a usable free plan.',
+    pickB: 'You present to hundreds of people, or want to avoid a vendor with a fresh breach.'
+  },
+  {
     a: 'mailchimp', b: 'brevo',
     summary: 'The best-known email tool vs the value-priced all-in-one.',
     verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',

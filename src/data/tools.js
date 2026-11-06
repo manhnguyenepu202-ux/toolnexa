@@ -412,6 +412,32 @@ module.exports = [
     alternatives: ['midjourney', 'chatgpt', 'runway'], affiliateUrl: 'https://refer.getimg.ai/kazuki'
   }),
   t({
+    slug: 'ahaslides', name: 'AhaSlides', vendor: 'AhaSlides Pte. Ltd.', category: 'saas', sub: 'presentations',
+    color: '#6B1FBF', website: 'https://ahaslides.com',
+    tagline: 'Low-cost live polls, quizzes and Q&A for presentations.',
+    description: 'AhaSlides adds live polls, quizzes and Q&A to slides, with a useful free plan and very low education prices. Free plan limits are not published, and a 2026 breach exposed account and invoice data.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$8.95/mo (annual)', priceValue: 8.95,
+    score: 7.8, scores: { ease: 8.6, features: 8.2, value: 8.4, support: 7.0 },
+    bestFor: 'Teachers and trainers running regular sessions for under 100 people.',
+    pros: ['Free for 50 people at once', 'Very cheap education plans', 'PowerPoint add-in on every plan', 'Strong Capterra ratings'],
+    cons: ['2026 breach hit all AhaSlides.com accounts', 'Free slide limits not published', 'Monthly billing costs about 3x yearly', 'Refund terms conflict with FAQ'],
+    features: ['Live polls', 'Quizzes', 'Word clouds', 'Audience Q&A', 'PowerPoint add-in'],
+    alternatives: ['mentimeter', 'canva'], affiliateUrl: 'https://ahaslides.com/?red=tatsuk&utm_source=tatsuk&utm_medium=revshare&utm_affiliate_network=reditus'
+  }),
+  t({
+    slug: 'mentimeter', name: 'Mentimeter', vendor: 'Mentimeter AB', category: 'saas', sub: 'presentations',
+    color: '#5769E7', website: 'https://www.mentimeter.com',
+    tagline: 'Simple live polling with no participant limit on paid plans.',
+    description: 'Mentimeter runs live polls, word clouds and quizzes, with unlimited participants on paid plans. It is easy to use, but the free plan is small, and recent reviews complain about renewals and refunds.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$11.99/mo (annual)', priceValue: 11.99,
+    score: 7.6, scores: { ease: 8.8, features: 8.0, value: 7.2, support: 6.2 },
+    bestFor: 'Presenters who regularly speak to hundreds of people.',
+    pros: ['Unlimited participants on paid plans', 'Very easy to use', 'Basic is cheap for big crowds'],
+    cons: ['Free plan allows 50 participants a month', 'Pro is annual only', 'Recent auto-renewal complaints'],
+    features: ['Live polls', 'Word clouds', 'Quizzes', 'Slide import', 'AI question help'],
+    alternatives: ['ahaslides', 'canva']
+  }),
+  t({
     slug: 'surfer-seo', name: 'Surfer', vendor: 'Surfer', category: 'ai-tools', sub: 'ai-seo',
     color: '#FF5C35', website: 'https://surfer.ai',
     tagline: 'Content optimization and AI writing for ranking on Google.',

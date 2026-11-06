@@ -30,6 +30,7 @@ module.exports = [
       { slug: 'crm', name: 'CRM' },
       { slug: 'automation', name: 'Automation' },
       { slug: 'design', name: 'Design' },
+      { slug: 'presentations', name: 'Presentations & Audience Polling' },
       { slug: 'seo-marketing', name: 'SEO & Marketing' },
       { slug: 'social-media', name: 'Social Media' },
       { slug: 'website-builder', name: 'Website Builders' }
