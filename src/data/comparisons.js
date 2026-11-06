@@ -93,6 +93,13 @@ module.exports = [
     pickB: 'You want generated footage and an AI agent that edits for you.'
   },
   {
+    a: 'joggai', b: 'creatify',
+    summary: 'Far cheaper avatar minutes vs stronger paid-ad tools.',
+    verdict: 'JoggAI wins on cost for simple avatar videos. Creatify is the better tool for people running paid ads, thanks to its research and cloning tools. Pay monthly on either, since neither gives refunds.',
+    pickA: 'You make lots of simple avatar videos on a small budget.',
+    pickB: 'You run paid ads and would use competitor research.'
+  },
+  {
     a: 'mailchimp', b: 'brevo',
     summary: 'The best-known email tool vs the value-priced all-in-one.',
     verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',

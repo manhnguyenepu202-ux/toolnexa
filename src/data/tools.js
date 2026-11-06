@@ -307,6 +307,32 @@ module.exports = [
     alternatives: ['invideo', 'videogen', 'synthesia'], affiliateUrl: 'https://fliki.ai/?via=harry-johnson'
   }),
   t({
+    slug: 'joggai', name: 'JoggAI', vendor: 'JOGG PTE. LTD.', category: 'ai-tools', sub: 'ai-video',
+    color: '#2563EB', website: 'https://www.jogg.ai',
+    tagline: 'Low-cost AI avatar videos and UGC-style product ads.',
+    description: 'JoggAI makes avatar videos and product ads from scripts or URLs, with translation and 200+ AI models on one credit balance. Standard avatar video is very cheap per minute, but its small Trustpilot record is poor, and payments are non-refundable.',
+    pricingModel: 'Free Trial', freePlan: false, startingPrice: '$24/mo (annual)', priceValue: 24,
+    score: 7.3, scores: { ease: 8.2, features: 8.4, value: 7.4, support: 5.6 },
+    bestFor: 'Small sellers and marketers testing many simple avatar videos.',
+    pros: ['About 120 avatar minutes for $29', 'Editing and previewing cost no credits', 'Monthly credits roll over three months'],
+    cons: ['Trustpilot 2.1 from a small sample', 'Payments are non-refundable', 'AI footage uses credits fast', 'Credit system changed repeatedly in 2026'],
+    features: ['AI avatars', 'URL to video', 'Product ad tools', 'Translation', 'Talking photos', 'API and MCP'],
+    alternatives: ['creatify', 'synthesia', 'fliki'], affiliateUrl: 'https://www.jogg.ai/?fpr=manh53'
+  }),
+  t({
+    slug: 'creatify', name: 'Creatify', vendor: 'Creatify Lab', category: 'ai-tools', sub: 'ai-video',
+    color: '#7C3AED', website: 'https://creatify.ai',
+    tagline: 'AI video ads with UGC-style actors and competitor ad research.',
+    description: 'Creatify turns products into AI video ads, with hundreds of AI actors, templates, and ad research tools from Pro. It suits people running paid ads, but credits cover limited avatar time, and recent reviews raise billing and output concerns.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$10/mo (annual)', priceValue: 10,
+    score: 7.5, scores: { ease: 8.4, features: 8.5, value: 7.2, support: 5.8 },
+    bestFor: 'Marketers running and testing paid video ads.',
+    pros: ['Competitor ad tracker and Ad Clone from Pro', '300 to 1,500 AI actors', 'Low entry price'],
+    cons: ['Unexpected annual renewals in recent reviews', 'Payments are non-refundable', 'Avatar minutes are limited at each plan'],
+    features: ['AI actors', 'URL to video', 'Ad templates', 'Competitor ad tracker', 'Ad Clone', 'API'],
+    alternatives: ['joggai', 'synthesia', 'invideo']
+  }),
+  t({
     slug: 'surfer-seo', name: 'Surfer', vendor: 'Surfer', category: 'ai-tools', sub: 'ai-seo',
     color: '#FF5C35', website: 'https://surfer.ai',
     tagline: 'Content optimization and AI writing for ranking on Google.',
