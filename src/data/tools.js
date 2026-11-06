@@ -373,6 +373,45 @@ module.exports = [
     alternatives: ['jenni', 'grammarly']
   }),
   t({
+    slug: 'wispr-flow', name: 'Wispr Flow', vendor: 'Wispr AI, Inc.', category: 'ai-tools', sub: 'ai-voice',
+    color: '#111827', website: 'https://wisprflow.ai',
+    tagline: 'Voice dictation that writes clean text in any app.',
+    description: 'Wispr Flow turns speech into polished text wherever your cursor is, on Mac, Windows, iOS and Android. It is very easy to use, but all transcription runs in the cloud, and privacy settings need attention.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$12/mo (annual)', priceValue: 12,
+    score: 7.9, scores: { ease: 9.0, features: 8.6, value: 8.0, support: 6.4 },
+    bestFor: 'People who write all day and do not handle confidential data.',
+    pros: ['Clean text with little editing', 'Works in any app', 'Mac, Windows, iOS and Android', 'Clear data controls'],
+    cons: ['Cloud only, no offline mode', 'Past privacy controversy', 'Refunds only if law requires', 'Free plan has a weekly word limit'],
+    features: ['Voice dictation', 'Auto clean-up', 'Context awareness', 'Team plans', 'Notetaker'],
+    alternatives: ['superwhisper', 'elevenlabs'], affiliateUrl: 'https://ref.wisprflow.ai/kazuki'
+  }),
+  t({
+    slug: 'superwhisper', name: 'Superwhisper', vendor: 'Superwhisper', category: 'ai-tools', sub: 'ai-voice',
+    color: '#4F46E5', website: 'https://superwhisper.com',
+    tagline: 'Dictation with local AI models that works offline.',
+    description: 'Superwhisper runs speech models on your own device, so dictation can work offline and privately. It offers a lifetime licence and a 30-day refund, but takes more setup than cloud tools.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: 'About $7/mo (annual)', priceValue: 7,
+    score: 7.8, scores: { ease: 8.0, features: 8.5, value: 8.4, support: 6.8 },
+    bestFor: 'People who need private or offline dictation.',
+    pros: ['Local models work offline', 'Lifetime licence available', '30-day refund on first purchase'],
+    cons: ['More settings to learn', 'Best on Apple Silicon for local use', 'Very few public reviews'],
+    features: ['Local dictation', 'Cloud models', 'Own API keys', 'File transcription', 'Translation'],
+    alternatives: ['wispr-flow']
+  }),
+  t({
+    slug: 'getimg', name: 'getimg.ai', vendor: 'Webrockets Sp. z o. o.', category: 'ai-tools', sub: 'ai-image',
+    color: '#DB2777', website: 'https://getimg.ai',
+    tagline: 'One subscription for many AI image and video models.',
+    description: 'getimg.ai gives access to many image and video models with one credit balance, and shows what each plan buys. There is no free plan, refunds are very limited, and custom model training was reportedly removed in 2026.',
+    pricingModel: 'Paid', freePlan: false, startingPrice: 'About $11/mo (annual)', priceValue: 11,
+    score: 7.2, scores: { ease: 8.2, features: 8.4, value: 7.0, support: 5.6 },
+    bestFor: 'Creators who want many AI models in one account.',
+    pros: ['Many image and video models', 'Plan page shows what credits buy', 'Flat cost per image'],
+    cons: ['No free plan or trial', 'Refund only under 100 credits within 3 days', 'Credits do not roll over', 'Terms date from 2022'],
+    features: ['AI image models', 'AI video models', 'Upscaling', 'Editing tools', 'API'],
+    alternatives: ['midjourney', 'chatgpt', 'runway'], affiliateUrl: 'https://refer.getimg.ai/kazuki'
+  }),
+  t({
     slug: 'surfer-seo', name: 'Surfer', vendor: 'Surfer', category: 'ai-tools', sub: 'ai-seo',
     color: '#FF5C35', website: 'https://surfer.ai',
     tagline: 'Content optimization and AI writing for ranking on Google.',

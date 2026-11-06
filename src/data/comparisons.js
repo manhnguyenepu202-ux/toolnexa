@@ -114,6 +114,13 @@ module.exports = [
     pickB: 'You have a draft and need it polished for submission.'
   },
   {
+    a: 'wispr-flow', b: 'superwhisper',
+    summary: 'Cloud polish on every device vs local privacy.',
+    verdict: 'Wispr Flow is the easiest dictation to live with. Superwhisper wins on privacy, price and refunds, so try its free local mode first.',
+    pickA: 'You want clean text with no setup, and accept cloud processing.',
+    pickB: 'You need offline or private dictation, or prefer to pay once.'
+  },
+  {
     a: 'mailchimp', b: 'brevo',
     summary: 'The best-known email tool vs the value-priced all-in-one.',
     verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',
