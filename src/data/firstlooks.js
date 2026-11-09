@@ -6,5 +6,6 @@ module.exports = [
   { slug: 'vidu', name: 'Vidu', website: 'https://www.vidu.com', affiliateUrl: 'https://vidu.pxf.io/en0b7r' },
   { slug: 'medo', name: 'MeDo', website: 'https://medo.dev', affiliateUrl: 'https://sailaiprivatelimited.pxf.io/OYvAMN' },
   { slug: 'kommodo', name: 'Kommodo', website: 'https://kommodo.ai', affiliateUrl: 'https://kommodo.ai/?via=tatsuki' },
-  { slug: 'context-dev', name: 'Context.dev', website: 'https://context.dev', affiliateUrl: 'https://link.context.dev/harry-johnson' }
+  { slug: 'context-dev', name: 'Context.dev', website: 'https://context.dev', affiliateUrl: 'https://link.context.dev/harry-johnson' },
+  { slug: 'toolsaday', name: 'Toolsaday', website: 'https://toolsaday.com', affiliateUrl: 'https://toolsaday.com/writing/email-generator?via=Tatsuki' }
 ];
