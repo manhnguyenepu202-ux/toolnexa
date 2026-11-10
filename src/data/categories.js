@@ -66,7 +66,7 @@ module.exports = [
     name: 'PC Utilities',
     short: 'Utilities',
     icon: 'shield',
-    color: '#2563EB',
+    color: '#DB2777',
     description: 'Desktop utilities compared on what they really rescue, what they cost and how refunds work.',
     subcategories: [
       { slug: 'data-recovery', name: 'Data Recovery' }
