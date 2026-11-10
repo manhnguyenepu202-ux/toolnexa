@@ -8,6 +8,7 @@ author: ToolKenzon Editorial
 readTime: 11
 tools: wispr-flow, getimg, invideo, opusclip, ahaslides, mentimeter, easeus-data-recovery, superwhisper
 cover: shield
+color: #4F46E5
 ---
 
 Every AI tool now sells itself with a free plan, a trial or a "cancel anytime" badge. Fewer tell you what happens when you've paid and it doesn't work for you. So we went back through the terms, refund policies and help centres we read for our reviews, and lined them up side by side.

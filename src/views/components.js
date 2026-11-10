@@ -70,7 +70,7 @@ function bestCard(b) {
 function postCard(p) {
   const cat = catMap[p.category];
   return html`<article class="post-card">
-    <a href="/blog/${p.slug}" class="post-cover" style="--cat:${cat ? cat.color : '#2563EB'}" tabindex="-1" aria-hidden="true">${icon(p.cover, '', 40)}</a>
+    <a href="/blog/${p.slug}" class="post-cover" style="--cat:${p.coverColor || (cat ? cat.color : '#2563EB')}" tabindex="-1" aria-hidden="true">${icon(p.cover, '', 40)}</a>
     <div class="post-body">
       <span class="eyebrow">${cat ? cat.name : 'Guide'}</span>
       <h3><a href="/blog/${p.slug}">${p.title}</a></h3>

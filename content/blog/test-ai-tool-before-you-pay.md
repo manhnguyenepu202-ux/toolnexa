@@ -8,6 +8,7 @@ author: ToolKenzon Editorial
 readTime: 9
 tools: chatgpt, getimg, fliki, base44, kommodo, ahaslides, wispr-flow
 cover: check
+color: #0D9488
 ---
 
 **Quick answer:** treat the free plan or trial as your only safe test, because most paid AI plans can't be refunded once you've used them. In seven days you can check what a real task costs, what the free plan hides, where your data goes and how hard it is to leave. If a tool fails any of those, you've lost nothing.

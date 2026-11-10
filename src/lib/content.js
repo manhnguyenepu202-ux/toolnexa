@@ -74,6 +74,8 @@ loadArticles('reviews', toolMap);
 loadArticles('compare', compareMap);
 
 // Blog posts from /content/blog/*.md
+const COVER_PALETTE = ['#7C3AED', '#4F46E5', '#0284C7', '#0D9488', '#16A34A', '#CA8A04', '#EA580C', '#E11D48', '#DB2777', '#2563EB'];
+const coverFor = (slug) => COVER_PALETTE[[...slug].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) >>> 0, 7) % COVER_PALETTE.length];
 const blogDir = path.join(__dirname, '..', '..', 'content', 'blog');
 const posts = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md')).map((f) => {
   const { data, body } = parseFrontmatter(fs.readFileSync(path.join(blogDir, f), 'utf8'));
@@ -87,6 +89,7 @@ const posts = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md')).map((f) =
     author: data.author || 'ToolKenzon Editorial',
     readTime: Number(data.readTime) || 5,
     cover: data.cover || 'book',
+    coverColor: data.color || coverFor(f.replace(/\.md$/, '')),
     type: data.type || (f.endsWith('-first-look.md') ? 'first-look' : 'guide'),
     tools: (data.tools || '').split(',').map((s) => s.trim()).filter((s) => toolMap[s]),
     html,

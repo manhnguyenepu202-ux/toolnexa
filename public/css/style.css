@@ -600,3 +600,8 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--p
 .prose .author-box h2.author-name { margin: 0 0 8px; font-size: 1.15rem; border: 0; padding: 0; }
 .author-box p:last-child { margin-bottom: 0; color: var(--fg-2); font-size: .95rem; }
 .prose .key-findings, .prose blockquote.findings { background: color-mix(in srgb, var(--accent) 8%, var(--card)); border-left-color: var(--accent); }
+
+/* Keep cover icons white on hover (a:hover would recolour them). */
+.post-cover, .post-cover:hover, .post-cover:focus-visible { color: #fff; }
+.post-cover .icon { transition: transform .25s var(--ease); }
+.post-cover:hover .icon { transform: scale(1.08); }
