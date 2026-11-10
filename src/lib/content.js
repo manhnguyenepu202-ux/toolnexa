@@ -90,6 +90,7 @@ const posts = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md')).map((f) =
     readTime: Number(data.readTime) || 5,
     cover: data.cover || 'book',
     coverColor: data.color || coverFor(f.replace(/\.md$/, '')),
+    image: fs.existsSync(path.join(__dirname, '..', '..', 'public', 'img', 'covers', f.replace(/\.md$/, '.svg'))) ? `/img/covers/${f.replace(/\.md$/, '.svg')}` : null,
     type: data.type || (f.endsWith('-first-look.md') ? 'first-look' : 'guide'),
     tools: (data.tools || '').split(',').map((s) => s.trim()).filter((s) => toolMap[s]),
     html,

@@ -3,7 +3,7 @@ const { html, raw, formatDate } = require('../lib/util');
 const { icon } = require('../lib/icons');
 const C = require('../lib/content');
 const {
-  logoTile, scorePill, pricingTag, visitBtn, toolCard, compareCard, bestCard, postCard,
+  logoTile, scorePill, pricingTag, visitBtn, toolCard, compareCard, bestCard, postCard, coverArt,
   breadcrumbs, breadcrumbLd, scoreBars, scoreRing, newsletter
 } = require('./components');
 const { page } = require('./layout');
@@ -554,7 +554,7 @@ function topicNav(active) {
 function recentItem(p) {
   const cat = C.catMap[p.category];
   return html`<article class="recent-item">
-    <a href="/blog/${p.slug}" class="post-cover sm" style="--cat:${p.coverColor || cat.color}" tabindex="-1" aria-hidden="true">${icon(p.cover, '', 28)}</a>
+    <a href="/blog/${p.slug}" class="post-cover sm" style="--cat:${p.coverColor || cat.color}" tabindex="-1" aria-hidden="true">${coverArt(p, 28)}</a>
     <div>
       <span class="eyebrow">${postEyebrow(p)}</span>
       <h3><a href="/blog/${p.slug}">${p.title}</a></h3>
@@ -582,7 +582,7 @@ ${topicNav(topic)}
   <h2 class="slash-head"><span aria-hidden="true">/</span> ${topic ? `${topic.name} · most recent posts` : 'Most recent posts'}</h2>
   <div class="recent-grid">
     <article class="recent-feature">
-      <a href="/blog/${first.slug}" class="post-cover lg" style="--cat:${first.coverColor || fcat.color}" tabindex="-1" aria-hidden="true">${icon(first.cover, '', 64)}</a>
+      <a href="/blog/${first.slug}" class="post-cover lg" style="--cat:${first.coverColor || fcat.color}" tabindex="-1" aria-hidden="true">${coverArt(first, 64)}</a>
       <span class="eyebrow">${postEyebrow(first)}</span>
       <h3><a href="/blog/${first.slug}">${first.title}</a></h3>
       <p>${first.description}</p>
@@ -621,6 +621,7 @@ function post(p) {
     </div>
   </aside>
   <article class="prose">
+    ${p.image ? html`<figure class="post-figure"><img src="${p.image}" alt="Illustration for ${p.title}" width="1200" height="750" decoding="async"></figure>` : ''}
     ${raw(p.html)}
     <aside class="author-box" aria-label="About the author">
       <p class="f-label">About the author</p>

@@ -67,10 +67,17 @@ function bestCard(b) {
   </a>`;
 }
 
+// Illustrated cover if the post has one, otherwise the icon on a colour gradient.
+function coverArt(p, size) {
+  return p.image
+    ? html`<img src="${p.image}" alt="" width="1200" height="750" loading="lazy" decoding="async">`
+    : icon(p.cover, '', size);
+}
+
 function postCard(p) {
   const cat = catMap[p.category];
   return html`<article class="post-card">
-    <a href="/blog/${p.slug}" class="post-cover" style="--cat:${p.coverColor || (cat ? cat.color : '#2563EB')}" tabindex="-1" aria-hidden="true">${icon(p.cover, '', 40)}</a>
+    <a href="/blog/${p.slug}" class="post-cover" style="--cat:${p.coverColor || (cat ? cat.color : '#2563EB')}" tabindex="-1" aria-hidden="true">${coverArt(p, 40)}</a>
     <div class="post-body">
       <span class="eyebrow">${cat ? cat.name : 'Guide'}</span>
       <h3><a href="/blog/${p.slug}">${p.title}</a></h3>
@@ -130,4 +137,4 @@ function disclosureNote() {
   return html`<p class="disclosure">${icon('info', '', 16)} <span>We review tools independently. Some links are affiliate links — if you buy, we may earn a commission at no extra cost to you. <a href="/affiliate-disclosure">How we make money</a>.</span></p>`;
 }
 
-module.exports = { logoTile, scorePill, pricingTag, visitBtn, toolCard, compareCard, bestCard, postCard, breadcrumbs, breadcrumbLd, scoreBars, scoreRing, newsletter, disclosureNote, initials, raw };
+module.exports = { logoTile, scorePill, pricingTag, visitBtn, toolCard, compareCard, bestCard, postCard, coverArt, breadcrumbs, breadcrumbLd, scoreBars, scoreRing, newsletter, disclosureNote, initials, raw };

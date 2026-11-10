@@ -605,3 +605,13 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--p
 .post-cover, .post-cover:hover, .post-cover:focus-visible { color: #fff; }
 .post-cover .icon { transition: transform .25s var(--ease); }
 .post-cover:hover .icon { transform: scale(1.08); }
+
+/* Illustrated post covers */
+.post-cover { position: relative; overflow: hidden; }
+.post-cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .35s var(--ease); }
+.post-cover:hover img { transform: scale(1.04); }
+.post-card .post-cover, .recent-feature .post-cover, .post-cover.sm { border-radius: inherit; }
+.post-card .post-cover { border-radius: 0; }
+.post-figure { margin: 0 0 28px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); }
+.post-figure img { display: block; width: 100%; height: auto; }
+@media (prefers-reduced-motion: reduce) { .post-cover img, .post-cover .icon { transition: none; } .post-cover:hover img { transform: none; } }
