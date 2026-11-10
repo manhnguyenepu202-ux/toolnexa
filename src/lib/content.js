@@ -87,6 +87,7 @@ const posts = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md')).map((f) =
     author: data.author || 'ToolKenzon Editorial',
     readTime: Number(data.readTime) || 5,
     cover: data.cover || 'book',
+    type: data.type || (f.endsWith('-first-look.md') ? 'first-look' : 'guide'),
     tools: (data.tools || '').split(',').map((s) => s.trim()).filter((s) => toolMap[s]),
     html,
     toc
@@ -94,11 +95,19 @@ const posts = fs.readdirSync(blogDir).filter((f) => f.endsWith('.md')).map((f) =
 }).sort((a, b) => (a.date < b.date ? 1 : -1));
 const postMap = Object.fromEntries(posts.map((p) => [p.slug, p]));
 
+// Blog topics: one per category that has posts, plus research and first looks.
+const blogTopics = [
+  { slug: 'research', name: 'Research', match: (p) => p.type === 'research' },
+  ...categories.filter((c) => posts.some((p) => p.category === c.slug))
+    .map((c) => ({ slug: c.slug, name: c.name, color: c.color, match: (p) => p.category === c.slug })),
+  { slug: 'first-looks', name: 'First Looks', match: (p) => p.type === 'first-look' }
+].filter((t) => posts.some(t.match));
+
 const toolsIn = (catSlug) => tools.filter((t) => t.category === catSlug).sort((a, b) => b.score - a.score);
 const comparisonsFor = (slug) => comparisons.filter((c) => c.a === slug || c.b === slug);
 
 module.exports = {
-  categories, tools, comparisons, bestof, posts, firstLooks,
+  categories, tools, comparisons, bestof, posts, blogTopics, firstLooks,
   toolMap, firstLookMap, catMap, subMap, compareMap, bestMap, postMap,
   toolsIn, comparisonsFor
 };

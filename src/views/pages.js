@@ -124,7 +124,7 @@ function home() {
 
 <section class="section section-alt">
   <div class="container">
-    ${sectionHead('Guides', 'Latest from the blog', '/blog', 'All guides')}
+    ${sectionHead('Blog & Research', 'Latest from the blog', '/blog', 'All posts')}
     <div class="post-grid">${C.posts.slice(0, 3).map(postCard)}</div>
   </div>
 </section>
@@ -541,42 +541,77 @@ ${newsletter('best')}`;
 }
 
 // ───────────────────────────── BLOG ─────────────────────────────
-function blogIndex() {
-  const [first, ...rest] = C.posts;
-  const body = html`
-<section class="page-hero"><div class="container">
-  ${breadcrumbs([{ label: 'Guides', href: '/blog' }])}
-  <h1>Guides & Insights</h1>
-  <p class="lead">Practical how-tos for choosing and using AI, SaaS and email marketing tools.</p>
-</div></section>
-<section class="section-tight"><div class="container">
-  <article class="post-feature">
-    <a href="/blog/${first.slug}" class="post-cover lg" style="--cat:${C.catMap[first.category].color}" tabindex="-1" aria-hidden="true">${icon(first.cover, '', 64)}</a>
+const typeLabel = { research: 'Research', guide: 'Guide', 'first-look': 'First Look' };
+const postEyebrow = (p) => `${typeLabel[p.type] || 'Guide'} · ${C.catMap[p.category] ? C.catMap[p.category].name : ''}`;
+
+function topicNav(active) {
+  const items = [{ slug: '', name: 'All content' }, ...C.blogTopics];
+  return html`<nav class="topic-nav" aria-label="Blog topics"><div class="container"><ul>
+    ${items.map((t) => html`<li><a href="${t.slug ? `/blog/topic/${t.slug}` : '/blog'}"${(active ? active.slug : '') === t.slug ? raw(' aria-current="page"') : ''}>${t.name}</a></li>`)}
+  </ul></div></nav>`;
+}
+
+function recentItem(p) {
+  const cat = C.catMap[p.category];
+  return html`<article class="recent-item">
+    <a href="/blog/${p.slug}" class="post-cover sm" style="--cat:${cat.color}" tabindex="-1" aria-hidden="true">${icon(p.cover, '', 28)}</a>
     <div>
-      <span class="eyebrow">Featured · ${C.catMap[first.category].name}</span>
-      <h2><a href="/blog/${first.slug}">${first.title}</a></h2>
-      <p class="lead-sm">${first.description}</p>
-      <p class="post-meta">${icon('clock', '', 14)} ${first.readTime} min read · <time datetime="${first.date}">${formatDate(first.date)}</time></p>
+      <span class="eyebrow">${postEyebrow(p)}</span>
+      <h3><a href="/blog/${p.slug}">${p.title}</a></h3>
+      <p class="post-meta"><time datetime="${p.date}">${formatDate(p.date)}</time> · by ${p.author}</p>
     </div>
-  </article>
-  <div class="post-grid">${rest.map(postCard)}</div>
+  </article>`;
+}
+
+function blogIndex(topic) {
+  const list = topic ? C.posts.filter(topic.match) : C.posts;
+  const [first, ...rest] = list;
+  const side = rest.slice(0, 3);
+  const more = rest.slice(3);
+  const heading = topic ? topic.name : 'Blog & Research';
+  const crumbs = topic ? [{ label: 'Blog & Research', href: '/blog' }, { label: topic.name, href: `/blog/topic/${topic.slug}` }] : [{ label: 'Blog & Research', href: '/blog' }];
+  const fcat = C.catMap[first.category];
+  const body = html`
+<section class="page-hero blog-hero"><div class="container">
+  ${breadcrumbs(crumbs)}
+  <h1>${heading}</h1>
+  <p class="lead">${topic && topic.slug === 'first-looks' ? 'Early, unscored looks at new tools, published before there is enough evidence for a full review.' : topic && topic.slug === 'research' ? 'Original analysis built from the pricing pages, terms and user reviews behind every ToolKenzon review.' : 'Research, buying guides and first looks for people choosing AI, SaaS and email marketing software. No sponsored rankings.'}</p>
+</div></section>
+${topicNav(topic)}
+<section class="section-tight"><div class="container">
+  <h2 class="slash-head"><span aria-hidden="true">/</span> ${topic ? `${topic.name} · most recent posts` : 'Most recent posts'}</h2>
+  <div class="recent-grid">
+    <article class="recent-feature">
+      <a href="/blog/${first.slug}" class="post-cover lg" style="--cat:${fcat.color}" tabindex="-1" aria-hidden="true">${icon(first.cover, '', 64)}</a>
+      <span class="eyebrow">${postEyebrow(first)}</span>
+      <h3><a href="/blog/${first.slug}">${first.title}</a></h3>
+      <p>${first.description}</p>
+      <p class="post-meta"><time datetime="${first.date}">${formatDate(first.date)}</time> · by ${first.author} · ${first.readTime} min read</p>
+    </article>
+    <div class="recent-list">${side.map(recentItem)}</div>
+  </div>
+  ${more.length ? html`<h2 class="slash-head more"><span aria-hidden="true">/</span> More posts</h2><div class="post-grid">${more.map(postCard)}</div>` : ''}
 </div></section>
 ${newsletter('blog')}`;
-  return page({ title: 'Guides: AI Tools, SaaS & Email Marketing', description: 'Practical guides on choosing and using AI tools, SaaS platforms and email marketing software.', path: '/blog', body });
+  return page({
+    title: topic ? `${topic.name}: Blog & Research` : 'Blog & Research: AI Tools, SaaS & Email Marketing',
+    description: topic ? `${topic.name} posts from the ToolKenzon blog: research, buying guides and first looks.` : 'Original research, buying guides and first looks on AI tools, SaaS platforms and email marketing software.',
+    path: topic ? `/blog/topic/${topic.slug}` : '/blog', body
+  });
 }
 
 function post(p) {
   const cat = C.catMap[p.category];
-  const crumbs = [{ label: 'Guides', href: '/blog' }, { label: p.title, href: `/blog/${p.slug}` }];
+  const crumbs = [{ label: 'Blog & Research', href: '/blog' }, { label: p.title, href: `/blog/${p.slug}` }];
   const tools = p.tools.map((s) => C.toolMap[s]);
-  const related = C.posts.filter((x) => x !== p).slice(0, 3);
+  const related = [...C.posts.filter((x) => x !== p && x.category === p.category), ...C.posts.filter((x) => x !== p && x.category !== p.category)].slice(0, 3);
   const body = html`
 <section class="page-hero post-hero" style="--cat:${cat.color}"><div class="container narrow">
   ${breadcrumbs(crumbs)}
-  <span class="eyebrow">${cat.name}</span>
+  <span class="eyebrow">${postEyebrow(p)}</span>
   <h1>${p.title}</h1>
   <p class="lead">${p.description}</p>
-  <p class="post-meta">By ${p.author} · ${icon('clock', '', 14)} ${p.readTime} min read · <time datetime="${p.date}">${formatDate(p.date)}</time></p>
+  <p class="post-meta">By ${p.author} · <a href="/about#method">How we research</a> · ${icon('clock', '', 14)} ${p.readTime} min read · <time datetime="${p.date}">${formatDate(p.date)}</time></p>
 </div></section>
 <div class="container post-layout">
   <aside class="toc" aria-label="On this page">
@@ -587,6 +622,11 @@ function post(p) {
   </aside>
   <article class="prose">
     ${raw(p.html)}
+    <aside class="author-box" aria-label="About the author">
+      <p class="f-label">About the author</p>
+      <h2 class="author-name">${p.author}</h2>
+      <p>ToolKenzon Editorial is the research desk behind every review on this site. We read pricing pages, terms, refund policies, documentation and recent user reviews, and we show our sources at the end of each piece. We don't take payment for scores or rankings. <a href="/about#method">Read how we research</a>.</p>
+    </aside>
   </article>
   <aside class="post-tools" aria-label="Tools mentioned">
     <div class="sticky">
@@ -595,7 +635,7 @@ function post(p) {
     </div>
   </aside>
 </div>
-<section class="section section-alt"><div class="container">${sectionHead('Keep reading', 'Related guides', '/blog', 'All guides')}<div class="post-grid">${related.map(postCard)}</div></div></section>
+<section class="section section-alt"><div class="container">${sectionHead('Keep reading', 'Related reading', '/blog', 'All posts')}<div class="post-grid">${related.map(postCard)}</div></div></section>
 ${newsletter('post')}`;
   return page({
     title: p.title, description: p.description, path: `/blog/${p.slug}`, body, ogType: 'article',

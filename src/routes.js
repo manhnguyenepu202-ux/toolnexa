@@ -22,6 +22,7 @@ function staticRoutes() {
   C.comparisons.forEach((c) => { r[`/compare/${c.slug}`] = () => P.compare(c); });
   C.bestof.forEach((b) => { r[`/best/${b.slug}`] = () => P.best(b); });
   C.posts.forEach((p) => { r[`/blog/${p.slug}`] = () => P.post(p); });
+  C.blogTopics.forEach((t) => { r[`/blog/topic/${t.slug}`] = () => P.blogIndex(t); });
   return r;
 }
 
