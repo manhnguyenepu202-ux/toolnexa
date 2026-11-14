@@ -31,6 +31,7 @@ module.exports = [
       { slug: 'automation', name: 'Automation' },
       { slug: 'design', name: 'Design' },
       { slug: 'presentations', name: 'Presentations & Audience Polling' },
+      { slug: 'web-scraping', name: 'Web Scraping APIs' },
       { slug: 'seo-marketing', name: 'SEO & Marketing' },
       { slug: 'social-media', name: 'Social Media' },
       { slug: 'website-builder', name: 'Website Builders' }

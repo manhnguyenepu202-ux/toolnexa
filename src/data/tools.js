@@ -438,6 +438,32 @@ module.exports = [
     alternatives: ['ahaslides', 'canva']
   }),
   t({
+    slug: 'scrape-do', name: 'Scrape.do', vendor: 'PACKEND, LLC', category: 'saas', sub: 'web-scraping',
+    color: '#1F2937', website: 'https://scrape.do',
+    tagline: 'Web scraping API that charges only for successful requests.',
+    description: 'Scrape.do handles proxies, blocks and JavaScript rendering behind one API, and is among the cheapest per protected page. There is no overage billing, the legal pages date from 2022, and users report that cancelling removes remaining credits.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$29/mo', priceValue: 29,
+    score: 8.5, scores: { ease: 8.5, features: 8.6, value: 8.9, support: 8.4 },
+    bestFor: 'Developers scraping protected sites at moderate volume.',
+    pros: ['Low cost per protected page', 'Failed requests are free', 'Strong result in a public benchmark', 'Free plan with 1,000 credits a month'],
+    cons: ['No pay-as-you-go overage', 'Cancelling removes remaining credits', 'Terms dated 2022, no address', 'Refunds only within 3 days'],
+    features: ['Rotating proxies', 'JavaScript rendering', 'Residential and mobile proxies', 'Geo-targeting', 'Async jobs'],
+    alternatives: ['scraperapi'], affiliateUrl: 'https://scrape.do?fpr=m1pr7d'
+  }),
+  t({
+    slug: 'scraperapi', name: 'ScraperAPI', vendor: 'ScraperAPI', category: 'saas', sub: 'web-scraping',
+    color: '#1D2AE8', website: 'https://www.scraperapi.com',
+    tagline: 'Established scraping API with overage billing on larger plans.',
+    description: 'ScraperAPI handles proxies and rendering behind one API, with plans up to 21.5 million credits, pay-as-you-go from its Scaling plan and a 7-day refund. Protected pages cost more credits than at some rivals.',
+    pricingModel: 'Paid', freePlan: false, startingPrice: '$49/mo', priceValue: 49,
+    score: 8.0, scores: { ease: 8.4, features: 8.6, value: 7.6, support: 7.8 },
+    bestFor: 'Teams that need overage billing and very large plans.',
+    pros: ['Pay-as-you-go on larger plans', '7-day refund', 'Large plans up to 21.5M credits'],
+    cons: ['Higher cost per protected page', 'Extra credits for bot-protection bypass', 'No Trustpilot reviews in the last year'],
+    features: ['Rotating proxies', 'JavaScript rendering', 'Premium proxies', 'Structured endpoints', 'Async jobs'],
+    alternatives: ['scrape-do']
+  }),
+  t({
     slug: 'surfer-seo', name: 'Surfer', vendor: 'Surfer', category: 'ai-tools', sub: 'ai-seo',
     color: '#FF5C35', website: 'https://surfer.ai',
     tagline: 'Content optimization and AI writing for ranking on Google.',

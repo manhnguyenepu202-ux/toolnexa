@@ -128,6 +128,13 @@ module.exports = [
     pickB: 'You present to hundreds of people, or want to avoid a vendor with a fresh breach.'
   },
   {
+    a: 'scrape-do', b: 'scraperapi',
+    summary: 'Cheaper protected pages vs overage billing and a 7-day refund.',
+    verdict: 'Scrape.do buys roughly twice as many protected pages per dollar at mid tiers and did better in a public benchmark. ScraperAPI suits jobs that cannot stop when credits run out.',
+    pickA: 'You scrape protected sites and cost per successful page matters most.',
+    pickB: 'You need pay-as-you-go overage, very large plans or a 7-day refund.'
+  },
+  {
     a: 'mailchimp', b: 'brevo',
     summary: 'The best-known email tool vs the value-priced all-in-one.',
     verdict: 'Brevo is the better value for most growing lists because you pay for emails sent, not contacts stored. Mailchimp has the more polished editor and a larger integration library.',
