@@ -346,6 +346,19 @@ module.exports = [
     alternatives: ['opusclip', 'submagic', 'fliki'], affiliateUrl: 'http://crayo.ai/?ref=manhrz'
   }),
   t({
+    slug: 'focusee', pricingChecked: null, name: 'FocuSee', vendor: 'iMobie Inc.', category: 'ai-tools', sub: 'ai-video',
+    color: '#6D28D9', website: 'https://focusee.imobie.com',
+    tagline: 'Screen recorder that adds auto-zoom and cursor effects for you.',
+    description: 'FocuSee records your screen and webcam, then automatically zooms in on clicks, smooths the cursor and adds backgrounds, so demos and tutorials look edited without manual keyframes. It runs on Windows and Mac.',
+    pricingModel: 'Paid', freePlan: false, startingPrice: 'About $50–60/yr', priceValue: 5,
+    score: 7.4, scores: { ease: 8.7, features: 7.8, value: 7.4, support: 6.2 },
+    bestFor: 'Creators, marketers and SaaS teams making product demos and tutorials.',
+    pros: ['Auto-zoom follows your clicks', 'Windows and Mac (Screen Studio is Mac-only)', 'Lifetime licence option', '60-day refund on annual and lifetime plans'],
+    cons: ['Free trial exports one watermarked video', 'Prices differ across official pages', 'Some reports of bugs and audio sync issues', 'Not a full video editor'],
+    features: ['Auto-zoom', 'Cursor smoothing', 'Webcam overlay', 'Auto captions', 'Vertical export'],
+    alternatives: ['submagic', 'invideo'], affiliateUrl: 'https://focusee.sjv.io/c/6833997/4097798/59646'
+  }),
+  t({
     slug: 'jenni', name: 'Jenni AI', vendor: 'Jenni AI, Inc.', category: 'ai-tools', sub: 'ai-writing',
     color: '#0EA5E9', website: 'https://jenni.ai',
     tagline: 'AI writing assistant for academics, with autocomplete and citations.',
@@ -397,6 +410,32 @@ module.exports = [
     cons: ['More settings to learn', 'Best on Apple Silicon for local use', 'Very few public reviews'],
     features: ['Local dictation', 'Cloud models', 'Own API keys', 'File transcription', 'Translation'],
     alternatives: ['wispr-flow']
+  }),
+  t({
+    slug: 'krisp', name: 'Krisp', vendor: 'Krisp Technologies, Inc.', category: 'ai-tools', sub: 'ai-voice',
+    color: '#1C1C3A', website: 'https://krisp.ai',
+    tagline: 'Noise cancellation and a bot-free AI meeting note-taker.',
+    description: 'Krisp removes background noise and voices from your calls, then transcribes and summarises meetings without sending a bot into the call. It runs as a desktop app alongside Zoom, Meet, Teams and most other call apps.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$8/mo (annual)', priceValue: 8,
+    score: 8.0, scores: { ease: 8.8, features: 8.3, value: 7.8, support: 6.5 },
+    bestFor: 'Remote workers who take calls in noisy places and want notes without a meeting bot.',
+    pros: ['Strong noise and voice cancellation', 'No bot joins your meetings', 'Works with almost any call app', 'Free plan with 60 minutes a day of noise cancellation'],
+    cons: ['Free plan keeps notes for 7 days only', 'Support complaints on Trustpilot', 'Noise cancellation is desktop-focused', 'Paid tiers add up for teams'],
+    features: ['Noise cancellation', 'Background voice cancellation', 'Meeting transcription', 'AI meeting notes', 'Accent conversion'],
+    alternatives: ['notta', 'wispr-flow'], affiliateUrl: 'https://krisp.pxf.io/c/6833997/2859289/33230'
+  }),
+  t({
+    slug: 'notta', name: 'Notta', vendor: 'Notta Inc.', category: 'ai-tools', sub: 'ai-voice',
+    color: '#2B5CE6', website: 'https://www.notta.ai',
+    tagline: 'AI transcription for meetings and files in 58 languages.',
+    description: 'Notta transcribes live meetings, uploaded audio and video, and recordings from its mobile app, then writes AI summaries. Its strengths are language coverage and price. Its weak spot is billing: many users report charges after cancelling.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$8.17/mo (annual)', priceValue: 8.17,
+    score: 7.2, scores: { ease: 8.4, features: 8.0, value: 8.2, support: 4.5 },
+    bestFor: 'Multilingual teams and students who transcribe a lot of recordings on a budget.',
+    pros: ['58 transcription languages', 'Low annual price', 'Transcribes uploads, meetings and phone recordings', 'Bilingual transcription and translation'],
+    cons: ['Free plan caps each recording at 3 minutes', 'Many complaints about charges after cancelling', 'Meeting bot joins your calls', 'Accuracy drops with heavy accents or crosstalk'],
+    features: ['Live meeting transcription', 'File transcription', 'AI summaries', 'Translation', 'Mobile recorder'],
+    alternatives: ['krisp', 'wispr-flow'], affiliateUrl: 'https://notta.pxf.io/c/6833997/1965200/24010'
   }),
   t({
     slug: 'getimg', name: 'getimg.ai', vendor: 'Webrockets Sp. z o. o.', category: 'ai-tools', sub: 'ai-image',

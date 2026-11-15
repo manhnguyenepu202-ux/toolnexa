@@ -121,6 +121,13 @@ module.exports = [
     pickB: 'You need offline or private dictation, or prefer to pay once.'
   },
   {
+    a: 'krisp', b: 'notta',
+    summary: 'Bot-free call notes vs cheap multilingual transcription.',
+    verdict: 'Krisp is the safer pick for live calls and noisy rooms. Notta gives more minutes and 58 languages for the money, but watch its billing.',
+    pickA: 'You need noise cancellation or notes without a meeting bot.',
+    pickB: 'You transcribe files or several languages and want the most minutes per dollar.'
+  },
+  {
     a: 'ahaslides', b: 'mentimeter',
     summary: 'Cheaper under 100 people vs cheaper for big crowds.',
     verdict: 'AhaSlides is the better buy for classrooms and groups under 100. Above that, Mentimeter Basic costs less and has no participant cap.',
