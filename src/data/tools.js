@@ -242,15 +242,15 @@ module.exports = [
     alternatives: ['tripo']
   }),
   t({
-    slug: 'rodin', pricingChecked: null, name: 'Rodin (Hyper3D)', vendor: 'Deemos Technologies', category: 'ai-tools', sub: 'ai-3d',
+    slug: 'rodin', name: 'Rodin (Hyper3D)', vendor: 'Deemos Technologies', category: 'ai-tools', sub: 'ai-3d',
     color: '#0F766E', website: 'https://hyper3d.ai',
     tagline: 'High-quality AI 3D assets with clean quad meshes and 4K PBR textures.',
     description: 'Rodin, from Hyper3D, generates 3D models from images or text with quad-mesh topology and detailed PBR textures. You preview results and spend credits on the models you keep. It costs more than Tripo or Meshy but aims at production-quality assets.',
-    pricingModel: 'Freemium', freePlan: true, startingPrice: 'About $30/mo', priceValue: 30,
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$24/mo (annual)', priceValue: 24,
     score: 7.9, scores: { ease: 7.8, features: 8.6, value: 7.2, support: 6.8 },
     bestFor: 'Game developers and 3D artists who need cleaner topology and textures.',
     pros: ['Native quad-mesh output', '4K PBR texture maps', 'Pay for the results you keep', 'Plugins for Blender, Unity and Unreal'],
-    cons: ['Higher entry price than Tripo or Meshy', 'Pricing differs between sources', 'STL exports may need repair before printing', 'Fewer credits per dollar'],
+    cons: ['Higher entry price than Tripo or Meshy', 'Payments are non-refundable', 'Cancellation complaints on Trustpilot', 'STL exports may need repair before printing'],
     features: ['Image to 3D', 'Text to 3D', 'Quad mesh', 'PBR textures', 'API and plugins'],
     alternatives: ['tripo', 'meshy']
   }),

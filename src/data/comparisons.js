@@ -51,6 +51,20 @@ module.exports = [
     pickB: 'You want an agent to edit and generate, or you value a short refund window.'
   },
   {
+    a: 'tripo', b: 'rodin',
+    summary: 'Cheaper, faster volume vs premium quads and 4K textures.',
+    verdict: 'Tripo wins on price and, in one blind test, on raw geometry. Rodin is worth paying more for hero assets that need clean quads and detailed PBR textures.',
+    pickA: 'You need many models, rigging, or the lowest cost per asset.',
+    pickB: 'You need production-quality quad meshes and 4K textures for a few key assets.'
+  },
+  {
+    a: 'meshy', b: 'rodin',
+    summary: 'Print tools and textures vs clean quads for production.',
+    verdict: 'Meshy is the better all-rounder, especially for 3D printing and textured models. Rodin suits artists who need quad topology and API pipelines.',
+    pickA: 'You 3D print, want multicolor exports, or iterate quickly.',
+    pickB: 'You build game or film assets and want native quads.'
+  },
+  {
     a: 'tripo', b: 'meshy',
     summary: 'More models per dollar vs a stronger reputation and print tools.',
     verdict: 'Tripo is better value for game assets, props and prototypes. Meshy is worth the extra cost for 3D printing or if you want the stronger track record.',
