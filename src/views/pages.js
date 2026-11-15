@@ -777,4 +777,22 @@ function goPage(t) {
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"><meta http-equiv="refresh" content="0;url=${url}"><title>Redirecting to ${t.name}…</title><script>location.replace(${JSON.stringify(url)})</script></head><body><p>Redirecting to <a href="${url}" rel="sponsored nofollow">${t.name}</a>…</p></body></html>`;
 }
 
-module.exports = { home, directory, category, tool, compareIndex, compare, bestIndex, best, blogIndex, post, about, disclosure, privacy, terms, contact, notFound, goPage };
+
+// Link-in-bio page for Instagram: latest promoted reviews first.
+const links = () => {
+  const today = new Date().toISOString().slice(0, 10);
+  const items = require('../data/social-links').filter((l, i) => i === 0 || l.date <= today).sort((a, b) => (a.date < b.date ? 1 : -1));
+  const utm = '?utm_source=instagram&utm_medium=social&utm_campaign=bio';
+  const list = items.map((l) => `<li class="links-item"><a href="${l.path}${utm}"><img src="${l.image}" alt="" width="108" height="135" loading="lazy"><span>${l.title}</span></a></li>`).join('');
+  return simple({
+    path: '/links', title: 'Latest Reviews from Our Instagram', h1: 'Latest from ToolKenzon',
+    description: 'The AI and SaaS tool reviews we share on Instagram, newest first.',
+    lead: 'Tap a post to read the full review.',
+    content: `<style>.links-list{list-style:none;padding:0;display:grid;gap:12px}.links-item a{display:flex;gap:14px;align-items:center;padding:10px;border:1px solid #E2E8F0;border-radius:14px;background:#fff;text-decoration:none;color:inherit;font-weight:600}.links-item img{border-radius:10px;flex:none;width:72px;height:90px;object-fit:cover}</style>
+<ul class="links-list">${list || '<li>New reviews coming soon.</li>'}</ul>
+<p><a href="/tools${utm}">Browse all tool reviews →</a></p>
+<p><small>Some links on our site are affiliate links. We may earn a commission at no extra cost to you. <a href="/affiliate-disclosure">Learn more</a>.</small></p>`
+  });
+};
+
+module.exports = { links, home, directory, category, tool, compareIndex, compare, bestIndex, best, blogIndex, post, about, disclosure, privacy, terms, contact, notFound, goPage };

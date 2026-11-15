@@ -15,7 +15,8 @@ function staticRoutes() {
     '/affiliate-disclosure': P.disclosure,
     '/privacy': P.privacy,
     '/terms': P.terms,
-    '/contact': P.contact
+    '/contact': P.contact,
+    '/links': P.links
   };
   C.categories.forEach((c) => { r[`/category/${c.slug}`] = () => P.category(c); });
   C.tools.forEach((t) => { r[`/tools/${t.slug}`] = () => P.tool(t); });
