@@ -18,6 +18,46 @@ module.exports = [
     howWeChose: ['Naturalness and accuracy of output', 'Brand voice and team controls', 'Workflow fit (browser, docs, CMS)', 'Value for money']
   },
   {
+    slug: 'ai-3d-model-generators',
+    title: 'Best AI 3D Model Generators',
+    category: 'ai-tools',
+    intro: 'Turn a photo or a sentence into a 3D model in under a minute. We compared the leading AI 3D generators on mesh quality, textures, export formats and what a usable model really costs.',
+    picks: [['tripo', 'Best overall value'], ['meshy', 'Best for multicolor 3D printing'], ['rodin', 'Best quality for production assets']],
+    howWeChose: ['Mesh quality and topology reported in independent tests', 'Texture quality and PBR maps', 'Export formats for games, AR and 3D printing', 'Real cost per finished model, not the headline credit count']
+  },
+  {
+    slug: 'ai-3d-models-for-3d-printing',
+    title: 'Best AI Tools for 3D Printing Models',
+    category: 'ai-tools',
+    intro: 'Want to print a figurine of your dog, a custom gift or a game miniature without learning CAD? These AI tools turn images into printable STL and 3MF files.',
+    picks: [['tripo', 'Best overall for printing'], ['meshy', 'Best for Bambu Lab multicolor prints'], ['rodin', 'Best surface detail for figurines']],
+    howWeChose: ['Direct STL and 3MF export', 'Watertight meshes and repair tools', 'Color printing support', 'Cost per printable model']
+  },
+  {
+    slug: 'ai-tools-for-game-developers',
+    title: 'Best AI Tools for Indie Game Developers',
+    category: 'ai-tools',
+    intro: 'Small teams can now generate 3D props, rigged characters, concept art and voice lines with AI. Here are the tools worth adding to an indie game pipeline, and where each one still needs a human.',
+    picks: [['tripo', 'Best for 3D props and rigged characters'], ['rodin', 'Best for hero assets with clean topology'], ['meshy', 'Best for fast prototyping and textures'], ['elevenlabs', 'Best for voices and sound'], ['getimg', 'Best for concept art and textures']],
+    howWeChose: ['Output that imports cleanly into Unity, Unreal and Godot', 'Commercial-use rights on paid plans', 'Time saved versus manual work', 'Cost for a small team']
+  },
+  {
+    slug: 'ai-meeting-note-takers',
+    title: 'Best AI Meeting Note Takers',
+    category: 'ai-tools',
+    intro: 'AI note takers write up your calls so you can focus on the conversation. We compared bot-free and bot-based tools on note quality, privacy, languages and real cost.',
+    picks: [['granola', 'Best bot-free notes'], ['krisp', 'Best for noisy calls'], ['otter', 'Best cheap transcription'], ['fireflies', 'Best for sales teams and CRM'], ['notta', 'Best for many languages']],
+    howWeChose: ['Quality of summaries and action items', 'Whether a bot joins the call, and how consent is handled', 'Languages and platforms', 'Price per person on annual and monthly billing']
+  },
+  {
+    slug: 'ai-video-tools-for-creators',
+    title: 'Best AI Video Tools for Creators',
+    category: 'ai-tools',
+    intro: 'From clipping long videos into Shorts to turning a script into a narrated video, these AI tools cut hours of editing. We compared them on output quality, limits and real monthly cost.',
+    picks: [['opusclip', 'Best for clipping long videos'], ['submagic', 'Best captions for talking heads'], ['invideo', 'Best all-in-one AI editor'], ['videogen', 'Best for script and slide videos'], ['fliki', 'Best for multilingual voiceover videos'], ['crayo', 'Best for faceless story videos']],
+    howWeChose: ['Quality of the finished video with little manual editing', 'Credit and length limits by plan', 'Refund and billing terms', 'Price for a creator posting several times a week']
+  },
+  {
     slug: 'email-marketing-software',
     title: 'Best Email Marketing Software',
     category: 'email-marketing',

@@ -242,6 +242,19 @@ module.exports = [
     alternatives: ['tripo']
   }),
   t({
+    slug: 'rodin', pricingChecked: null, name: 'Rodin (Hyper3D)', vendor: 'Deemos Technologies', category: 'ai-tools', sub: 'ai-3d',
+    color: '#0F766E', website: 'https://hyper3d.ai',
+    tagline: 'High-quality AI 3D assets with clean quad meshes and 4K PBR textures.',
+    description: 'Rodin, from Hyper3D, generates 3D models from images or text with quad-mesh topology and detailed PBR textures. You preview results and spend credits on the models you keep. It costs more than Tripo or Meshy but aims at production-quality assets.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: 'About $30/mo', priceValue: 30,
+    score: 7.9, scores: { ease: 7.8, features: 8.6, value: 7.2, support: 6.8 },
+    bestFor: 'Game developers and 3D artists who need cleaner topology and textures.',
+    pros: ['Native quad-mesh output', '4K PBR texture maps', 'Pay for the results you keep', 'Plugins for Blender, Unity and Unreal'],
+    cons: ['Higher entry price than Tripo or Meshy', 'Pricing differs between sources', 'STL exports may need repair before printing', 'Fewer credits per dollar'],
+    features: ['Image to 3D', 'Text to 3D', 'Quad mesh', 'PBR textures', 'API and plugins'],
+    alternatives: ['tripo', 'meshy']
+  }),
+  t({
     slug: 'vista-social', name: 'Vista Social', vendor: 'Vista Social LLC', category: 'saas', sub: 'social-media',
     color: '#2563EB', website: 'https://vistasocial.com',
     tagline: 'All-in-one social media management on flat plans for agencies and teams.',
@@ -423,6 +436,45 @@ module.exports = [
     cons: ['Free plan keeps notes for 7 days only', 'Support complaints on Trustpilot', 'Noise cancellation is desktop-focused', 'Paid tiers add up for teams'],
     features: ['Noise cancellation', 'Background voice cancellation', 'Meeting transcription', 'AI meeting notes', 'Accent conversion'],
     alternatives: ['notta', 'wispr-flow'], affiliateUrl: 'https://krisp.pxf.io/c/6833997/2859289/33230'
+  }),
+  t({
+    slug: 'granola', name: 'Granola', vendor: 'Granola, Inc.', category: 'ai-tools', sub: 'ai-voice',
+    color: '#3F6212', website: 'https://www.granola.ai',
+    tagline: 'A bot-free AI notepad that turns your rough notes into clean meeting notes.',
+    description: 'Granola listens to your computer audio during calls, then blends the transcript with the notes you typed into tidy, editable meeting notes. No bot joins the call. It runs on Mac and Windows, with phone apps for in-person meetings.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$14/user/mo', priceValue: 14,
+    score: 8.2, scores: { ease: 9.0, features: 8.4, value: 8.0, support: 7.0 },
+    bestFor: 'People in back-to-back calls who already jot notes and want them polished.',
+    pros: ['No meeting bot in the participant list', 'Your own notes guide the summary', 'Works with any call app on Mac and Windows', 'Free Basic plan to start'],
+    cons: ['Free plan only shows recent meeting history', 'Monthly billing only, no annual discount', 'Faces a 2026 class action over recording consent', 'Phone apps cannot capture calls in other apps'],
+    features: ['Bot-free capture', 'AI-enhanced notes', 'AI chat across meetings', 'Shared folders', 'Notion, Slack and HubSpot integrations'],
+    alternatives: ['krisp', 'otter']
+  }),
+  t({
+    slug: 'otter', name: 'Otter.ai', vendor: 'Otter.ai, Inc.', category: 'ai-tools', sub: 'ai-voice',
+    color: '#1E40AF', website: 'https://otter.ai',
+    tagline: 'Long-running AI transcription and meeting assistant with a generous free tier.',
+    description: 'Otter transcribes meetings live through its OtterPilot bot or the app, then writes summaries and action items. Plans are capped by monthly minutes and conversation length.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$8.33/mo (annual)', priceValue: 8.33,
+    score: 7.6, scores: { ease: 8.6, features: 8.0, value: 8.0, support: 6.0 },
+    bestFor: 'Individuals who want cheap, searchable transcripts of English meetings.',
+    pros: ['Low annual price for Pro', 'Free plan with 300 minutes a month', 'Live transcript you can follow during calls'],
+    cons: ['Pro caps calls at 90 minutes', 'Bot joins meetings by default', 'Accuracy drops with jargon and accents', 'Faces a class action over recording consent'],
+    features: ['Live transcription', 'OtterPilot meeting bot', 'AI summaries', 'Action items', 'Team workspaces'],
+    alternatives: ['fireflies', 'granola']
+  }),
+  t({
+    slug: 'fireflies', name: 'Fireflies.ai', vendor: 'Fireflies.ai Corp.', category: 'ai-tools', sub: 'ai-voice',
+    color: '#7C3AED', website: 'https://fireflies.ai',
+    tagline: 'Meeting bot that records, transcribes and syncs call notes to your CRM.',
+    description: 'Fireflies sends a bot to your meetings, transcribes them with no minute cap, and pushes summaries into tools like HubSpot and Salesforce. Advanced AI features run on a separate credit meter.',
+    pricingModel: 'Freemium', freePlan: true, startingPrice: '$10/seat/mo (annual)', priceValue: 10,
+    score: 7.7, scores: { ease: 8.2, features: 8.6, value: 7.6, support: 6.4 },
+    bestFor: 'Sales and customer teams that want call notes inside their CRM.',
+    pros: ['Unlimited transcription on every plan', 'Strong CRM integrations', 'Conversation analytics on Business'],
+    cons: ['Storage caps on Free and Pro', 'AI credits are an extra meter', 'Bot joins every call', 'Faces a class action over recording consent'],
+    features: ['Meeting bot', 'Unlimited transcription', 'CRM sync', 'Conversation intelligence', 'AI credits'],
+    alternatives: ['otter', 'granola']
   }),
   t({
     slug: 'notta', name: 'Notta', vendor: 'Notta Inc.', category: 'ai-tools', sub: 'ai-voice',

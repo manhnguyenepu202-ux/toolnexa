@@ -35,7 +35,7 @@ const compareMap = Object.fromEntries(comparisons.map((c) => [c.slug, c]));
 const bestMap = Object.fromEntries(bestof.map((b) => [b.slug, b]));
 
 // Long articles for tool and comparison pages:
-// content/reviews/<tool-slug>.md and content/compare/<a>-vs-<b>.md
+// content/reviews/<tool-slug>.md, content/compare/<a>-vs-<b>.md and content/best/<best-slug>.md
 function splitFaq(body) {
   const lines = body.split('\n');
   const start = lines.findIndex((l) => /^##\s+(faq|frequently asked questions)\b/i.test(l));
@@ -72,6 +72,7 @@ function loadArticles(folder, targets) {
 }
 loadArticles('reviews', toolMap);
 loadArticles('compare', compareMap);
+loadArticles('best', bestMap);
 
 // Blog posts from /content/blog/*.md
 const COVER_PALETTE = ['#7C3AED', '#4F46E5', '#0284C7', '#0D9488', '#16A34A', '#CA8A04', '#EA580C', '#E11D48', '#DB2777', '#2563EB'];

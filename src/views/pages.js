@@ -525,6 +525,9 @@ function best(b) {
     </div>
   </section>`)}
 
+  ${b.article ? articleBlock(b.article, "The full guide") : ''}
+  ${b.article && b.article.faqs.length ? html`<section aria-labelledby="best-faq"><h2 id="best-faq">FAQ</h2><div class="faq">${b.article.faqs.map(([q, a]) => html`<details><summary>${q}${icon('chevronDown', 'chev', 18)}</summary><p>${a}</p></details>`)}</div></section>` : ''}
+
   <section class="method-box" aria-labelledby="hw">
     <h2 id="hw">How we chose</h2>
     <ul>${b.howWeChose.map((x) => html`<li>${icon('check', '', 16)} ${x}</li>`)}</ul>
@@ -533,10 +536,10 @@ function best(b) {
 </div>
 ${newsletter('best')}`;
   return page({
-    title: `${b.title} (${site.year}) — Compared & Ranked`,
-    description: `${b.intro.split('. ')[0]}. Top picks: ${picks.slice(0, 3).map((p) => p.t.name).join(', ')}.`,
+    title: (b.article && b.article.title) || `${b.title} (${site.year}) — Compared & Ranked`,
+    description: (b.article && b.article.description) || `${b.intro.split('. ')[0]}. Top picks: ${picks.slice(0, 3).map((p) => p.t.name).join(', ')}.`,
     path: `/best/${b.slug}`, body, ogType: 'article',
-    jsonLd: [breadcrumbLd(site, crumbs), { '@context': 'https://schema.org', '@type': 'ItemList', name: b.title, itemListElement: picks.map(({ t }, i) => ({ '@type': 'ListItem', position: i + 1, url: `${site.url}/tools/${t.slug}`, name: t.name })) }]
+    jsonLd: [...(b.article && b.article.faqs.length ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: b.article.faqs.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) }] : []), breadcrumbLd(site, crumbs), { '@context': 'https://schema.org', '@type': 'ItemList', name: b.title, itemListElement: picks.map(({ t }, i) => ({ '@type': 'ListItem', position: i + 1, url: `${site.url}/tools/${t.slug}`, name: t.name })) }]
   });
 }
 
