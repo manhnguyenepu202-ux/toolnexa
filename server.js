@@ -121,7 +121,7 @@ const server = http.createServer(async (req, res) => {
     if (pathname === '/social-bridge') {
       const page = `<!doctype html><meta charset="utf-8"><script>
 const ORIGIN='https://business.facebook.com';
-addEventListener('message',async(e)=>{if(e.origin!==ORIGIN||!e.data||!/^[a-z0-9-]+$/.test(e.data.slug||''))return;
+addEventListener('message',async(e)=>{if(e.origin!==ORIGIN||!e.data)return;if(e.data.posts){const r=await fetch('/social/posts.json',{cache:'no-store'});parent.postMessage({posts:await r.json()},ORIGIN);return;}if(!/^[a-z0-9-]+$/.test(e.data.slug||''))return;
 const r=await fetch('/img/ig/'+e.data.slug+'.png');const b=await r.blob();parent.postMessage({slug:e.data.slug,blob:b,ok:r.ok},ORIGIN);});
 parent.postMessage({ready:true},ORIGIN);<\/script>`;
       const h = { 'Content-Type': 'text/html; charset=utf-8', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "frame-ancestors https://business.facebook.com", 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' };
