@@ -61,8 +61,9 @@ function serveStatic(req, res, pathname) {
   try { stat = fs.statSync(file); } catch { return false; }
   if (!stat.isFile()) return false;
   const type = MIME[path.extname(file).toLowerCase()] || 'application/octet-stream';
+  const extra = pathname.startsWith('/img/') ? { 'Access-Control-Allow-Origin': '*' } : {};
   send(req, res, 200, fs.readFileSync(file), type, {
-    'Cache-Control': isProd ? 'public, max-age=604800' : 'no-cache'
+    'Cache-Control': isProd ? 'public, max-age=604800' : 'no-cache', ...extra
   });
   return true;
 }
