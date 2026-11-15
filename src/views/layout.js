@@ -105,6 +105,7 @@ function page({ title, description, path = '/', body, jsonLd = [], ogType = 'web
 <meta name="impact-site-verification" value="9166c2b2-73fd-4324-939d-df23baf80a1e">
 <meta name="impact-site-verification" value="741f188b-c309-43df-a436-7da8e7b3ab34">
 <meta name="p:domain_verify" content="d3a462b0cdb735604e4f298cb18c7ca1"/>
+<meta name="google-site-verification" content="AXBtusHJtXLxtGUEaf8tqTZNvdnFO9JroGVcmCeZurQ"/>
 <title>${fullTitle}</title>
 <meta name="description" content="${desc}">
 <link rel="canonical" href="${canonical}">
