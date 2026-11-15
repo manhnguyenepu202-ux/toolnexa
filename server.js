@@ -116,6 +116,18 @@ const server = http.createServer(async (req, res) => {
     const url = new URL(req.url, 'http://localhost');
     let pathname = decodeURIComponent(url.pathname);
 
+    // Tiny helper page that lets Meta Business Suite pull our own social images
+    // (/img/ig/*.png) when scheduling posts. Only framable by business.facebook.com.
+    if (pathname === '/social-bridge') {
+      const page = `<!doctype html><meta charset="utf-8"><script>
+const ORIGIN='https://business.facebook.com';
+addEventListener('message',async(e)=>{if(e.origin!==ORIGIN||!e.data||!/^[a-z0-9-]+$/.test(e.data.slug||''))return;
+const r=await fetch('/img/ig/'+e.data.slug+'.png');const b=await r.blob();parent.postMessage({slug:e.data.slug,blob:b,ok:r.ok},ORIGIN);});
+parent.postMessage({ready:true},ORIGIN);<\/script>`;
+      const h = { 'Content-Type': 'text/html; charset=utf-8', 'X-Content-Type-Options': 'nosniff', 'Content-Security-Policy': "frame-ancestors https://business.facebook.com", 'Cache-Control': 'no-store', 'X-Robots-Tag': 'noindex' };
+      res.writeHead(200, h); return res.end(req.method === 'HEAD' ? undefined : page);
+    }
+
     // Normalise trailing slash (except root) → 301 for clean canonical URLs
     if (pathname.length > 1 && pathname.endsWith('/')) {
       res.writeHead(301, { Location: pathname.replace(/\/+$/, '') + url.search });
