@@ -2,6 +2,7 @@
 title: Black Friday 2026 AI & SaaS Deals Tracker: What's Confirmed and What to Expect
 description: Black Friday 2026 is November 27, Cyber Monday November 30. We track AI video, 3D, meeting-note and SaaS tools: last year's real discounts, this year's confirmed offers, and how to avoid subscription traps.
 date: 2026-11-15
+updated: 2026-11-17
 category: ai-tools
 type: guide
 author: ToolKenzon Editorial
@@ -13,11 +14,12 @@ color: #111827
 
 *Affiliate note: ToolKenzon may earn a commission if you buy through links on this page. It costs you nothing extra. We only list a discount as confirmed when the vendor has published it.*
 
-**Last checked: November 15, 2026.** We'll update this page as offers go live. Black Friday falls on **Friday, November 27, 2026**, and Cyber Monday on **Monday, November 30**. Many software deals start a few days earlier and run into early December.
+**Last checked: November 17, 2026.** We'll update this page as offers go live. Black Friday falls on **Friday, November 27, 2026**, and Cyber Monday on **Monday, November 30**. Many software deals start a few days earlier and run into early December.
 
 ## The quick version
 
-- **No 2026 offers confirmed yet** for the tools below. Most AI vendors announce in the week before Black Friday.
+- **First 2026 offers are appearing.** Deal sites now report Fliki's 50% off annual plans from November 24 and an OpusClip "Cyber Month" offer of up to 65% off. Neither is on the vendor's own page yet, so treat them as expected, not confirmed.
+- **InVideo:** no Black Friday deal announced yet, but its annual plans already cost about half the monthly price, so a Black Friday cut may be small.
 - **Last year's best patterns:** 50% off yearly plans (Fliki) and up to 65% off annual Pro (OpusClip, as reported by deal sites).
 - **Some tools don't discount at all.** Tripo reportedly ran no extra Black Friday discount in 2025, so don't delay a purchase you need now on the hope of one.
 - **Most Black Friday software deals are annual plans.** A "50% off" deal still means paying for a full year upfront.
@@ -26,10 +28,10 @@ color: #111827
 
 | Tool | What it does | Black Friday 2025 | 2026 status |
 |---|---|---|---|
-| [Fliki](/tools/fliki) | Script to narrated video | 50% off yearly plans, code FLIKIBLACKFRIDAY50 | Not announced yet |
-| [OpusClip](/tools/opusclip) | Clip long videos into Shorts | 65% off annual Pro (reported) | Not announced yet |
+| [Fliki](/tools/fliki) | Script to narrated video | 50% off yearly plans, code FLIKIBLACKFRIDAY50 | Reported: 50% off annual plans from Nov 24, same code (deal sites) |
+| [OpusClip](/tools/opusclip) | Clip long videos into Shorts | 65% off annual Pro (reported) | Reported: up to 65% off for "Cyber Month" (deal sites) |
 | [Krisp](/tools/krisp) | Noise cancellation + AI notes | 30% off annual plans (reported; sources conflict) | Not announced yet |
-| [InVideo](/tools/invideo) | AI video editor | Ran a Black Friday deal; terms varied | Not announced yet |
+| [InVideo](/tools/invideo) | AI video editor | Ran a Black Friday deal; terms varied | No deal announced yet; annual plans already ~50% below monthly |
 | [Tripo](/tools/tripo) | AI 3D model generator | No extra discount reported | Not announced yet |
 | [Submagic](/tools/submagic) | AI captions | No record found | Not announced yet |
 | [Notta](/tools/notta) | Multilingual transcription | No software deal found | Not announced yet |
