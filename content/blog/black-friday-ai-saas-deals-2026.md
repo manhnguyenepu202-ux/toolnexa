@@ -26,18 +26,18 @@ color: #111827
 
 ## AI tool deals we're tracking
 
-| Tool | What it does | Black Friday 2025 | 2026 status |
-|---|---|---|---|
-| [Fliki](/tools/fliki) | Script to narrated video | 50% off yearly plans, code FLIKIBLACKFRIDAY50 | Reported: 50% off annual plans from Nov 24, same code (deal sites) |
-| [OpusClip](/tools/opusclip) | Clip long videos into Shorts | 65% off annual Pro (reported) | Reported: up to 65% off for "Cyber Month" (deal sites) |
-| [Krisp](/tools/krisp) | Noise cancellation + AI notes | 30% off annual plans (reported; sources conflict) | Not announced yet |
-| [InVideo](/tools/invideo) | AI video editor | Ran a Black Friday deal; terms varied | No deal announced yet; annual plans already ~50% below monthly |
-| [Tripo](/tools/tripo) | AI 3D model generator | No extra discount reported | Not announced yet |
-| [Submagic](/tools/submagic) | AI captions | No record found | Not announced yet |
-| [Notta](/tools/notta) | Multilingual transcription | No software deal found | Not announced yet |
-| [FocuSee](/tools/focusee) | Auto-zoom screen recorder | No record found | Not announced yet |
+| Tool | What it does | Black Friday 2025 | 2026 status | Price |
+|---|---|---|---|---|
+| [Fliki](/tools/fliki) | Script to narrated video | 50% off yearly plans, code FLIKIBLACKFRIDAY50 | Reported: 50% off annual plans from Nov 24, same code (deal sites) | [Check price](/go/fliki) |
+| [OpusClip](/tools/opusclip) | Clip long videos into Shorts | 65% off annual Pro (reported) | Reported: up to 65% off for "Cyber Month" (deal sites) | [Check price](/go/opusclip) |
+| [Krisp](/tools/krisp) | Noise cancellation + AI notes | 30% off annual plans (reported; sources conflict) | Not announced yet | [Check price](/go/krisp) |
+| [InVideo](/tools/invideo) | AI video editor | Ran a Black Friday deal; terms varied | No deal announced yet; annual plans already ~50% below monthly | [Check price](/go/invideo) |
+| [Tripo](/tools/tripo) | AI 3D model generator | No extra discount reported | Not announced yet | [Check price](/go/tripo) |
+| [Submagic](/tools/submagic) | AI captions | No record found | Not announced yet | [Check price](/go/submagic) |
+| [Notta](/tools/notta) | Multilingual transcription | No software deal found | Not announced yet | [Check price](/go/notta) |
+| [FocuSee](/tools/focusee) | Auto-zoom screen recorder | No record found | Not announced yet | [Check price](/go/focusee) |
 
-"Reported" means a deal site listed the offer but we couldn't confirm it on the vendor's own page. "No record found" doesn't mean there was no sale, only that we couldn't verify one.
+"Check price" links are affiliate links and open the vendor's own page, where the current price is shown. "Reported" means a deal site listed the offer but we couldn't confirm it on the vendor's own page. "No record found" doesn't mean there was no sale, only that we couldn't verify one.
 
 ## Should you wait for Black Friday?
 
