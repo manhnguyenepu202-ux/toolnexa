@@ -14,11 +14,12 @@ color: #111827
 
 *Affiliate note: ToolKenzon may earn a commission if you buy through links on this page. It costs you nothing extra. We only list a discount as confirmed when the vendor has published it.*
 
-**Last checked: November 17, 2026.** We'll update this page as offers go live. Black Friday falls on **Friday, November 27, 2026**, and Cyber Monday on **Monday, November 30**. Many software deals start a few days earlier and run into early December.
+**Last checked: November 24, 2026.** We'll update this page as offers go live. Black Friday falls on **Friday, November 27, 2026**, and Cyber Monday on **Monday, November 30**. Many software deals start a few days earlier and run into early December.
 
 ## The quick version
 
 - **First 2026 offers are appearing.** Deal sites now report Fliki's 50% off annual plans from November 24 and an OpusClip "Cyber Month" offer of up to 65% off. Neither is on the vendor's own page yet, so treat them as expected, not confirmed.
+- **Still unconfirmed on November 24:** we found no 2026 offer on the vendors' own pages for any tool below. Fliki's reported start date is today, so check its price link before you buy.
 - **InVideo:** no Black Friday deal announced yet, but its annual plans already cost about half the monthly price, so a Black Friday cut may be small.
 - **Last year's best patterns:** 50% off yearly plans (Fliki) and up to 65% off annual Pro (OpusClip, as reported by deal sites).
 - **Some tools don't discount at all.** Tripo reportedly ran no extra Black Friday discount in 2025, so don't delay a purchase you need now on the hope of one.
@@ -33,7 +34,7 @@ color: #111827
 | [Krisp](/tools/krisp) | Noise cancellation + AI notes | 30% off annual plans (reported; sources conflict) | Not announced yet | [Check price](/go/krisp) |
 | [InVideo](/tools/invideo) | AI video editor | Ran a Black Friday deal; terms varied | No deal announced yet; annual plans already ~50% below monthly | [Check price](/go/invideo) |
 | [Tripo](/tools/tripo) | AI 3D model generator | No extra discount reported | Not announced yet | [Check price](/go/tripo) |
-| [Submagic](/tools/submagic) | AI captions | No record found | Not announced yet | [Check price](/go/submagic) |
+| [Submagic](/tools/submagic) | AI captions | 50% off annual plans for 48 hours (reported) | Not announced yet | [Check price](/go/submagic) |
 | [Notta](/tools/notta) | Multilingual transcription | No software deal found | Not announced yet | [Check price](/go/notta) |
 | [FocuSee](/tools/focusee) | Auto-zoom screen recorder | No record found | Not announced yet | [Check price](/go/focusee) |
 
@@ -86,4 +87,6 @@ Yes. We re-check vendor pages during Black Friday week and update the table with
 - [Taskip Black Friday AI deals tracker](https://taskip.net/black-friday-ai-deals/)
 - [Feisworld on Krisp's 2025 offer](https://www.feisworld.com/blog/category/offers)
 - [ColorMango Tripo deal history](https://www.colormango.com/product/tripo-ai_158556.html)
+- [BloggingX on Submagic's 2025 offer](https://bloggingx.com/submagic-black-friday/)
+- [Aliteq on InVideo's own pages, Nov 13, 2026](https://aliteq.com/invideo-promo-code)
 - [EngageBay Black Friday SaaS deals 2026 (dates)](https://www.engagebay.com/blog/black-friday-saas-deals/)
